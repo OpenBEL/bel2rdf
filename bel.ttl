@@ -1,0 +1,59 @@
+prefix bel:  <http://www.selventa.com/bel/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix HGNC: <http://www.selventa.com/bel/entity/hgnc-approved-symbols>
+prefix MESHCL: <http://www.selventa.com/bel/entity/mesh-cellular-locations>
+
+bel:ProteinAbundance rdfs:subClassOf bel:Abundance .
+bel:ModifiedProteinAbundance rdfs:subClassOf bel:ProteinAbundance .
+bel:PhosphoProteinAbundance rdfs:subClassOf bel:ModifiedProteinAbundance . # maybe
+bel:PhosphoSerineProteinAbundance rdfs:subClassOf bel:PhosphoProteinAbundance . # maybe
+bel:PhosphoTyrosineProteinAbundance rdfs:subClassOf bel:PhosphoProteinAbundance . # maybe
+bel:PhosphoThreonineProteinAbundance rdfs:subClassOf bel:PhosphoProteinAbundance . # maybe
+bel:ProteinVariantAbundance rdfs:subClassOf bel:ProteinAbundance .
+bel:ComplexAbundance rdfs:subClassOf bel:Abundance .
+bel:CompositeAbundance rdfs:subclassOf bel:Abundance .
+bel:RNAAbundance rdfs:subClassOf bel:Abundance .
+bel:GeneAbundance rdfs:subClassOf bel:Abundance .
+bel:microRNAAbundance rdfs:subClassOf bel:Abundance .
+
+bel:BiologicalProcess rdfs:subClassOf bel:Process .
+bel:Pathology rdfs:subClassOf bel:BiologicalProcess .
+bel:Transformation rdfs:subClassOf bel:Process .
+bel:Reaction rdfs:subClassOf bel:Transformation .
+bel:Translocation rdfs:subClassOf bel:Transformation .
+bel:CellSecretion rdfs:subClassOf bel:Translocation . # specific translocation, does this need to be its own type?
+bel:Degradation rdfs:subClassOf bel:Transformation .
+bel:AbundanceActivity rdfs:subClassOf bel:Process .
+
+bel:proteinAbundance_HGNC_AKT1_pmod_P_S_473 a bel:ModifiedProteinAbundance;
+    bel:ModificationType bel:Phospho-Serine ; # can use bel vocabulary or adopt external
+    bel:ModificationPosition "473" ;
+    bel:hasChild bel:proteinAbundance_HGNC_AKT1 . # problem with broader/narrower
+bel:proteinAbundance_HGNC_AKT1 bel:hasConcept HGNC:AKT1 .
+
+bel:proteinAbundance_HGNC_AKT1_pmod_P_S_473 a bel:PhosphoSerineProteinAbundance ;
+    bel:ModificationPosition "473".
+
+bel:complexAbundance_proteinAbundance_MGI_Fos_proteinAbundance_MGI_Jun a bel:ComplexAbundance ;
+    bel:hasChild bel:proteinAbundance_MGI_Fos, bel:proteinAbundance_MGI_Jun .
+
+bel:tscript_proteinAbundance_HGNC_TP53 a bel:AbundanceActivity ;
+    bel:hasChild bel:proteinAbundance_HGNC_TP53 .
+    bel:proteinAbundance_HGNC_TP53 bel:hasConcept HGNC:TP53 .
+
+bel:tloc_proteinAbundance_HGNC_NFE2L2_MESHCL_Cytoplasm_MESHCL_Cell_Nucleus a bel:Translocation ;
+    bel:hasInput bel:proteinAbundance_HGNC_NFE2L2_MESHCL_Cytoplasm ;
+    bel:hasOutput bel:proteinAbundance_HGNC_NFE2L2_MESHCL_Cell_Nucleus .
+bel:proteinAbundance_HGNC_NFE2L2_MESHCL_Cell_Nucleus bel:hasChild bel:proteinAbundance_HGNC_NFE2L2 ;
+    bel:hasLocation MESHCL:Cell_Nucleus .
+
+bel:sec_proteinAbundance_HGNC_IL6 a bel:CellSecretion ;
+   bel:hasInput bel:proteinAbundance_HGNC_IL6_MESHCL_Intracellular ;
+   bel:hasOutput bel:proteinAbundance_HGNC_IL6_MESHCL_Extracellular .
+
+
+
+
+
+
+
