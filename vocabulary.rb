@@ -5,12 +5,28 @@ require 'rdf'
 require 'bel'
 
 module BELRDF
-  BELR   = RDF::Vocabulary.new("http://www.selventa.com/bel/")
-  BELV   = RDF::Vocabulary.new("http://www.selventa.com/vocabulary/")
-  HGNC   = RDF::Vocabulary.new("http://www.selventa.com/entity/hgnc-approved-symbols/")
-  MESHCL = RDF::Vocabulary.new("http://www.selventa.com/entity/mesh-cellular-locations/")
-  SFAM   = RDF::Vocabulary.new("http://www.selventa.com/entity/selventa-protein-families/")
-  CHEBI  = RDF::Vocabulary.new("http://www.selventa.com/entity/chebi-names/")
+  BELR    = RDF::Vocabulary.new("http://www.selventa.com/bel/")
+  BELV    = RDF::Vocabulary.new("http://www.selventa.com/vocabulary/")
+  HGNC    = RDF::Vocabulary.new("http://www.selventa.com/entity/hgnc-approved-symbols/")
+  MGI     = RDF::Vocabulary.new("http://www.selventa.com/entity/mgi-approved-symbols/")
+  RGD     = RDF::Vocabulary.new("http://www.selventa.com/entity/rgd-approved-symbols/")
+  MESHCL  = RDF::Vocabulary.new("http://www.selventa.com/entity/mesh-cellular-locations/")
+  SFAM    = RDF::Vocabulary.new("http://www.selventa.com/entity/selventa-protein-families/")
+  CHEBI   = RDF::Vocabulary.new("http://www.selventa.com/entity/chebi-names/")
+  NCH     = RDF::Vocabulary.new("http://www.selventa.com/entity/selventa-named-complexes-human/")
+  NCM     = RDF::Vocabulary.new("http://www.selventa.com/entity/selventa-named-complexes-mouse/")
+  NCR     = RDF::Vocabulary.new("http://www.selventa.com/entity/selventa-named-complexes-rat/")
+  PFH     = RDF::Vocabulary.new("http://www.selventa.com/entity/selventa-protein-families-human/")
+  PFM     = RDF::Vocabulary.new("http://www.selventa.com/entity/selventa-protein-families-mouse/")
+  PFR     = RDF::Vocabulary.new("http://www.selventa.com/entity/selventa-protein-families-rat/")
+  GO      = RDF::Vocabulary.new("http://www.selventa.com/entity/go/")
+  MESHPP  = RDF::Vocabulary.new("http://www.selventa.com/entity/mesh-processes/")
+  MESHD   = RDF::Vocabulary.new("http://www.selventa.com/entity/mesh-diseases/")
+  EGID    = RDF::Vocabulary.new("http://www.selventa.com/entity/entrez-gene/")
+  SCHEM   = RDF::Vocabulary.new("http://www.selventa.com/entity/selventa-protein-families-human/")
+  SDIS    = RDF::Vocabulary.new("http://www.selventa.com/entity/selventa-legacy-diseases/")
+  GOCCACC = RDF::Vocabulary.new("http://www.selventa.com/entity/go-cellular-components/")
+
 
   # maps outer function to bel/vocabulary class
   FUNCTION_TYPE = {
