@@ -26,7 +26,32 @@ module BELRDF
     rxn: BELV.Reaction,
     tloc: BELV.Translocation,
     sec: BELV.CellSecretion,
-    deg: BELV.Degradation
+    deg: BELV.Degradation,
+    cat: BELV.AbundanceActivity,
+    chap: BELV.AbundanceActivity,
+    gtp: BELV.AbundanceActivity,
+    kin: BELV.AbundanceActivity,
+    act: BELV.AbundanceActivity,
+    pep: BELV.AbundanceActivity,
+    phos: BELV.AbundanceActivity,
+    ribo: BELV.AbundanceActivity,
+    tscript: BELV.AbundanceActivity,
+    tport: BELV.AbundanceActivity
+  }
+  # maps modification types to bel/vocabulary class
+  MODIFICATION_TYPE = {
+    "P,S" => BELV.PhosphorylationSerineProteinAbundance,
+    "P,T" => BELV.PhosphorylationTyrosineProteinAbundance,
+    "P,Y" => BELV.PhosphorylationThreonineProteinAbundance,
+    "A" =>BELV.AcetylationProteinAbundance,
+    "F" =>BELV.FarnesylationProteinAbundance,
+    "G" =>BELV.GlycosylationProteinAbundance,
+    "H" =>BELV.HydroxylationProteinAbundance,
+    "M" =>BELV.MethylationProteinAbundance,
+    "P" =>BELV.PhosphorylationProteinAbundance,
+    "R" =>BELV.RibosylationProteinAbundance,
+    "S" =>BELV.SumoylationProteinAbundance,
+    "U" =>BELV.UbiquitinationProteinAbundance
   }
 
   def self.for_term(term, writer)
@@ -37,6 +62,11 @@ module BELRDF
 
     # special proteins
     if term.fx == :p and term.args.find{|x| x.is_a? BEL::Script::Term and x.fx == :pmod}
+      pmod = term.args.find{|x| x.is_a? BEL::Script::Term and x.fx == :pmod}
+      last = pmod.args.last.to_s
+      if last.match(/^\d+$/)
+        writer << [id, BELV.hasModificationPosition, last.to_i]
+      end
     end
 
     # belv:hasConcept
@@ -60,7 +90,10 @@ module BELRDF
   def self.type(obj)
     if obj.respond_to? 'fx'
       if obj.fx == :p and obj.args.find{|x| x.is_a? BEL::Script::Term and x.fx == :pmod}
-        return BELV.ModifiedProteinAbundance
+        pmod = obj.args.find{|x| x.is_a? BEL::Script::Term and x.fx ==:pmod}
+        mod_string = pmod.args.map(&:to_s).join(',')
+        mod_type = MODIFICATION_TYPE.find {|k,v| mod_string.start_with? k}
+        return mod_type ? mod_type[1] : BELV.ModifiedProteinAbundance
       end
 
       FUNCTION_TYPE[obj.fx.to_sym] || BELV.Abundance
@@ -75,10 +108,18 @@ module BELRDF
     [
       [BELV.ProteinAbundance, RDF::RDFS.subClassOf, BELV.Abundance],
       [BELV.ModifiedProteinAbundance, RDF::RDFS.subClassOf, BELV.ProteinAbundance],
-      #[BELV.PhosphoProteinAbundance, RDF::RDFS.subClassOf, BELV.ModifiedProteinAbundance],
-      #[BELV.PhosphoSerineProteinAbundance, RDF::RDFS.subClassOf, BELV.PhosphoProteinAbundance],
-      #[BELV.PhosphoTyrosineProteinAbundance, RDF::RDFS.subClassOf, BELV.PhosphoProteinAbundance],
-      #[BELV.PhosphoThreonineProteinAbundance, RDF::RDFS.subClassOf, BELV.PhosphoProteinAbundance],
+      [BELV.AcetylationProteinAbundance, RDF::RDFS.subClassOf, BELV.ModifiedProteinAbundance],
+      [BELV.FarnesylationProteinAbundance, RDF::RDFS.subClassOf, BELV.ModifiedProteinAbundance],
+      [BELV.GlycosylationProteinAbundance, RDF::RDFS.subClassOf, BELV.ModifiedProteinAbundance],
+      [BELV.HydroxylationProteinAbundance, RDF::RDFS.subClassOf, BELV.ModifiedProteinAbundance],
+      [BELV.MethylationProteinAbundance, RDF::RDFS.subClassOf, BELV.ModifiedProteinAbundance],
+      [BELV.PhosphorylationProteinAbundance, RDF::RDFS.subClassOf, BELV.ModifiedProteinAbundance],
+      [BELV.RibosylationProteinAbundance, RDF::RDFS.subClassOf, BELV.ModifiedProteinAbundance],
+      [BELV.SumoylationProteinAbundance, RDF::RDFS.subClassOf, BELV.ModifiedProteinAbundance],
+      [BELV.UbiquitinationProteinAbundance, RDF::RDFS.subClassOf, BELV.ModifiedProteinAbundance],
+      [BELV.PhosphorylationSerineProteinAbundance, RDF::RDFS.subClassOf, BELV.PhosphorylationProteinAbundance],
+      [BELV.PhosphorylationTyrosineProteinAbundance, RDF::RDFS.subClassOf, BELV.PhosphorylationProteinAbundance],
+      [BELV.PhosphorylationThreonineProteinAbundance, RDF::RDFS.subClassOf, BELV.PhosphorylationProteinAbundance],
       [BELV.ProteinVariantAbundance, RDF::RDFS.subClassOf, BELV.ProteinAbundance],
       [BELV.ComplexAbundance, RDF::RDFS.subClassOf, BELV.Abundance],
       [BELV.CompositeAbundance, RDF::RDFS.subClassOf, BELV.Abundance],

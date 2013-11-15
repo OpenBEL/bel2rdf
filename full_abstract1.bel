@@ -19,11 +19,11 @@ a(CHEBI:"phorbol 13-acetate 12-myristate") -> kin(p(SFAM:"MAPK p38 Family"))
 
 SET Evidence = "These kinases are regulated by the reversible dual phosphorylation of conserved threonine and tyrosine residues."
 
-p(HGNC:MAPK1, pmod(P, T)) => kin(p(HGNC:MAPK1))
-p(HGNC:MAPK1, pmod(P, Y)) => kin(p(HGNC:MAPK1))
-p(HGNC:MAPK8, pmod(P, T)) => kin(p(HGNC:MAPK8))
+p(HGNC:MAPK1, pmod(P, T, 310)) => kin(p(HGNC:MAPK1))
+p(HGNC:MAPK1, pmod(P, Y, 10)) => kin(p(HGNC:MAPK1))
+p(HGNC:MAPK8, pmod(P, T, 150)) => kin(p(HGNC:MAPK8))
 p(HGNC:MAPK8, pmod(P, Y)) => kin(p(HGNC:MAPK8))
-p(HGNC:MAPK14, pmod(P, T)) => kin(p(SFAM:"MAPK p38 Family"))
+p(HGNC:MAPK14, pmod(P, 310)) => kin(p(SFAM:"MAPK p38 Family"))
 p(HGNC:MAPK14, pmod(P, Y)) => kin(p(SFAM:"MAPK p38 Family"))
 
 SET Evidence = "The dual specificity protein phosphatase MAPK phosphatase-1(MKP-1) has been shown to dephosphorylate and inactivate ERK2, SAPK, and p38 MAPK in transient transfection studies."
