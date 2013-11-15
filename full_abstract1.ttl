@@ -20,39 +20,39 @@
 <kin_p_SFAM_MAPK_p38_Family> a belv:Abundance;
    belv:hasChild <p_SFAM_MAPK_p38_Family> .
 
-<p_HGNC_MAPK14pmod_PT> a belv:ProteinAbundance;
-   belv:hasChild <pmod_PT>;
+<p_HGNC_MAPK14_pmod_P_T> a belv:ModifiedProteinAbundance;
+   belv:hasChild <pmod_P_T>;
    belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK14> .
 
-<p_HGNC_MAPK14pmod_PY> a belv:ProteinAbundance;
-   belv:hasChild <pmod_PY>;
+<p_HGNC_MAPK14_pmod_P_Y> a belv:ModifiedProteinAbundance;
+   belv:hasChild <pmod_P_Y>;
    belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK14> .
 
-<p_HGNC_MAPK1pmod_P> a belv:ProteinAbundance;
+<p_HGNC_MAPK1_pmod_P> a belv:ModifiedProteinAbundance;
    belv:hasChild <pmod_P>;
    belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK1> .
 
-<p_HGNC_MAPK1pmod_PT> a belv:ProteinAbundance;
-   belv:hasChild <pmod_PT>;
+<p_HGNC_MAPK1_pmod_P_T> a belv:ModifiedProteinAbundance;
+   belv:hasChild <pmod_P_T>;
    belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK1> .
 
-<p_HGNC_MAPK1pmod_PY> a belv:ProteinAbundance;
-   belv:hasChild <pmod_PY>;
+<p_HGNC_MAPK1_pmod_P_Y> a belv:ModifiedProteinAbundance;
+   belv:hasChild <pmod_P_Y>;
    belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK1> .
 
-<p_HGNC_MAPK8pmod_P> a belv:ProteinAbundance;
+<p_HGNC_MAPK8_pmod_P> a belv:ModifiedProteinAbundance;
    belv:hasChild <pmod_P>;
    belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK8> .
 
-<p_HGNC_MAPK8pmod_PT> a belv:ProteinAbundance;
-   belv:hasChild <pmod_PT>;
+<p_HGNC_MAPK8_pmod_P_T> a belv:ModifiedProteinAbundance;
+   belv:hasChild <pmod_P_T>;
    belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK8> .
 
-<p_HGNC_MAPK8pmod_PY> a belv:ProteinAbundance;
-   belv:hasChild <pmod_PY>;
+<p_HGNC_MAPK8_pmod_P_Y> a belv:ModifiedProteinAbundance;
+   belv:hasChild <pmod_P_Y>;
    belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK8> .
 
-<p_SFAM_MAPK_p38_Familypmod_P> a belv:ProteinAbundance;
+<p_SFAM_MAPK_p38_Family_pmod_P> a belv:ModifiedProteinAbundance;
    belv:hasChild <pmod_P>;
    belv:hasConcept SFAM:MAPK_p38_Family .
 
@@ -81,12 +81,6 @@ belv:Degradation rdfs:subClassOf belv:Transformation .
 belv:GeneAbundance rdfs:subClassOf belv:Abundance .
 
 belv:Pathology rdfs:subClassOf belv:BiologicalProcess .
-
-belv:PhosphoSerineProteinAbundance rdfs:subClassOf belv:PhosphoProteinAbundance .
-
-belv:PhosphoThreonineProteinAbundance rdfs:subClassOf belv:PhosphoProteinAbundance .
-
-belv:PhosphoTyrosineProteinAbundance rdfs:subClassOf belv:PhosphoProteinAbundance .
 
 belv:ProteinVariantAbundance rdfs:subClassOf belv:ProteinAbundance .
 
@@ -119,18 +113,16 @@ belv:microRNAAbundance rdfs:subClassOf belv:Abundance .
 
 belv:BiologicalProcess rdfs:subClassOf belv:Process .
 
-belv:ModifiedProteinAbundance rdfs:subClassOf belv:ProteinAbundance .
-
 belv:Translocation rdfs:subClassOf belv:Transformation .
 
 <pmod_P> a belv:Abundance .
 
-<pmod_PT> a belv:Abundance .
+<pmod_P_T> a belv:Abundance .
 
-<pmod_PY> a belv:Abundance .
-
-belv:PhosphoProteinAbundance rdfs:subClassOf belv:ModifiedProteinAbundance .
+<pmod_P_Y> a belv:Abundance .
 
 belv:Transformation rdfs:subClassOf belv:Process .
+
+belv:ModifiedProteinAbundance rdfs:subClassOf belv:ProteinAbundance .
 
 belv:ProteinAbundance rdfs:subClassOf belv:Abundance .

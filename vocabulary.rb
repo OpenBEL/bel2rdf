@@ -35,6 +35,10 @@ module BELRDF
     # rdf:type
     writer << [id, RDF.type, BELRDF::type(term)]
 
+    # special proteins
+    if term.fx == :p and term.args.find{|x| x.is_a? BEL::Script::Term and x.fx == :pmod}
+    end
+
     # belv:hasConcept
     term.args.find_all{|x| x.is_a? BEL::Script::Parameter}.each do |concept|
       if concept.ns and const_get concept.ns
@@ -55,22 +59,26 @@ module BELRDF
 
   def self.type(obj)
     if obj.respond_to? 'fx'
+      if obj.fx == :p and obj.args.find{|x| x.is_a? BEL::Script::Term and x.fx == :pmod}
+        return BELV.ModifiedProteinAbundance
+      end
+
       FUNCTION_TYPE[obj.fx.to_sym] || BELV.Abundance
     end
   end
 
   def self.term_id(term)
-    term.to_s.squeeze(')').gsub(/[",)]/, '').gsub(/[(:, ]/, '_')
+    term.to_s.squeeze(')').gsub(/[")]/, '').gsub(/[(:, ]/, '_')
   end
 
   def self.vocabulary_rdf
     [
       [BELV.ProteinAbundance, RDF::RDFS.subClassOf, BELV.Abundance],
       [BELV.ModifiedProteinAbundance, RDF::RDFS.subClassOf, BELV.ProteinAbundance],
-      [BELV.PhosphoProteinAbundance, RDF::RDFS.subClassOf, BELV.ModifiedProteinAbundance],
-      [BELV.PhosphoSerineProteinAbundance, RDF::RDFS.subClassOf, BELV.PhosphoProteinAbundance],
-      [BELV.PhosphoTyrosineProteinAbundance, RDF::RDFS.subClassOf, BELV.PhosphoProteinAbundance],
-      [BELV.PhosphoThreonineProteinAbundance, RDF::RDFS.subClassOf, BELV.PhosphoProteinAbundance],
+      #[BELV.PhosphoProteinAbundance, RDF::RDFS.subClassOf, BELV.ModifiedProteinAbundance],
+      #[BELV.PhosphoSerineProteinAbundance, RDF::RDFS.subClassOf, BELV.PhosphoProteinAbundance],
+      #[BELV.PhosphoTyrosineProteinAbundance, RDF::RDFS.subClassOf, BELV.PhosphoProteinAbundance],
+      #[BELV.PhosphoThreonineProteinAbundance, RDF::RDFS.subClassOf, BELV.PhosphoProteinAbundance],
       [BELV.ProteinVariantAbundance, RDF::RDFS.subClassOf, BELV.ProteinAbundance],
       [BELV.ComplexAbundance, RDF::RDFS.subClassOf, BELV.Abundance],
       [BELV.CompositeAbundance, RDF::RDFS.subClassOf, BELV.Abundance],
