@@ -12,7 +12,7 @@ module BELRDF
 
     def initialize(&block)
       @writer = RDF::Turtle::Writer.new($stdout, {
-          #:stream => true,
+          :stream => true,
           :base_uri => "http://www.selventa.com/bel/",
           :prefixes => {
              :bel => "http://www.selventa.com/bel/",
