@@ -1,0 +1,136 @@
+@base <http://www.selventa.com/bel/> .
+@base <http://www.selventa.com/bel/> .
+@prefix CHEBI: <http://www.selventa.com/entity/chebi-names/> .
+@prefix HGNC: <http://www.selventa.com/entity/hgnc-approved-symbols> .
+@prefix SFAM: <http://www.selventa.com/entity/selventa-protein-families/> .
+@prefix bel: <http://www.selventa.com/bel/> .
+@prefix belv: <http://www.selventa.com/vocabulary/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<a_CHEBI_phorbol_13-acetate_12-myristate> a belv:Abundance;
+   belv:hasConcept CHEBI:phorbol_13-acetate_12-myristate .
+
+<kin_p_HGNC_MAPK1> a belv:Abundance;
+   belv:hasChild <p_HGNC_MAPK1> .
+
+<kin_p_HGNC_MAPK8> a belv:Abundance;
+   belv:hasChild <p_HGNC_MAPK8> .
+
+<kin_p_SFAM_MAPK_p38_Family> a belv:Abundance;
+   belv:hasChild <p_SFAM_MAPK_p38_Family> .
+
+<p_HGNC_MAPK14pmod_PT> a belv:ProteinAbundance;
+   belv:hasChild <pmod_PT>;
+   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK14> .
+
+<p_HGNC_MAPK14pmod_PY> a belv:ProteinAbundance;
+   belv:hasChild <pmod_PY>;
+   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK14> .
+
+<p_HGNC_MAPK1pmod_P> a belv:ProteinAbundance;
+   belv:hasChild <pmod_P>;
+   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK1> .
+
+<p_HGNC_MAPK1pmod_PT> a belv:ProteinAbundance;
+   belv:hasChild <pmod_PT>;
+   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK1> .
+
+<p_HGNC_MAPK1pmod_PY> a belv:ProteinAbundance;
+   belv:hasChild <pmod_PY>;
+   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK1> .
+
+<p_HGNC_MAPK8pmod_P> a belv:ProteinAbundance;
+   belv:hasChild <pmod_P>;
+   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK8> .
+
+<p_HGNC_MAPK8pmod_PT> a belv:ProteinAbundance;
+   belv:hasChild <pmod_PT>;
+   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK8> .
+
+<p_HGNC_MAPK8pmod_PY> a belv:ProteinAbundance;
+   belv:hasChild <pmod_PY>;
+   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK8> .
+
+<p_SFAM_MAPK_p38_Familypmod_P> a belv:ProteinAbundance;
+   belv:hasChild <pmod_P>;
+   belv:hasConcept SFAM:MAPK_p38_Family .
+
+<phos_p_HGNC_DUSP1> a belv:Abundance;
+   belv:hasChild <p_HGNC_DUSP1> .
+
+<tscript_p_HGNC_ELK1> a belv:Abundance;
+   belv:hasChild <p_HGNC_ELK1> .
+
+<tscript_p_HGNC_JUN> a belv:Abundance;
+   belv:hasChild <p_HGNC_JUN> .
+
+<tscript_p_HGNC_MYC> a belv:Abundance;
+   belv:hasChild <p_HGNC_MYC> .
+
+belv:AbundanceActivity rdfs:subClassOf belv:Process .
+
+belv:CellSecretion rdfs:subClassOf belv:Translocation .
+
+belv:ComplexAbundance rdfs:subClassOf belv:Abundance .
+
+belv:CompositeAbundance rdfs:subClassOf belv:Abundance .
+
+belv:Degradation rdfs:subClassOf belv:Transformation .
+
+belv:GeneAbundance rdfs:subClassOf belv:Abundance .
+
+belv:Pathology rdfs:subClassOf belv:BiologicalProcess .
+
+belv:PhosphoSerineProteinAbundance rdfs:subClassOf belv:PhosphoProteinAbundance .
+
+belv:PhosphoThreonineProteinAbundance rdfs:subClassOf belv:PhosphoProteinAbundance .
+
+belv:PhosphoTyrosineProteinAbundance rdfs:subClassOf belv:PhosphoProteinAbundance .
+
+belv:ProteinVariantAbundance rdfs:subClassOf belv:ProteinAbundance .
+
+belv:RNAAbundance rdfs:subClassOf belv:Abundance .
+
+belv:Reaction rdfs:subClassOf belv:Transformation .
+
+belv:microRNAAbundance rdfs:subClassOf belv:Abundance .
+
+<p_HGNC_DUSP1> a belv:ProteinAbundance;
+   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/DUSP1> .
+
+<p_HGNC_ELK1> a belv:ProteinAbundance;
+   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/ELK1> .
+
+<p_HGNC_JUN> a belv:ProteinAbundance;
+   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/JUN> .
+
+<p_HGNC_MAPK1> a belv:ProteinAbundance;
+   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK1> .
+
+<p_HGNC_MAPK8> a belv:ProteinAbundance;
+   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK8> .
+
+<p_HGNC_MYC> a belv:ProteinAbundance;
+   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MYC> .
+
+<p_SFAM_MAPK_p38_Family> a belv:ProteinAbundance;
+   belv:hasConcept SFAM:MAPK_p38_Family .
+
+belv:BiologicalProcess rdfs:subClassOf belv:Process .
+
+belv:ModifiedProteinAbundance rdfs:subClassOf belv:ProteinAbundance .
+
+belv:Translocation rdfs:subClassOf belv:Transformation .
+
+<pmod_P> a belv:Abundance .
+
+<pmod_PT> a belv:Abundance .
+
+<pmod_PY> a belv:Abundance .
+
+belv:PhosphoProteinAbundance rdfs:subClassOf belv:ModifiedProteinAbundance .
+
+belv:Transformation rdfs:subClassOf belv:Process .
+
+belv:ProteinAbundance rdfs:subClassOf belv:Abundance .
