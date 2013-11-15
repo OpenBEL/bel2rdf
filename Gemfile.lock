@@ -1,10 +1,13 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    addressable (2.3.5)
     bel (0.2.0)
     diff-lcs (1.2.5)
     json (1.8.1)
     rake (10.1.0)
+    rdf (1.0.10.2)
+      addressable (>= 2.3)
     rdoc (3.12.2)
       json (~> 1.4)
     rspec (2.14.1)
@@ -24,6 +27,7 @@ DEPENDENCIES
   bel (~> 0.2.0)
   bundler (~> 1.0)
   rake (~> 10.1.0)
+  rdf (~> 1.0.10)
   rdoc (~> 3.12)
   rspec (~> 2.14.0)
   yard (~> 0.7)

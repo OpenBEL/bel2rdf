@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'bel', '~> 0.2.0'
+gem 'rdf', '~> 1.0.10'
 
 # development requirements
 group :development do
