@@ -20,7 +20,8 @@ if __FILE__ == $0
       parser = BEL::Script::Parser.new
       parser.add_observer self
 
-      @ttl = BELRDF::Serializer.new
+      stream = ARGV.find {|x| ['-s', '--stream'].include? x} || false
+      @ttl = BELRDF::Serializer.new(stream)
       BELRDF::vocabulary_rdf.each do |trpl|
         @ttl << trpl
       end

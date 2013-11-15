@@ -56,18 +56,18 @@ module BELRDF
   }
   # maps modification types to bel/vocabulary class
   MODIFICATION_TYPE = {
-    "P,S" => BELV.PhosphorylationSerineProteinAbundance,
-    "P,T" => BELV.PhosphorylationTyrosineProteinAbundance,
-    "P,Y" => BELV.PhosphorylationThreonineProteinAbundance,
-    "A" =>BELV.AcetylationProteinAbundance,
-    "F" =>BELV.FarnesylationProteinAbundance,
-    "G" =>BELV.GlycosylationProteinAbundance,
-    "H" =>BELV.HydroxylationProteinAbundance,
-    "M" =>BELV.MethylationProteinAbundance,
-    "P" =>BELV.PhosphorylationProteinAbundance,
-    "R" =>BELV.RibosylationProteinAbundance,
-    "S" =>BELV.SumoylationProteinAbundance,
-    "U" =>BELV.UbiquitinationProteinAbundance
+    "P,S" => BELV.PhosphorylationSerine,
+    "P,T" => BELV.PhosphorylationTyrosine,
+    "P,Y" => BELV.PhosphorylationThreonine,
+    "A" =>BELV.Acetylation,
+    "F" =>BELV.Farnesylation,
+    "G" =>BELV.Glycosylation,
+    "H" =>BELV.Hydroxylation,
+    "M" =>BELV.Methylation,
+    "P" =>BELV.Phosphorylation,
+    "R" =>BELV.Ribosylation,
+    "S" =>BELV.Sumoylation,
+    "U" =>BELV.Ubiquitination
   }
 
   def self.for_term(term, writer)
@@ -79,6 +79,10 @@ module BELRDF
     # special proteins
     if term.fx == :p and term.args.find{|x| x.is_a? BEL::Script::Term and x.fx == :pmod}
       pmod = term.args.find{|x| x.is_a? BEL::Script::Term and x.fx == :pmod}
+      mod_string = pmod.args.map(&:to_s).join(',')
+      mod_type = MODIFICATION_TYPE.find {|k,v| mod_string.start_with? k}
+      mod_type = (mod_type ? mod_type[1] : BELV.Modification)
+      writer << [id, BELV.hasModificationType, mod_type]
       last = pmod.args.last.to_s
       if last.match(/^\d+$/)
         writer << [id, BELV.hasModificationPosition, last.to_i]
@@ -106,10 +110,7 @@ module BELRDF
   def self.type(obj)
     if obj.respond_to? 'fx'
       if obj.fx == :p and obj.args.find{|x| x.is_a? BEL::Script::Term and x.fx == :pmod}
-        pmod = obj.args.find{|x| x.is_a? BEL::Script::Term and x.fx ==:pmod}
-        mod_string = pmod.args.map(&:to_s).join(',')
-        mod_type = MODIFICATION_TYPE.find {|k,v| mod_string.start_with? k}
-        return mod_type ? mod_type[1] : BELV.ModifiedProteinAbundance
+        return BELV.ModifiedProteinAbundance
       end
 
       FUNCTION_TYPE[obj.fx.to_sym] || BELV.Abundance
@@ -124,18 +125,6 @@ module BELRDF
     [
       [BELV.ProteinAbundance, RDF::RDFS.subClassOf, BELV.Abundance],
       [BELV.ModifiedProteinAbundance, RDF::RDFS.subClassOf, BELV.ProteinAbundance],
-      [BELV.AcetylationProteinAbundance, RDF::RDFS.subClassOf, BELV.ModifiedProteinAbundance],
-      [BELV.FarnesylationProteinAbundance, RDF::RDFS.subClassOf, BELV.ModifiedProteinAbundance],
-      [BELV.GlycosylationProteinAbundance, RDF::RDFS.subClassOf, BELV.ModifiedProteinAbundance],
-      [BELV.HydroxylationProteinAbundance, RDF::RDFS.subClassOf, BELV.ModifiedProteinAbundance],
-      [BELV.MethylationProteinAbundance, RDF::RDFS.subClassOf, BELV.ModifiedProteinAbundance],
-      [BELV.PhosphorylationProteinAbundance, RDF::RDFS.subClassOf, BELV.ModifiedProteinAbundance],
-      [BELV.RibosylationProteinAbundance, RDF::RDFS.subClassOf, BELV.ModifiedProteinAbundance],
-      [BELV.SumoylationProteinAbundance, RDF::RDFS.subClassOf, BELV.ModifiedProteinAbundance],
-      [BELV.UbiquitinationProteinAbundance, RDF::RDFS.subClassOf, BELV.ModifiedProteinAbundance],
-      [BELV.PhosphorylationSerineProteinAbundance, RDF::RDFS.subClassOf, BELV.PhosphorylationProteinAbundance],
-      [BELV.PhosphorylationTyrosineProteinAbundance, RDF::RDFS.subClassOf, BELV.PhosphorylationProteinAbundance],
-      [BELV.PhosphorylationThreonineProteinAbundance, RDF::RDFS.subClassOf, BELV.PhosphorylationProteinAbundance],
       [BELV.ProteinVariantAbundance, RDF::RDFS.subClassOf, BELV.ProteinAbundance],
       [BELV.ComplexAbundance, RDF::RDFS.subClassOf, BELV.Abundance],
       [BELV.CompositeAbundance, RDF::RDFS.subClassOf, BELV.Abundance],
@@ -149,7 +138,19 @@ module BELRDF
       [BELV.Translocation, RDF::RDFS.subClassOf, BELV.Transformation],
       [BELV.CellSecretion, RDF::RDFS.subClassOf, BELV.Translocation],
       [BELV.Degradation, RDF::RDFS.subClassOf, BELV.Transformation],
-      [BELV.AbundanceActivity, RDF::RDFS.subClassOf, BELV.Process]
+      [BELV.AbundanceActivity, RDF::RDFS.subClassOf, BELV.Process],
+      [BELV.Acetylation, RDF::RDFS.subClassOf, BELV.Modification],
+      [BELV.Farnesylation, RDF::RDFS.subClassOf, BELV.Modification],
+      [BELV.Glycosylation, RDF::RDFS.subClassOf, BELV.Modification],
+      [BELV.Hydroxylation, RDF::RDFS.subClassOf, BELV.Modification],
+      [BELV.Methylation, RDF::RDFS.subClassOf, BELV.Modification],
+      [BELV.Phosphorylation, RDF::RDFS.subClassOf, BELV.Modification],
+      [BELV.Ribosylation, RDF::RDFS.subClassOf, BELV.Modification],
+      [BELV.Sumoylation, RDF::RDFS.subClassOf, BELV.Modification],
+      [BELV.Ubiquitination, RDF::RDFS.subClassOf, BELV.Modification],
+      [BELV.PhosphorylationSerine, RDF::RDFS.subClassOf, BELV.Phosphorylation],
+      [BELV.PhosphorylationTyrosine, RDF::RDFS.subClassOf, BELV.Phosphorylation],
+      [BELV.PhosphorylationThreonine, RDF::RDFS.subClassOf, BELV.Phosphorylation]
     ]
   end
 end

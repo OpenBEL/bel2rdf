@@ -20,45 +20,54 @@
 <kin_p_SFAM_MAPK_p38_Family> a belv:AbundanceActivity;
    belv:hasChild <p_SFAM_MAPK_p38_Family> .
 
-<p_HGNC_MAPK14_pmod_P_310> a belv:PhosphorylationProteinAbundance;
+<p_HGNC_MAPK14_pmod_P_310> a belv:ModifiedProteinAbundance;
    belv:hasChild <pmod_P_310>;
    belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK14>;
-   belv:hasModificationPosition 310 .
+   belv:hasModificationPosition 310;
+   belv:hasModificationType belv:Phosphorylation .
 
-<p_HGNC_MAPK14_pmod_P_Y> a belv:PhosphorylationThreonineProteinAbundance;
+<p_HGNC_MAPK14_pmod_P_Y> a belv:ModifiedProteinAbundance;
    belv:hasChild <pmod_P_Y>;
-   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK14> .
+   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK14>;
+   belv:hasModificationType belv:PhosphorylationThreonine .
 
-<p_HGNC_MAPK1_pmod_P> a belv:PhosphorylationProteinAbundance;
+<p_HGNC_MAPK1_pmod_P> a belv:ModifiedProteinAbundance;
    belv:hasChild <pmod_P>;
-   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK1> .
+   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK1>;
+   belv:hasModificationType belv:Phosphorylation .
 
-<p_HGNC_MAPK1_pmod_P_T_310> a belv:PhosphorylationTyrosineProteinAbundance;
+<p_HGNC_MAPK1_pmod_P_T_310> a belv:ModifiedProteinAbundance;
    belv:hasChild <pmod_P_T_310>;
    belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK1>;
-   belv:hasModificationPosition 310 .
+   belv:hasModificationPosition 310;
+   belv:hasModificationType belv:PhosphorylationTyrosine .
 
-<p_HGNC_MAPK1_pmod_P_Y_10> a belv:PhosphorylationThreonineProteinAbundance;
+<p_HGNC_MAPK1_pmod_P_Y_10> a belv:ModifiedProteinAbundance;
    belv:hasChild <pmod_P_Y_10>;
    belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK1>;
-   belv:hasModificationPosition 10 .
+   belv:hasModificationPosition 10;
+   belv:hasModificationType belv:PhosphorylationThreonine .
 
-<p_HGNC_MAPK8_pmod_P> a belv:PhosphorylationProteinAbundance;
+<p_HGNC_MAPK8_pmod_P> a belv:ModifiedProteinAbundance;
    belv:hasChild <pmod_P>;
-   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK8> .
+   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK8>;
+   belv:hasModificationType belv:Phosphorylation .
 
-<p_HGNC_MAPK8_pmod_P_T_150> a belv:PhosphorylationTyrosineProteinAbundance;
+<p_HGNC_MAPK8_pmod_P_T_150> a belv:ModifiedProteinAbundance;
    belv:hasChild <pmod_P_T_150>;
    belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK8>;
-   belv:hasModificationPosition 150 .
+   belv:hasModificationPosition 150;
+   belv:hasModificationType belv:PhosphorylationTyrosine .
 
-<p_HGNC_MAPK8_pmod_P_Y> a belv:PhosphorylationThreonineProteinAbundance;
+<p_HGNC_MAPK8_pmod_P_Y> a belv:ModifiedProteinAbundance;
    belv:hasChild <pmod_P_Y>;
-   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK8> .
+   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK8>;
+   belv:hasModificationType belv:PhosphorylationThreonine .
 
-<p_SFAM_MAPK_p38_Family_pmod_P> a belv:PhosphorylationProteinAbundance;
+<p_SFAM_MAPK_p38_Family_pmod_P> a belv:ModifiedProteinAbundance;
    belv:hasChild <pmod_P>;
-   belv:hasConcept SFAM:MAPK_p38_Family .
+   belv:hasConcept SFAM:MAPK_p38_Family;
+   belv:hasModificationType belv:Phosphorylation .
 
 <phos_p_HGNC_DUSP1> a belv:AbundanceActivity;
    belv:hasChild <p_HGNC_DUSP1> .
@@ -72,7 +81,7 @@
 <tscript_p_HGNC_MYC> a belv:AbundanceActivity;
    belv:hasChild <p_HGNC_MYC> .
 
-belv:AcetylationProteinAbundance rdfs:subClassOf belv:ModifiedProteinAbundance .
+belv:Acetylation rdfs:subClassOf belv:Modification .
 
 belv:CellSecretion rdfs:subClassOf belv:Translocation .
 
@@ -82,19 +91,19 @@ belv:CompositeAbundance rdfs:subClassOf belv:Abundance .
 
 belv:Degradation rdfs:subClassOf belv:Transformation .
 
-belv:FarnesylationProteinAbundance rdfs:subClassOf belv:ModifiedProteinAbundance .
+belv:Farnesylation rdfs:subClassOf belv:Modification .
 
 belv:GeneAbundance rdfs:subClassOf belv:Abundance .
 
-belv:GlycosylationProteinAbundance rdfs:subClassOf belv:ModifiedProteinAbundance .
+belv:Glycosylation rdfs:subClassOf belv:Modification .
 
-belv:HydroxylationProteinAbundance rdfs:subClassOf belv:ModifiedProteinAbundance .
+belv:Hydroxylation rdfs:subClassOf belv:Modification .
 
-belv:MethylationProteinAbundance rdfs:subClassOf belv:ModifiedProteinAbundance .
+belv:Methylation rdfs:subClassOf belv:Modification .
 
 belv:Pathology rdfs:subClassOf belv:BiologicalProcess .
 
-belv:PhosphorylationSerineProteinAbundance rdfs:subClassOf belv:PhosphorylationProteinAbundance .
+belv:PhosphorylationSerine rdfs:subClassOf belv:Phosphorylation .
 
 belv:ProteinVariantAbundance rdfs:subClassOf belv:ProteinAbundance .
 
@@ -102,11 +111,11 @@ belv:RNAAbundance rdfs:subClassOf belv:Abundance .
 
 belv:Reaction rdfs:subClassOf belv:Transformation .
 
-belv:RibosylationProteinAbundance rdfs:subClassOf belv:ModifiedProteinAbundance .
+belv:Ribosylation rdfs:subClassOf belv:Modification .
 
-belv:SumoylationProteinAbundance rdfs:subClassOf belv:ModifiedProteinAbundance .
+belv:Sumoylation rdfs:subClassOf belv:Modification .
 
-belv:UbiquitinationProteinAbundance rdfs:subClassOf belv:ModifiedProteinAbundance .
+belv:Ubiquitination rdfs:subClassOf belv:Modification .
 
 belv:microRNAAbundance rdfs:subClassOf belv:Abundance .
 
@@ -145,17 +154,17 @@ belv:Translocation rdfs:subClassOf belv:Transformation .
 
 <pmod_P_Y> a belv:Abundance .
 
-belv:PhosphorylationTyrosineProteinAbundance rdfs:subClassOf belv:PhosphorylationProteinAbundance .
+belv:PhosphorylationTyrosine rdfs:subClassOf belv:Phosphorylation .
 
 <pmod_P> a belv:Abundance .
 
-belv:PhosphorylationThreonineProteinAbundance rdfs:subClassOf belv:PhosphorylationProteinAbundance .
+belv:PhosphorylationThreonine rdfs:subClassOf belv:Phosphorylation .
 
 belv:Transformation rdfs:subClassOf belv:Process .
 
 belv:AbundanceActivity rdfs:subClassOf belv:Process .
 
-belv:PhosphorylationProteinAbundance rdfs:subClassOf belv:ModifiedProteinAbundance .
+belv:Phosphorylation rdfs:subClassOf belv:Modification .
 
 belv:ModifiedProteinAbundance rdfs:subClassOf belv:ProteinAbundance .
 
