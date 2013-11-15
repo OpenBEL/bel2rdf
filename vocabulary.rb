@@ -54,6 +54,43 @@ module BELRDF
     tscript: BELV.AbundanceActivity,
     tport: BELV.AbundanceActivity
   }
+  RELATIONSHIP_TYPE = {
+    # 'actsIn' =>                 'actsIn',  XXX captured by belv:hasChild
+      'analogous'              => 'analogous',
+      'association'            => 'association',
+      '--'                     => 'association',
+      'biomarkerFor'           => 'biomarkerFor',
+      'causesNoChange'         => 'causesNoChange',
+      'decreases'              => 'decreases',
+      '-|'                     => 'decreases',
+      'directlyDecreases'      => 'directlyDecreases',
+      '=|'                     => 'directlyDecreases',
+      'directlyIncreases'      => 'directlyIncreases',
+      '=>'                     => 'directlyIncreases',
+      'hasComponent'           => 'hasComponent',
+      'hasComponents'          => 'hasComponents',
+      'hasMember'              => 'hasMember',
+      'hasMembers'             => 'hasMembers',
+      'hasModification'        => 'hasModification',
+      'hasProduct'             => 'hasProduct',
+      'hasVariant'             => 'hasVariant',
+      'includes'               => 'includes',
+      'increases'              => 'increases',
+      '->'                     => 'increases',
+      'isA'                    => 'isA',
+      'negativeCorrelation'    => 'negativeCorrelation',
+      'orthologous'            => 'orthologous',
+      'positiveCorrelation'    => 'positiveCorrelation',
+      'prognosticBiomarkerFor' => 'prognosticBiomarkerFor',
+      'rateLimitingStepOf'     => 'rateLimitingStepOf',
+      'reactantIn'             => 'reactantIn',
+      'subProcessOf'           => 'subProcessOf',
+      'transcribedTo'          => 'transcribedTo',
+      ':>'                     => 'transcribedTo',
+      '>>'                     => 'translatedTo',
+      'translatedTo'           => 'translatedTo',
+      'translocates'           => 'translocates'
+  }
   # maps modification types to bel/vocabulary class
   MODIFICATION_TYPE = {
     "P,S" => BELV.PhosphorylationSerine,
@@ -70,11 +107,39 @@ module BELRDF
     "U" =>BELV.Ubiquitination
   }
 
+  def self.for_statement(statement, writer)
+    # TODO canonicalization
+
+    case
+    when statement.subject_only?
+      id = for_term(statement.subject, writer)
+    when statement.simple?
+      sub_id = for_term(statement.subject, writer)
+      obj_id = for_term(statement.object, writer)
+      rel = RELATIONSHIP_TYPE[statement.rel.to_s]
+      id = BELR["#{sub_id}_##{rel}_#{obj_id}"]
+    when statement.nested?
+      sub_id  = for_term(statement.subject, writer)
+      nsub_id = for_term(statement.object.subject, writer)
+      nobj_id = for_term(statement.object.object, writer)
+      rel = RELATIONSHIP_TYPE[statement.rel.to_s]
+      nrel = RELATIONSHIP_TYPE[statement.object.rel.to_s]
+      id = BELR["#{sub_id}_##{rel}_#{nsub_id}_#{nrel}_#{nobj_id}"]
+    end
+
+    writer << [id, RDF.type, BELV.Statement]
+    writer << [id, RDF::RDFS.label, statement.to_s]
+  end
+
   def self.for_term(term, writer)
     id = BELR[BELRDF::term_id(term)]
 
     # rdf:type
+    writer << [id, RDF.type, BELV.Term]
     writer << [id, RDF.type, BELRDF::type(term)]
+
+    # rdfs:label
+    writer << [id, RDF::RDFS.label, term.to_s]
 
     # special proteins
     if term.fx == :p and term.args.find{|x| x.is_a? BEL::Script::Term and x.fx == :pmod}
@@ -123,6 +188,24 @@ module BELRDF
 
   def self.vocabulary_rdf
     [
+      # Property
+      [BELV.hasConcept, RDF.type, RDF.Property],
+      [BELV.hasChild, RDF.type, RDF.Property],
+      [BELV.hasSubject, RDF::RDFS.subPropertyOf, BELV.hasChild],
+      [BELV.hasSubject, RDF::RDFS.range, BELV.Term],
+      [BELV.hasSubject, RDF::RDFS.domain, BELV.Statement],
+      [BELV.hasObject, RDF::RDFS.subPropertyOf, BELV.hasChild],
+      [BELV.hasObject, RDF::RDFS.range, BELV.Term],
+      [BELV.hasObject, RDF::RDFS.domain, BELV.Statement],
+      [BELV.hasRelationship, RDF.type, RDF.Property],
+      [BELV.hasModificationPosition, RDF.type, RDF.Property],
+      [BELV.hasModificationType, RDF.type, RDF.Property],
+
+      # Class
+      [BELV.Term, RDF.type, RDF::RDFS.Class],
+      [BELV.Statement, RDF.type, RDF::RDFS.Class],
+      [BELV.Abundance, RDF.type, RDF::RDFS.Class],
+      [BELV.Process, RDF.type, RDF::RDFS.Class],
       [BELV.ProteinAbundance, RDF::RDFS.subClassOf, BELV.Abundance],
       [BELV.ModifiedProteinAbundance, RDF::RDFS.subClassOf, BELV.ProteinAbundance],
       [BELV.ProteinVariantAbundance, RDF::RDFS.subClassOf, BELV.ProteinAbundance],

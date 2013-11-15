@@ -28,8 +28,8 @@ if __FILE__ == $0
       parser.parse(content)
     end
     def update(obj)
-      if obj.is_a? BEL::Script::Term
-        BELRDF::for_term(obj, @ttl)
+      if obj.is_a? BEL::Script::Statement
+        BELRDF::for_statement(obj, @ttl)
       end
     end
   end
