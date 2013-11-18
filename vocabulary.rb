@@ -106,6 +106,8 @@ module BELRDF
     "S" =>BELV.Sumoylation,
     "U" =>BELV.Ubiquitination
   }
+  # pubmed URI
+  PUBMED = 'http://bio2rdf.org/pubmed:'
 
   def self.for_statement(statement, writer)
     # TODO canonicalization
@@ -113,22 +115,64 @@ module BELRDF
     case
     when statement.subject_only?
       id = for_term(statement.subject, writer)
+      writer << [id, BELV.hasSubject, id]
     when statement.simple?
-      sub_id = for_term(statement.subject, writer)
-      obj_id = for_term(statement.object, writer)
+      sub_id = strip_prefix(for_term(statement.subject, writer))
+      obj_id = strip_prefix(for_term(statement.object, writer))
       rel = RELATIONSHIP_TYPE[statement.rel.to_s]
       id = BELR["#{sub_id}_##{rel}_#{obj_id}"]
+      writer << [id, BELV.hasSubject, sub_id]
+      writer << [id, BELV.hasObject, obj_id]
+      writer << [id, BELV.hasRelationship, RELATIONSHIP_TYPE[rel.to_s]]
     when statement.nested?
-      sub_id  = for_term(statement.subject, writer)
-      nsub_id = for_term(statement.object.subject, writer)
-      nobj_id = for_term(statement.object.object, writer)
+      sub_id  = strip_prefix(for_term(statement.subject, writer))
+      nsub_id = strip_prefix(for_term(statement.object.subject, writer))
+      nobj_id = strip_prefix(for_term(statement.object.object, writer))
       rel = RELATIONSHIP_TYPE[statement.rel.to_s]
       nrel = RELATIONSHIP_TYPE[statement.object.rel.to_s]
-      id = BELR["#{sub_id}_##{rel}_#{nsub_id}_#{nrel}_#{nobj_id}"]
+      id = BELR["#{sub_id}_#{rel}_#{nsub_id}_#{nrel}_#{nobj_id}"]
+      nid = BELR["#{nsub_id}_#{nrel}_#{nobj_id}"]
+
+      writer << [nid, RDF.type, BELV.Statement]
+      writer << [nid, BELV.hasSubject, nsub_id]
+      writer << [nid, BELV.hasObject, nobj_id]
+      writer << [nid, BELV.hasRelationship, RELATIONSHIP_TYPE[nrel.to_s]]
+      writer << [id, BELV.hasSubject, sub_id]
+      writer << [id, BELV.hasObject, nid]
+      writer << [id, BELV.hasRelationship, RELATIONSHIP_TYPE[rel.to_s]]
     end
 
     writer << [id, RDF.type, BELV.Statement]
     writer << [id, RDF::RDFS.label, statement.to_s]
+
+    # evidence
+    evidence_bnode = RDF::Node.new
+    writer << [evidence_bnode, RDF.type, BELV.Evidence]
+    writer << [id, BELV.hasEvidence, evidence_bnode]
+    writer << [evidence_bnode, BELV.evidenceFor, id]
+
+    # citation
+    citation = statement.annotations.delete('Citation')
+    value = citation.value.map{|x| x.gsub('"', '')}
+    if citation and value[0] == 'PubMed'
+      pid = value[2]
+      writer << [evidence_bnode, BELV.hasCitation, RDF::URI(PUBMED + pid)]
+    end
+
+    # evidence
+    evidence_text = statement.annotations.delete('Evidence')
+    if evidence_text
+      value = evidence_text.value.gsub('"', '')
+      writer << [evidence_bnode, BELV.hasEvidenceText, value]
+    end
+
+    # annotations
+    statement.annotations.each do |name, annotation|
+      name = annotation.name.gsub('"', '')
+      value = annotation.value.gsub('"', '')
+      writer << [evidence_bnode, BELV.hasAnnotation, "#{name}:#{value}"]
+    end
+
   end
 
   def self.for_term(term, writer)
@@ -184,6 +228,14 @@ module BELRDF
 
   def self.term_id(term)
     term.to_s.squeeze(')').gsub(/[")]/, '').gsub(/[(:, ]/, '_')
+  end
+
+  def self.strip_prefix(uri)
+    if uri.to_s.start_with? 'http://www.selventa.com/bel/'
+      uri.to_s[28..-1]
+    else
+      uri
+    end
   end
 
   def self.vocabulary_rdf
