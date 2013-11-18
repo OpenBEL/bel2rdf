@@ -93,11 +93,23 @@ module BELRDF
       'translatedTo'           => 'translatedTo',
       'translocates'           => 'translocates'
   }
+  ACTIVITY_TYPE = {
+    cat: BELV.Catalytic,
+    chap: BELV.Chaperone,
+    gtp: BELV.GtpBound,
+    kin: BELV.Kinase,
+    act: BELV.Activity,
+    pep: BELV.Peptidase,
+    phos: BELV.Phosphatase,
+    ribo: BELV.Ribosylase,
+    tscript: BELV.Transcription,
+    tport: BELV.Transport
+  }
   # maps modification types to bel/vocabulary class
   MODIFICATION_TYPE = {
     "P,S" => BELV.PhosphorylationSerine,
-    "P,T" => BELV.PhosphorylationTyrosine,
-    "P,Y" => BELV.PhosphorylationThreonine,
+    "P,T" => BELV.PhosphorylationThreonine,
+    "P,Y" => BELV.PhosphorylationTyrosine,
     "A" =>BELV.Acetylation,
     "F" =>BELV.Farnesylation,
     "G" =>BELV.Glycosylation,
@@ -119,21 +131,21 @@ module BELRDF
       id = for_term(statement.subject, writer)
       writer << [id, BELV.hasSubject, id]
     when statement.simple?
-      sub_id = strip_prefix(for_term(statement.subject, writer))
-      obj_id = strip_prefix(for_term(statement.object, writer))
+      sub_id = for_term(statement.subject, writer)
+      obj_id = for_term(statement.object, writer)
       rel = RELATIONSHIP_TYPE[statement.rel.to_s]
-      id = BELR["#{sub_id}_##{rel}_#{obj_id}"]
+      id = BELR["#{strip_prefix(sub_id)}_##{rel}_#{strip_prefix(obj_id)}"]
       writer << [id, BELV.hasSubject, sub_id]
       writer << [id, BELV.hasObject, obj_id]
       writer << [id, BELV.hasRelationship, RELATIONSHIP_TYPE[rel.to_s]]
     when statement.nested?
-      sub_id  = strip_prefix(for_term(statement.subject, writer))
-      nsub_id = strip_prefix(for_term(statement.object.subject, writer))
-      nobj_id = strip_prefix(for_term(statement.object.object, writer))
+      sub_id  = for_term(statement.subject, writer)
+      nsub_id = for_term(statement.object.subject, writer)
+      nobj_id = for_term(statement.object.object, writer)
       rel = RELATIONSHIP_TYPE[statement.rel.to_s]
       nrel = RELATIONSHIP_TYPE[statement.object.rel.to_s]
-      id = BELR["#{sub_id}_#{rel}_#{nsub_id}_#{nrel}_#{nobj_id}"]
-      nid = BELR["#{nsub_id}_#{nrel}_#{nobj_id}"]
+      id = BELR["#{strip_prefix(sub_id)}_#{rel}_#{strip_prefix(nsub_id)}_#{nrel}_#{strip_prefix(nobj_id)}"]
+      nid = BELR["#{strip_prefix(nsub_id)}_#{nrel}_#{strip_prefix(nobj_id)}"]
 
       writer << [nid, RDF.type, BELV.Statement]
       writer << [nid, BELV.hasSubject, nsub_id]
@@ -151,6 +163,7 @@ module BELRDF
     evidence_bnode = RDF::Node.new
     writer << [evidence_bnode, RDF.type, BELV.Evidence]
     writer << [id, BELV.hasEvidence, evidence_bnode]
+    writer << [evidence_bnode, BELV.hasStatement, id]
     writer << [evidence_bnode, BELV.evidenceFor, id]
 
     # citation
@@ -183,13 +196,17 @@ module BELRDF
     id = BELR[BELRDF::term_id(term)]
 
     # rdf:type
+    type = BELRDF::type(term)
     writer << [id, RDF.type, BELV.Term]
-    writer << [id, RDF.type, BELRDF::type(term)]
+    writer << [id, RDF.type, type]
+    if ACTIVITY_TYPE.include? term.fx
+      writer << [id, BELV.hasActivityType, ACTIVITY_TYPE[term.fx]]
+    end
 
     # rdfs:label
     writer << [id, RDF::RDFS.label, term.to_s]
 
-    # special proteins
+    # special proteins (does not recurse into pmod)
     if term.fx == :p and term.args.find{|x| x.is_a? BEL::Script::Term and x.fx == :pmod}
       pmod = term.args.find{|x| x.is_a? BEL::Script::Term and x.fx == :pmod}
       mod_string = pmod.args.map(&:to_s).join(',')
@@ -200,13 +217,24 @@ module BELRDF
       if last.match(/^\d+$/)
         writer << [id, BELV.hasModificationPosition, last.to_i]
       end
+
+      # belv:hasConcept
+      term.args.find_all{|x| x.is_a? BEL::Script::Parameter}.each do |param|
+        if param.ns and const_get param.ns
+          ev = const_get param.ns
+          value = param.value.gsub(' ', '_').gsub('"', '')
+          writer << [id, BELV.hasConcept, ev[value]]
+        end
+      end
+
+      return id
     end
 
     # belv:hasConcept
-    term.args.find_all{|x| x.is_a? BEL::Script::Parameter}.each do |concept|
-      if concept.ns and const_get concept.ns
-        ev = const_get concept.ns
-        value = concept.value.gsub(' ', '_').gsub('"', '')
+    term.args.find_all{|x| x.is_a? BEL::Script::Parameter}.each do |param|
+      if param.ns and const_get param.ns
+        ev = const_get param.ns
+        value = param.value.gsub(' ', '_').gsub('"', '')
         writer << [id, BELV.hasConcept, ev[value]]
       end
     end

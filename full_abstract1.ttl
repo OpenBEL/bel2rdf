@@ -13,113 +13,6 @@ belv:Statement a rdfs:Class .
 
 belv:Term a rdfs:Class .
 
-<a_CHEBI_phorbol_13-acetate_12-myristate> a belv:Term,
-     belv:Abundance;
-   rdfs:label "a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\")";
-   belv:hasConcept <entity/chebi-names/phorbol_13-acetate_12-myristate> .
-
-<kin_p_HGNC_MAPK1> a belv:Term,
-     belv:AbundanceActivity;
-   rdfs:label "kin(p(HGNC:MAPK1))";
-   belv:hasChild <p_HGNC_MAPK1> .
-
-<kin_p_HGNC_MAPK8> a belv:Term,
-     belv:AbundanceActivity;
-   rdfs:label "kin(p(HGNC:MAPK8))";
-   belv:hasChild <p_HGNC_MAPK8> .
-
-<kin_p_SFAM_MAPK_p38_Family> a belv:Term,
-     belv:AbundanceActivity;
-   rdfs:label "kin(p(SFAM:\"\"MAPK p38 Family\"\"))";
-   belv:hasChild <p_SFAM_MAPK_p38_Family> .
-
-<p_HGNC_MAPK14_pmod_P_310> a belv:Term,
-     belv:ModifiedProteinAbundance;
-   rdfs:label "p(HGNC:MAPK14,pmod(P,310))";
-   belv:hasChild <pmod_P_310>;
-   belv:hasConcept <entity/hgnc-approved-symbols/MAPK14>;
-   belv:hasModificationPosition 310;
-   belv:hasModificationType belv:Phosphorylation .
-
-<p_HGNC_MAPK14_pmod_P_Y> a belv:Term,
-     belv:ModifiedProteinAbundance;
-   rdfs:label "p(HGNC:MAPK14,pmod(P,Y))";
-   belv:hasChild <pmod_P_Y>;
-   belv:hasConcept <entity/hgnc-approved-symbols/MAPK14>;
-   belv:hasModificationType belv:PhosphorylationThreonine .
-
-<p_HGNC_MAPK1_pmod_P> a belv:Term,
-     belv:ModifiedProteinAbundance;
-   rdfs:label "p(HGNC:MAPK1,pmod(P))";
-   belv:hasChild <pmod_P>;
-   belv:hasConcept <entity/hgnc-approved-symbols/MAPK1>;
-   belv:hasModificationType belv:Phosphorylation .
-
-<p_HGNC_MAPK1_pmod_P_T_310> a belv:Term,
-     belv:ModifiedProteinAbundance;
-   rdfs:label "p(HGNC:MAPK1,pmod(P,T,310))";
-   belv:hasChild <pmod_P_T_310>;
-   belv:hasConcept <entity/hgnc-approved-symbols/MAPK1>;
-   belv:hasModificationPosition 310;
-   belv:hasModificationType belv:PhosphorylationTyrosine .
-
-<p_HGNC_MAPK1_pmod_P_Y_10> a belv:Term,
-     belv:ModifiedProteinAbundance;
-   rdfs:label "p(HGNC:MAPK1,pmod(P,Y,10))";
-   belv:hasChild <pmod_P_Y_10>;
-   belv:hasConcept <entity/hgnc-approved-symbols/MAPK1>;
-   belv:hasModificationPosition 10;
-   belv:hasModificationType belv:PhosphorylationThreonine .
-
-<p_HGNC_MAPK8_pmod_P> a belv:Term,
-     belv:ModifiedProteinAbundance;
-   rdfs:label "p(HGNC:MAPK8,pmod(P))";
-   belv:hasChild <pmod_P>;
-   belv:hasConcept <entity/hgnc-approved-symbols/MAPK8>;
-   belv:hasModificationType belv:Phosphorylation .
-
-<p_HGNC_MAPK8_pmod_P_T_150> a belv:Term,
-     belv:ModifiedProteinAbundance;
-   rdfs:label "p(HGNC:MAPK8,pmod(P,T,150))";
-   belv:hasChild <pmod_P_T_150>;
-   belv:hasConcept <entity/hgnc-approved-symbols/MAPK8>;
-   belv:hasModificationPosition 150;
-   belv:hasModificationType belv:PhosphorylationTyrosine .
-
-<p_HGNC_MAPK8_pmod_P_Y> a belv:Term,
-     belv:ModifiedProteinAbundance;
-   rdfs:label "p(HGNC:MAPK8,pmod(P,Y))";
-   belv:hasChild <pmod_P_Y>;
-   belv:hasConcept <entity/hgnc-approved-symbols/MAPK8>;
-   belv:hasModificationType belv:PhosphorylationThreonine .
-
-<p_SFAM_MAPK_p38_Family_pmod_P> a belv:Term,
-     belv:ModifiedProteinAbundance;
-   rdfs:label "p(SFAM:\"\"MAPK p38 Family\"\",pmod(P))";
-   belv:hasChild <pmod_P>;
-   belv:hasConcept <entity/selventa-protein-families/MAPK_p38_Family>;
-   belv:hasModificationType belv:Phosphorylation .
-
-<phos_p_HGNC_DUSP1> a belv:Term,
-     belv:AbundanceActivity;
-   rdfs:label "phos(p(HGNC:DUSP1))";
-   belv:hasChild <p_HGNC_DUSP1> .
-
-<tscript_p_HGNC_ELK1> a belv:Term,
-     belv:AbundanceActivity;
-   rdfs:label "tscript(p(HGNC:ELK1))";
-   belv:hasChild <p_HGNC_ELK1> .
-
-<tscript_p_HGNC_JUN> a belv:Term,
-     belv:AbundanceActivity;
-   rdfs:label "tscript(p(HGNC:JUN))";
-   belv:hasChild <p_HGNC_JUN> .
-
-<tscript_p_HGNC_MYC> a belv:Term,
-     belv:AbundanceActivity;
-   rdfs:label "tscript(p(HGNC:MYC))";
-   belv:hasChild <p_HGNC_MYC> .
-
 belv:Acetylation rdfs:subClassOf belv:Modification .
 
 belv:CellSecretion rdfs:subClassOf belv:Translocation .
@@ -158,131 +51,6 @@ belv:Ubiquitination rdfs:subClassOf belv:Modification .
 
 belv:microRNAAbundance rdfs:subClassOf belv:Abundance .
 
-<a_CHEBI_phorbol_13-acetate_12-myristate_#increases_kin_p_HGNC_MAPK1> a belv:Statement;
-   rdfs:label "a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\") -> kin(p(HGNC:MAPK1))";
-   belv:hasEvidence [ a belv:Evidence;
-     belv:evidenceFor <a_CHEBI_phorbol_13-acetate_12-myristate_#increases_kin_p_HGNC_MAPK1>;
-     belv:hasAnnotation "Species:9606",
-       "CellLine:U-937";
-     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "Phorbol ester tumor promoters, such as phorbol 12-myristate 13-acetate (PMA), are potent activators of extracellular signal-regulated kinase 2 (ERK2), stress-activated protein kinase (SAPK), and p38 mitogen-activated protein kinase (MAPK) in U937 human leukemic cells."];
-   belv:hasObject "kin_p_HGNC_MAPK1";
-   belv:hasRelationship "increases";
-   belv:hasSubject "a_CHEBI_phorbol_13-acetate_12-myristate" .
-
-<a_CHEBI_phorbol_13-acetate_12-myristate_#increases_kin_p_HGNC_MAPK8> a belv:Statement;
-   rdfs:label "a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\") -> kin(p(HGNC:MAPK8))";
-   belv:hasEvidence [ a belv:Evidence;
-     belv:evidenceFor <a_CHEBI_phorbol_13-acetate_12-myristate_#increases_kin_p_HGNC_MAPK8>;
-     belv:hasAnnotation "Species:9606",
-       "CellLine:U-937";
-     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "Phorbol ester tumor promoters, such as phorbol 12-myristate 13-acetate (PMA), are potent activators of extracellular signal-regulated kinase 2 (ERK2), stress-activated protein kinase (SAPK), and p38 mitogen-activated protein kinase (MAPK) in U937 human leukemic cells."];
-   belv:hasObject "kin_p_HGNC_MAPK8";
-   belv:hasRelationship "increases";
-   belv:hasSubject "a_CHEBI_phorbol_13-acetate_12-myristate" .
-
-<a_CHEBI_phorbol_13-acetate_12-myristate_#increases_kin_p_SFAM_MAPK_p38_Family> a belv:Statement;
-   rdfs:label "a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\") -> kin(p(SFAM:\"\"MAPK p38 Family\"\"))";
-   belv:hasEvidence [ a belv:Evidence;
-     belv:evidenceFor <a_CHEBI_phorbol_13-acetate_12-myristate_#increases_kin_p_SFAM_MAPK_p38_Family>;
-     belv:hasAnnotation "Species:9606",
-       "CellLine:U-937";
-     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "Phorbol ester tumor promoters, such as phorbol 12-myristate 13-acetate (PMA), are potent activators of extracellular signal-regulated kinase 2 (ERK2), stress-activated protein kinase (SAPK), and p38 mitogen-activated protein kinase (MAPK) in U937 human leukemic cells."];
-   belv:hasObject "kin_p_SFAM_MAPK_p38_Family";
-   belv:hasRelationship "increases";
-   belv:hasSubject "a_CHEBI_phorbol_13-acetate_12-myristate" .
-
-<a_CHEBI_phorbol_13-acetate_12-myristate_#increases_p_HGNC_DUSP1> a belv:Statement;
-   rdfs:label "a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\") -> p(HGNC:DUSP1)";
-   belv:hasEvidence [ a belv:Evidence;
-     belv:evidenceFor <a_CHEBI_phorbol_13-acetate_12-myristate_#increases_p_HGNC_DUSP1>;
-     belv:hasAnnotation "Species:9606",
-       "CellLine:U-937";
-     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "Here we demonstrate that PMA treatment induces MKP-1 protein expression in U937 cells, which is detectable within 30 min with maximal levels attained after 4 h."];
-   belv:hasObject "p_HGNC_DUSP1";
-   belv:hasRelationship "increases";
-   belv:hasSubject "a_CHEBI_phorbol_13-acetate_12-myristate" .
-
-<a_CHEBI_phorbol_13-acetate_12-myristate_#increases_tscript_p_HGNC_ELK1> a belv:Statement;
-   rdfs:label "a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\") -> tscript(p(HGNC:ELK1))";
-   belv:hasEvidence [ a belv:Evidence;
-     belv:evidenceFor <a_CHEBI_phorbol_13-acetate_12-myristate_#increases_tscript_p_HGNC_ELK1>;
-     belv:hasAnnotation "Species:9606",
-       "CellLine:U-937";
-     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "This differential substrate specificity of MKP-1 can be functionally extended to nuclear transcriptional events in that PMAinduced c-Jun transcriptional activity was more sensitive to inhibition by MKP-1 than either Elk-1 or c-Myc."];
-   belv:hasObject "tscript_p_HGNC_ELK1";
-   belv:hasRelationship "increases";
-   belv:hasSubject "a_CHEBI_phorbol_13-acetate_12-myristate" .
-
-<a_CHEBI_phorbol_13-acetate_12-myristate_#increases_tscript_p_HGNC_JUN> a belv:Statement;
-   rdfs:label "a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\") -> tscript(p(HGNC:JUN))";
-   belv:hasEvidence [ a belv:Evidence;
-     belv:evidenceFor <a_CHEBI_phorbol_13-acetate_12-myristate_#increases_tscript_p_HGNC_JUN>;
-     belv:hasAnnotation "Species:9606",
-       "CellLine:U-937";
-     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "This differential substrate specificity of MKP-1 can be functionally extended to nuclear transcriptional events in that PMAinduced c-Jun transcriptional activity was more sensitive to inhibition by MKP-1 than either Elk-1 or c-Myc."];
-   belv:hasObject "tscript_p_HGNC_JUN";
-   belv:hasRelationship "increases";
-   belv:hasSubject "a_CHEBI_phorbol_13-acetate_12-myristate" .
-
-<a_CHEBI_phorbol_13-acetate_12-myristate_#increases_tscript_p_HGNC_MYC> a belv:Statement;
-   rdfs:label "a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\") -> tscript(p(HGNC:MYC))";
-   belv:hasEvidence [ a belv:Evidence;
-     belv:evidenceFor <a_CHEBI_phorbol_13-acetate_12-myristate_#increases_tscript_p_HGNC_MYC>;
-     belv:hasAnnotation "Species:9606",
-       "CellLine:U-937";
-     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "This differential substrate specificity of MKP-1 can be functionally extended to nuclear transcriptional events in that PMAinduced c-Jun transcriptional activity was more sensitive to inhibition by MKP-1 than either Elk-1 or c-Myc."];
-   belv:hasObject "tscript_p_HGNC_MYC";
-   belv:hasRelationship "increases";
-   belv:hasSubject "a_CHEBI_phorbol_13-acetate_12-myristate" .
-
-<kin_p_HGNC_MAPK1_#increases_p_HGNC_DUSP1> a belv:Statement;
-   rdfs:label "kin(p(HGNC:MAPK1)) -> p(HGNC:DUSP1)";
-   belv:hasEvidence [ a belv:Evidence;
-     belv:evidenceFor <kin_p_HGNC_MAPK1_#increases_p_HGNC_DUSP1>;
-     belv:hasAnnotation "Species:9606",
-       "CellLine:U-937";
-     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "This negative feedback regulatory mechanism is likely due to MKP-1-mediated inhibition of ERK2, as studies utilizing the MEK1/2 inhibitor PD98059 suggest that ERK2 activation is required for PMA-induced MKP-1 expression."];
-   belv:hasObject "p_HGNC_DUSP1";
-   belv:hasRelationship "increases";
-   belv:hasSubject "kin_p_HGNC_MAPK1" .
-
-<kin_p_HGNC_MAPK1_increases_a_CHEBI_phorbol_13-acetate_12-myristate_increases_p_HGNC_DUSP1> a belv:Statement;
-   rdfs:label "kin(p(HGNC:MAPK1)) -> (a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\") -> p(HGNC:DUSP1))";
-   belv:hasEvidence [ a belv:Evidence;
-     belv:evidenceFor <kin_p_HGNC_MAPK1_increases_a_CHEBI_phorbol_13-acetate_12-myristate_increases_p_HGNC_DUSP1>;
-     belv:hasAnnotation "Species:9606",
-       "CellLine:U-937";
-     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "This negative feedback regulatory mechanism is likely due to MKP-1-mediated inhibition of ERK2, as studies utilizing the MEK1/2 inhibitor PD98059 suggest that ERK2 activation is required for PMA-induced MKP-1 expression."];
-   belv:hasObject <a_CHEBI_phorbol_13-acetate_12-myristate_increases_p_HGNC_DUSP1>;
-   belv:hasRelationship "increases";
-   belv:hasSubject "kin_p_HGNC_MAPK1" .
-
-<p_HGNC_DUSP1> a belv:Term,
-     belv:ProteinAbundance;
-   rdfs:label "p(HGNC:DUSP1)";
-   belv:hasConcept <entity/hgnc-approved-symbols/DUSP1> .
-
-<p_HGNC_DUSP1_decreases_a_CHEBI_phorbol_13-acetate_12-myristate_increases_p_HGNC_DUSP1> a belv:Statement;
-   rdfs:label "p(HGNC:DUSP1) -| (a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\") -> p(HGNC:DUSP1))";
-   belv:hasEvidence [ a belv:Evidence;
-     belv:evidenceFor <p_HGNC_DUSP1_decreases_a_CHEBI_phorbol_13-acetate_12-myristate_increases_p_HGNC_DUSP1>;
-     belv:hasAnnotation "Species:9606",
-       "CellLine:U-937";
-     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "Conditional expression of MKP-1 also abolished the induction of endogenous MKP-1 protein expression in response to PMA treatment."];
-   belv:hasObject <a_CHEBI_phorbol_13-acetate_12-myristate_increases_p_HGNC_DUSP1>;
-   belv:hasRelationship "decreases";
-   belv:hasSubject "p_HGNC_DUSP1" .
-
 <p_HGNC_ELK1> a belv:Term,
      belv:ProteinAbundance;
    rdfs:label "p(HGNC:ELK1)";
@@ -298,82 +66,62 @@ belv:microRNAAbundance rdfs:subClassOf belv:Abundance .
    rdfs:label "p(HGNC:MAPK1)";
    belv:hasConcept <entity/hgnc-approved-symbols/MAPK1> .
 
-<p_HGNC_MAPK14_pmod_P_310_#directlyIncreases_kin_p_SFAM_MAPK_p38_Family> a belv:Statement;
-   rdfs:label "p(HGNC:MAPK14,pmod(P,310)) => kin(p(SFAM:\"\"MAPK p38 Family\"\"))";
-   belv:hasEvidence [ a belv:Evidence;
-     belv:evidenceFor <p_HGNC_MAPK14_pmod_P_310_#directlyIncreases_kin_p_SFAM_MAPK_p38_Family>;
-     belv:hasAnnotation "Species:9606",
-       "CellLine:U-937";
-     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "These kinases are regulated by the reversible dual phosphorylation of conserved threonine and tyrosine residues."];
-   belv:hasObject "kin_p_SFAM_MAPK_p38_Family";
-   belv:hasRelationship "directlyIncreases";
-   belv:hasSubject "p_HGNC_MAPK14_pmod_P_310" .
+<p_HGNC_MAPK14_pmod_P_310> a belv:Term,
+     belv:ModifiedProteinAbundance;
+   rdfs:label "p(HGNC:MAPK14,pmod(P,310))";
+   belv:hasConcept <entity/hgnc-approved-symbols/MAPK14>;
+   belv:hasModificationPosition 310;
+   belv:hasModificationType belv:Phosphorylation .
 
-<p_HGNC_MAPK14_pmod_P_Y_#directlyIncreases_kin_p_SFAM_MAPK_p38_Family> a belv:Statement;
-   rdfs:label "p(HGNC:MAPK14,pmod(P,Y)) => kin(p(SFAM:\"\"MAPK p38 Family\"\"))";
-   belv:hasEvidence [ a belv:Evidence;
-     belv:evidenceFor <p_HGNC_MAPK14_pmod_P_Y_#directlyIncreases_kin_p_SFAM_MAPK_p38_Family>;
-     belv:hasAnnotation "Species:9606",
-       "CellLine:U-937";
-     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "These kinases are regulated by the reversible dual phosphorylation of conserved threonine and tyrosine residues."];
-   belv:hasObject "kin_p_SFAM_MAPK_p38_Family";
-   belv:hasRelationship "directlyIncreases";
-   belv:hasSubject "p_HGNC_MAPK14_pmod_P_Y" .
+<p_HGNC_MAPK14_pmod_P_Y> a belv:Term,
+     belv:ModifiedProteinAbundance;
+   rdfs:label "p(HGNC:MAPK14,pmod(P,Y))";
+   belv:hasConcept <entity/hgnc-approved-symbols/MAPK14>;
+   belv:hasModificationType belv:PhosphorylationTyrosine .
 
-<p_HGNC_MAPK1_pmod_P_T_310_#directlyIncreases_kin_p_HGNC_MAPK1> a belv:Statement;
-   rdfs:label "p(HGNC:MAPK1,pmod(P,T,310)) => kin(p(HGNC:MAPK1))";
-   belv:hasEvidence [ a belv:Evidence;
-     belv:evidenceFor <p_HGNC_MAPK1_pmod_P_T_310_#directlyIncreases_kin_p_HGNC_MAPK1>;
-     belv:hasAnnotation "Species:9606",
-       "CellLine:U-937";
-     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "These kinases are regulated by the reversible dual phosphorylation of conserved threonine and tyrosine residues."];
-   belv:hasObject "kin_p_HGNC_MAPK1";
-   belv:hasRelationship "directlyIncreases";
-   belv:hasSubject "p_HGNC_MAPK1_pmod_P_T_310" .
+<p_HGNC_MAPK1_pmod_P> a belv:Term,
+     belv:ModifiedProteinAbundance;
+   rdfs:label "p(HGNC:MAPK1,pmod(P))";
+   belv:hasConcept <entity/hgnc-approved-symbols/MAPK1>;
+   belv:hasModificationType belv:Phosphorylation .
 
-<p_HGNC_MAPK1_pmod_P_Y_10_#directlyIncreases_kin_p_HGNC_MAPK1> a belv:Statement;
-   rdfs:label "p(HGNC:MAPK1,pmod(P,Y,10)) => kin(p(HGNC:MAPK1))";
-   belv:hasEvidence [ a belv:Evidence;
-     belv:evidenceFor <p_HGNC_MAPK1_pmod_P_Y_10_#directlyIncreases_kin_p_HGNC_MAPK1>;
-     belv:hasAnnotation "Species:9606",
-       "CellLine:U-937";
-     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "These kinases are regulated by the reversible dual phosphorylation of conserved threonine and tyrosine residues."];
-   belv:hasObject "kin_p_HGNC_MAPK1";
-   belv:hasRelationship "directlyIncreases";
-   belv:hasSubject "p_HGNC_MAPK1_pmod_P_Y_10" .
+<p_HGNC_MAPK1_pmod_P_T_310> a belv:Term,
+     belv:ModifiedProteinAbundance;
+   rdfs:label "p(HGNC:MAPK1,pmod(P,T,310))";
+   belv:hasConcept <entity/hgnc-approved-symbols/MAPK1>;
+   belv:hasModificationPosition 310;
+   belv:hasModificationType belv:PhosphorylationThreonine .
+
+<p_HGNC_MAPK1_pmod_P_Y_10> a belv:Term,
+     belv:ModifiedProteinAbundance;
+   rdfs:label "p(HGNC:MAPK1,pmod(P,Y,10))";
+   belv:hasConcept <entity/hgnc-approved-symbols/MAPK1>;
+   belv:hasModificationPosition 10;
+   belv:hasModificationType belv:PhosphorylationTyrosine .
 
 <p_HGNC_MAPK8> a belv:Term,
      belv:ProteinAbundance;
    rdfs:label "p(HGNC:MAPK8)";
    belv:hasConcept <entity/hgnc-approved-symbols/MAPK8> .
 
-<p_HGNC_MAPK8_pmod_P_T_150_#directlyIncreases_kin_p_HGNC_MAPK8> a belv:Statement;
-   rdfs:label "p(HGNC:MAPK8,pmod(P,T,150)) => kin(p(HGNC:MAPK8))";
-   belv:hasEvidence [ a belv:Evidence;
-     belv:evidenceFor <p_HGNC_MAPK8_pmod_P_T_150_#directlyIncreases_kin_p_HGNC_MAPK8>;
-     belv:hasAnnotation "Species:9606",
-       "CellLine:U-937";
-     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "These kinases are regulated by the reversible dual phosphorylation of conserved threonine and tyrosine residues."];
-   belv:hasObject "kin_p_HGNC_MAPK8";
-   belv:hasRelationship "directlyIncreases";
-   belv:hasSubject "p_HGNC_MAPK8_pmod_P_T_150" .
+<p_HGNC_MAPK8_pmod_P> a belv:Term,
+     belv:ModifiedProteinAbundance;
+   rdfs:label "p(HGNC:MAPK8,pmod(P))";
+   belv:hasConcept <entity/hgnc-approved-symbols/MAPK8>;
+   belv:hasModificationType belv:Phosphorylation .
 
-<p_HGNC_MAPK8_pmod_P_Y_#directlyIncreases_kin_p_HGNC_MAPK8> a belv:Statement;
-   rdfs:label "p(HGNC:MAPK8,pmod(P,Y)) => kin(p(HGNC:MAPK8))";
-   belv:hasEvidence [ a belv:Evidence;
-     belv:evidenceFor <p_HGNC_MAPK8_pmod_P_Y_#directlyIncreases_kin_p_HGNC_MAPK8>;
-     belv:hasAnnotation "Species:9606",
-       "CellLine:U-937";
-     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "These kinases are regulated by the reversible dual phosphorylation of conserved threonine and tyrosine residues."];
-   belv:hasObject "kin_p_HGNC_MAPK8";
-   belv:hasRelationship "directlyIncreases";
-   belv:hasSubject "p_HGNC_MAPK8_pmod_P_Y" .
+<p_HGNC_MAPK8_pmod_P_T_150> a belv:Term,
+     belv:ModifiedProteinAbundance;
+   rdfs:label "p(HGNC:MAPK8,pmod(P,T,150))";
+   belv:hasConcept <entity/hgnc-approved-symbols/MAPK8>;
+   belv:hasModificationPosition 150;
+   belv:hasModificationType belv:PhosphorylationThreonine .
+
+<p_HGNC_MAPK8_pmod_P_Y> a belv:Term,
+     belv:ModifiedProteinAbundance;
+   rdfs:label "p(HGNC:MAPK8,pmod(P,Y))";
+   belv:hasConcept <entity/hgnc-approved-symbols/MAPK8>;
+   belv:hasModificationType belv:PhosphorylationTyrosine .
 
 <p_HGNC_MYC> a belv:Term,
      belv:ProteinAbundance;
@@ -385,6 +133,241 @@ belv:microRNAAbundance rdfs:subClassOf belv:Abundance .
    rdfs:label "p(SFAM:\"\"MAPK p38 Family\"\")";
    belv:hasConcept <entity/selventa-protein-families/MAPK_p38_Family> .
 
+<p_SFAM_MAPK_p38_Family_pmod_P> a belv:Term,
+     belv:ModifiedProteinAbundance;
+   rdfs:label "p(SFAM:\"\"MAPK p38 Family\"\",pmod(P))";
+   belv:hasConcept <entity/selventa-protein-families/MAPK_p38_Family>;
+   belv:hasModificationType belv:Phosphorylation .
+
+<tscript_p_HGNC_ELK1> a belv:Term,
+     belv:AbundanceActivity;
+   rdfs:label "tscript(p(HGNC:ELK1))";
+   belv:hasActivityType belv:Transcription;
+   belv:hasChild <p_HGNC_ELK1> .
+
+<tscript_p_HGNC_MYC> a belv:Term,
+     belv:AbundanceActivity;
+   rdfs:label "tscript(p(HGNC:MYC))";
+   belv:hasActivityType belv:Transcription;
+   belv:hasChild <p_HGNC_MYC> .
+
+belv:BiologicalProcess rdfs:subClassOf belv:Process .
+
+belv:Translocation rdfs:subClassOf belv:Transformation .
+
+<a_CHEBI_phorbol_13-acetate_12-myristate_#increases_kin_p_HGNC_MAPK1> a belv:Statement;
+   rdfs:label "a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\") -> kin(p(HGNC:MAPK1))";
+   belv:hasEvidence [ a belv:Evidence;
+     belv:evidenceFor <a_CHEBI_phorbol_13-acetate_12-myristate_#increases_kin_p_HGNC_MAPK1>;
+     belv:hasAnnotation "Species:9606",
+       "CellLine:U-937";
+     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
+     belv:hasEvidenceText "Phorbol ester tumor promoters, such as phorbol 12-myristate 13-acetate (PMA), are potent activators of extracellular signal-regulated kinase 2 (ERK2), stress-activated protein kinase (SAPK), and p38 mitogen-activated protein kinase (MAPK) in U937 human leukemic cells.";
+     belv:hasStatement <a_CHEBI_phorbol_13-acetate_12-myristate_#increases_kin_p_HGNC_MAPK1>];
+   belv:hasObject <kin_p_HGNC_MAPK1>;
+   belv:hasRelationship "increases";
+   belv:hasSubject <a_CHEBI_phorbol_13-acetate_12-myristate> .
+
+<a_CHEBI_phorbol_13-acetate_12-myristate_#increases_kin_p_HGNC_MAPK8> a belv:Statement;
+   rdfs:label "a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\") -> kin(p(HGNC:MAPK8))";
+   belv:hasEvidence [ a belv:Evidence;
+     belv:evidenceFor <a_CHEBI_phorbol_13-acetate_12-myristate_#increases_kin_p_HGNC_MAPK8>;
+     belv:hasAnnotation "Species:9606",
+       "CellLine:U-937";
+     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
+     belv:hasEvidenceText "Phorbol ester tumor promoters, such as phorbol 12-myristate 13-acetate (PMA), are potent activators of extracellular signal-regulated kinase 2 (ERK2), stress-activated protein kinase (SAPK), and p38 mitogen-activated protein kinase (MAPK) in U937 human leukemic cells.";
+     belv:hasStatement <a_CHEBI_phorbol_13-acetate_12-myristate_#increases_kin_p_HGNC_MAPK8>];
+   belv:hasObject <kin_p_HGNC_MAPK8>;
+   belv:hasRelationship "increases";
+   belv:hasSubject <a_CHEBI_phorbol_13-acetate_12-myristate> .
+
+<a_CHEBI_phorbol_13-acetate_12-myristate_#increases_kin_p_SFAM_MAPK_p38_Family> a belv:Statement;
+   rdfs:label "a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\") -> kin(p(SFAM:\"\"MAPK p38 Family\"\"))";
+   belv:hasEvidence [ a belv:Evidence;
+     belv:evidenceFor <a_CHEBI_phorbol_13-acetate_12-myristate_#increases_kin_p_SFAM_MAPK_p38_Family>;
+     belv:hasAnnotation "Species:9606",
+       "CellLine:U-937";
+     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
+     belv:hasEvidenceText "Phorbol ester tumor promoters, such as phorbol 12-myristate 13-acetate (PMA), are potent activators of extracellular signal-regulated kinase 2 (ERK2), stress-activated protein kinase (SAPK), and p38 mitogen-activated protein kinase (MAPK) in U937 human leukemic cells.";
+     belv:hasStatement <a_CHEBI_phorbol_13-acetate_12-myristate_#increases_kin_p_SFAM_MAPK_p38_Family>];
+   belv:hasObject <kin_p_SFAM_MAPK_p38_Family>;
+   belv:hasRelationship "increases";
+   belv:hasSubject <a_CHEBI_phorbol_13-acetate_12-myristate> .
+
+<a_CHEBI_phorbol_13-acetate_12-myristate_#increases_p_HGNC_DUSP1> a belv:Statement;
+   rdfs:label "a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\") -> p(HGNC:DUSP1)";
+   belv:hasEvidence [ a belv:Evidence;
+     belv:evidenceFor <a_CHEBI_phorbol_13-acetate_12-myristate_#increases_p_HGNC_DUSP1>;
+     belv:hasAnnotation "Species:9606",
+       "CellLine:U-937";
+     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
+     belv:hasEvidenceText "Here we demonstrate that PMA treatment induces MKP-1 protein expression in U937 cells, which is detectable within 30 min with maximal levels attained after 4 h.";
+     belv:hasStatement <a_CHEBI_phorbol_13-acetate_12-myristate_#increases_p_HGNC_DUSP1>];
+   belv:hasObject <p_HGNC_DUSP1>;
+   belv:hasRelationship "increases";
+   belv:hasSubject <a_CHEBI_phorbol_13-acetate_12-myristate> .
+
+<a_CHEBI_phorbol_13-acetate_12-myristate_#increases_tscript_p_HGNC_ELK1> a belv:Statement;
+   rdfs:label "a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\") -> tscript(p(HGNC:ELK1))";
+   belv:hasEvidence [ a belv:Evidence;
+     belv:evidenceFor <a_CHEBI_phorbol_13-acetate_12-myristate_#increases_tscript_p_HGNC_ELK1>;
+     belv:hasAnnotation "Species:9606",
+       "CellLine:U-937";
+     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
+     belv:hasEvidenceText "This differential substrate specificity of MKP-1 can be functionally extended to nuclear transcriptional events in that PMAinduced c-Jun transcriptional activity was more sensitive to inhibition by MKP-1 than either Elk-1 or c-Myc.";
+     belv:hasStatement <a_CHEBI_phorbol_13-acetate_12-myristate_#increases_tscript_p_HGNC_ELK1>];
+   belv:hasObject <tscript_p_HGNC_ELK1>;
+   belv:hasRelationship "increases";
+   belv:hasSubject <a_CHEBI_phorbol_13-acetate_12-myristate> .
+
+<a_CHEBI_phorbol_13-acetate_12-myristate_#increases_tscript_p_HGNC_JUN> a belv:Statement;
+   rdfs:label "a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\") -> tscript(p(HGNC:JUN))";
+   belv:hasEvidence [ a belv:Evidence;
+     belv:evidenceFor <a_CHEBI_phorbol_13-acetate_12-myristate_#increases_tscript_p_HGNC_JUN>;
+     belv:hasAnnotation "Species:9606",
+       "CellLine:U-937";
+     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
+     belv:hasEvidenceText "This differential substrate specificity of MKP-1 can be functionally extended to nuclear transcriptional events in that PMAinduced c-Jun transcriptional activity was more sensitive to inhibition by MKP-1 than either Elk-1 or c-Myc.";
+     belv:hasStatement <a_CHEBI_phorbol_13-acetate_12-myristate_#increases_tscript_p_HGNC_JUN>];
+   belv:hasObject <tscript_p_HGNC_JUN>;
+   belv:hasRelationship "increases";
+   belv:hasSubject <a_CHEBI_phorbol_13-acetate_12-myristate> .
+
+<a_CHEBI_phorbol_13-acetate_12-myristate_#increases_tscript_p_HGNC_MYC> a belv:Statement;
+   rdfs:label "a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\") -> tscript(p(HGNC:MYC))";
+   belv:hasEvidence [ a belv:Evidence;
+     belv:evidenceFor <a_CHEBI_phorbol_13-acetate_12-myristate_#increases_tscript_p_HGNC_MYC>;
+     belv:hasAnnotation "Species:9606",
+       "CellLine:U-937";
+     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
+     belv:hasEvidenceText "This differential substrate specificity of MKP-1 can be functionally extended to nuclear transcriptional events in that PMAinduced c-Jun transcriptional activity was more sensitive to inhibition by MKP-1 than either Elk-1 or c-Myc.";
+     belv:hasStatement <a_CHEBI_phorbol_13-acetate_12-myristate_#increases_tscript_p_HGNC_MYC>];
+   belv:hasObject <tscript_p_HGNC_MYC>;
+   belv:hasRelationship "increases";
+   belv:hasSubject <a_CHEBI_phorbol_13-acetate_12-myristate> .
+
+<a_CHEBI_phorbol_13-acetate_12-myristate_increases_p_HGNC_DUSP1> a belv:Statement;
+   belv:hasObject <p_HGNC_DUSP1>;
+   belv:hasRelationship "increases";
+   belv:hasSubject <a_CHEBI_phorbol_13-acetate_12-myristate> .
+
+<kin_p_HGNC_MAPK1_#increases_p_HGNC_DUSP1> a belv:Statement;
+   rdfs:label "kin(p(HGNC:MAPK1)) -> p(HGNC:DUSP1)";
+   belv:hasEvidence [ a belv:Evidence;
+     belv:evidenceFor <kin_p_HGNC_MAPK1_#increases_p_HGNC_DUSP1>;
+     belv:hasAnnotation "Species:9606",
+       "CellLine:U-937";
+     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
+     belv:hasEvidenceText "This negative feedback regulatory mechanism is likely due to MKP-1-mediated inhibition of ERK2, as studies utilizing the MEK1/2 inhibitor PD98059 suggest that ERK2 activation is required for PMA-induced MKP-1 expression.";
+     belv:hasStatement <kin_p_HGNC_MAPK1_#increases_p_HGNC_DUSP1>];
+   belv:hasObject <p_HGNC_DUSP1>;
+   belv:hasRelationship "increases";
+   belv:hasSubject <kin_p_HGNC_MAPK1> .
+
+<kin_p_HGNC_MAPK1_increases_a_CHEBI_phorbol_13-acetate_12-myristate_increases_p_HGNC_DUSP1> a belv:Statement;
+   rdfs:label "kin(p(HGNC:MAPK1)) -> (a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\") -> p(HGNC:DUSP1))";
+   belv:hasEvidence [ a belv:Evidence;
+     belv:evidenceFor <kin_p_HGNC_MAPK1_increases_a_CHEBI_phorbol_13-acetate_12-myristate_increases_p_HGNC_DUSP1>;
+     belv:hasAnnotation "Species:9606",
+       "CellLine:U-937";
+     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
+     belv:hasEvidenceText "This negative feedback regulatory mechanism is likely due to MKP-1-mediated inhibition of ERK2, as studies utilizing the MEK1/2 inhibitor PD98059 suggest that ERK2 activation is required for PMA-induced MKP-1 expression.";
+     belv:hasStatement <kin_p_HGNC_MAPK1_increases_a_CHEBI_phorbol_13-acetate_12-myristate_increases_p_HGNC_DUSP1>];
+   belv:hasObject <a_CHEBI_phorbol_13-acetate_12-myristate_increases_p_HGNC_DUSP1>;
+   belv:hasRelationship "increases";
+   belv:hasSubject <kin_p_HGNC_MAPK1> .
+
+<p_HGNC_DUSP1_decreases_a_CHEBI_phorbol_13-acetate_12-myristate_increases_p_HGNC_DUSP1> a belv:Statement;
+   rdfs:label "p(HGNC:DUSP1) -| (a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\") -> p(HGNC:DUSP1))";
+   belv:hasEvidence [ a belv:Evidence;
+     belv:evidenceFor <p_HGNC_DUSP1_decreases_a_CHEBI_phorbol_13-acetate_12-myristate_increases_p_HGNC_DUSP1>;
+     belv:hasAnnotation "Species:9606",
+       "CellLine:U-937";
+     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
+     belv:hasEvidenceText "Conditional expression of MKP-1 also abolished the induction of endogenous MKP-1 protein expression in response to PMA treatment.";
+     belv:hasStatement <p_HGNC_DUSP1_decreases_a_CHEBI_phorbol_13-acetate_12-myristate_increases_p_HGNC_DUSP1>];
+   belv:hasObject <a_CHEBI_phorbol_13-acetate_12-myristate_increases_p_HGNC_DUSP1>;
+   belv:hasRelationship "decreases";
+   belv:hasSubject <p_HGNC_DUSP1> .
+
+<p_HGNC_MAPK14_pmod_P_310_#directlyIncreases_kin_p_SFAM_MAPK_p38_Family> a belv:Statement;
+   rdfs:label "p(HGNC:MAPK14,pmod(P,310)) => kin(p(SFAM:\"\"MAPK p38 Family\"\"))";
+   belv:hasEvidence [ a belv:Evidence;
+     belv:evidenceFor <p_HGNC_MAPK14_pmod_P_310_#directlyIncreases_kin_p_SFAM_MAPK_p38_Family>;
+     belv:hasAnnotation "Species:9606",
+       "CellLine:U-937";
+     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
+     belv:hasEvidenceText "These kinases are regulated by the reversible dual phosphorylation of conserved threonine and tyrosine residues.";
+     belv:hasStatement <p_HGNC_MAPK14_pmod_P_310_#directlyIncreases_kin_p_SFAM_MAPK_p38_Family>];
+   belv:hasObject <kin_p_SFAM_MAPK_p38_Family>;
+   belv:hasRelationship "directlyIncreases";
+   belv:hasSubject <p_HGNC_MAPK14_pmod_P_310> .
+
+<p_HGNC_MAPK14_pmod_P_Y_#directlyIncreases_kin_p_SFAM_MAPK_p38_Family> a belv:Statement;
+   rdfs:label "p(HGNC:MAPK14,pmod(P,Y)) => kin(p(SFAM:\"\"MAPK p38 Family\"\"))";
+   belv:hasEvidence [ a belv:Evidence;
+     belv:evidenceFor <p_HGNC_MAPK14_pmod_P_Y_#directlyIncreases_kin_p_SFAM_MAPK_p38_Family>;
+     belv:hasAnnotation "Species:9606",
+       "CellLine:U-937";
+     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
+     belv:hasEvidenceText "These kinases are regulated by the reversible dual phosphorylation of conserved threonine and tyrosine residues.";
+     belv:hasStatement <p_HGNC_MAPK14_pmod_P_Y_#directlyIncreases_kin_p_SFAM_MAPK_p38_Family>];
+   belv:hasObject <kin_p_SFAM_MAPK_p38_Family>;
+   belv:hasRelationship "directlyIncreases";
+   belv:hasSubject <p_HGNC_MAPK14_pmod_P_Y> .
+
+<p_HGNC_MAPK1_pmod_P_T_310_#directlyIncreases_kin_p_HGNC_MAPK1> a belv:Statement;
+   rdfs:label "p(HGNC:MAPK1,pmod(P,T,310)) => kin(p(HGNC:MAPK1))";
+   belv:hasEvidence [ a belv:Evidence;
+     belv:evidenceFor <p_HGNC_MAPK1_pmod_P_T_310_#directlyIncreases_kin_p_HGNC_MAPK1>;
+     belv:hasAnnotation "Species:9606",
+       "CellLine:U-937";
+     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
+     belv:hasEvidenceText "These kinases are regulated by the reversible dual phosphorylation of conserved threonine and tyrosine residues.";
+     belv:hasStatement <p_HGNC_MAPK1_pmod_P_T_310_#directlyIncreases_kin_p_HGNC_MAPK1>];
+   belv:hasObject <kin_p_HGNC_MAPK1>;
+   belv:hasRelationship "directlyIncreases";
+   belv:hasSubject <p_HGNC_MAPK1_pmod_P_T_310> .
+
+<p_HGNC_MAPK1_pmod_P_Y_10_#directlyIncreases_kin_p_HGNC_MAPK1> a belv:Statement;
+   rdfs:label "p(HGNC:MAPK1,pmod(P,Y,10)) => kin(p(HGNC:MAPK1))";
+   belv:hasEvidence [ a belv:Evidence;
+     belv:evidenceFor <p_HGNC_MAPK1_pmod_P_Y_10_#directlyIncreases_kin_p_HGNC_MAPK1>;
+     belv:hasAnnotation "Species:9606",
+       "CellLine:U-937";
+     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
+     belv:hasEvidenceText "These kinases are regulated by the reversible dual phosphorylation of conserved threonine and tyrosine residues.";
+     belv:hasStatement <p_HGNC_MAPK1_pmod_P_Y_10_#directlyIncreases_kin_p_HGNC_MAPK1>];
+   belv:hasObject <kin_p_HGNC_MAPK1>;
+   belv:hasRelationship "directlyIncreases";
+   belv:hasSubject <p_HGNC_MAPK1_pmod_P_Y_10> .
+
+<p_HGNC_MAPK8_pmod_P_T_150_#directlyIncreases_kin_p_HGNC_MAPK8> a belv:Statement;
+   rdfs:label "p(HGNC:MAPK8,pmod(P,T,150)) => kin(p(HGNC:MAPK8))";
+   belv:hasEvidence [ a belv:Evidence;
+     belv:evidenceFor <p_HGNC_MAPK8_pmod_P_T_150_#directlyIncreases_kin_p_HGNC_MAPK8>;
+     belv:hasAnnotation "Species:9606",
+       "CellLine:U-937";
+     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
+     belv:hasEvidenceText "These kinases are regulated by the reversible dual phosphorylation of conserved threonine and tyrosine residues.";
+     belv:hasStatement <p_HGNC_MAPK8_pmod_P_T_150_#directlyIncreases_kin_p_HGNC_MAPK8>];
+   belv:hasObject <kin_p_HGNC_MAPK8>;
+   belv:hasRelationship "directlyIncreases";
+   belv:hasSubject <p_HGNC_MAPK8_pmod_P_T_150> .
+
+<p_HGNC_MAPK8_pmod_P_Y_#directlyIncreases_kin_p_HGNC_MAPK8> a belv:Statement;
+   rdfs:label "p(HGNC:MAPK8,pmod(P,Y)) => kin(p(HGNC:MAPK8))";
+   belv:hasEvidence [ a belv:Evidence;
+     belv:evidenceFor <p_HGNC_MAPK8_pmod_P_Y_#directlyIncreases_kin_p_HGNC_MAPK8>;
+     belv:hasAnnotation "Species:9606",
+       "CellLine:U-937";
+     belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
+     belv:hasEvidenceText "These kinases are regulated by the reversible dual phosphorylation of conserved threonine and tyrosine residues.";
+     belv:hasStatement <p_HGNC_MAPK8_pmod_P_Y_#directlyIncreases_kin_p_HGNC_MAPK8>];
+   belv:hasObject <kin_p_HGNC_MAPK8>;
+   belv:hasRelationship "directlyIncreases";
+   belv:hasSubject <p_HGNC_MAPK8_pmod_P_Y> .
+
 <phos_p_HGNC_DUSP1_#decreases_tscript_p_HGNC_JUN> a belv:Statement;
    rdfs:label "phos(p(HGNC:DUSP1)) -| tscript(p(HGNC:JUN))";
    belv:hasEvidence [ a belv:Evidence;
@@ -392,10 +375,11 @@ belv:microRNAAbundance rdfs:subClassOf belv:Abundance .
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
      belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "This differential substrate specificity of MKP-1 can be functionally extended to nuclear transcriptional events in that PMAinduced c-Jun transcriptional activity was more sensitive to inhibition by MKP-1 than either Elk-1 or c-Myc."];
-   belv:hasObject "tscript_p_HGNC_JUN";
+     belv:hasEvidenceText "This differential substrate specificity of MKP-1 can be functionally extended to nuclear transcriptional events in that PMAinduced c-Jun transcriptional activity was more sensitive to inhibition by MKP-1 than either Elk-1 or c-Myc.";
+     belv:hasStatement <phos_p_HGNC_DUSP1_#decreases_tscript_p_HGNC_JUN>];
+   belv:hasObject <tscript_p_HGNC_JUN>;
    belv:hasRelationship "decreases";
-   belv:hasSubject "phos_p_HGNC_DUSP1" .
+   belv:hasSubject <phos_p_HGNC_DUSP1> .
 
 <phos_p_HGNC_DUSP1_#directlyDecreases_kin_p_HGNC_MAPK1> a belv:Statement;
    rdfs:label "phos(p(HGNC:DUSP1)) =| kin(p(HGNC:MAPK1))";
@@ -404,10 +388,11 @@ belv:microRNAAbundance rdfs:subClassOf belv:Abundance .
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
      belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "The dual specificity protein phosphatase MAPK phosphatase-1(MKP-1) has been shown to dephosphorylate and inactivate ERK2, SAPK, and p38 MAPK in transient transfection studies."];
-   belv:hasObject "kin_p_HGNC_MAPK1";
+     belv:hasEvidenceText "The dual specificity protein phosphatase MAPK phosphatase-1(MKP-1) has been shown to dephosphorylate and inactivate ERK2, SAPK, and p38 MAPK in transient transfection studies.";
+     belv:hasStatement <phos_p_HGNC_DUSP1_#directlyDecreases_kin_p_HGNC_MAPK1>];
+   belv:hasObject <kin_p_HGNC_MAPK1>;
    belv:hasRelationship "directlyDecreases";
-   belv:hasSubject "phos_p_HGNC_DUSP1" .
+   belv:hasSubject <phos_p_HGNC_DUSP1> .
 
 <phos_p_HGNC_DUSP1_#directlyDecreases_kin_p_HGNC_MAPK8> a belv:Statement;
    rdfs:label "phos(p(HGNC:DUSP1)) =| kin(p(HGNC:MAPK8))";
@@ -416,10 +401,11 @@ belv:microRNAAbundance rdfs:subClassOf belv:Abundance .
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
      belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "The dual specificity protein phosphatase MAPK phosphatase-1(MKP-1) has been shown to dephosphorylate and inactivate ERK2, SAPK, and p38 MAPK in transient transfection studies."];
-   belv:hasObject "kin_p_HGNC_MAPK8";
+     belv:hasEvidenceText "The dual specificity protein phosphatase MAPK phosphatase-1(MKP-1) has been shown to dephosphorylate and inactivate ERK2, SAPK, and p38 MAPK in transient transfection studies.";
+     belv:hasStatement <phos_p_HGNC_DUSP1_#directlyDecreases_kin_p_HGNC_MAPK8>];
+   belv:hasObject <kin_p_HGNC_MAPK8>;
    belv:hasRelationship "directlyDecreases";
-   belv:hasSubject "phos_p_HGNC_DUSP1" .
+   belv:hasSubject <phos_p_HGNC_DUSP1> .
 
 <phos_p_HGNC_DUSP1_#directlyDecreases_kin_p_SFAM_MAPK_p38_Family> a belv:Statement;
    rdfs:label "phos(p(HGNC:DUSP1)) =| kin(p(SFAM:\"\"MAPK p38 Family\"\"))";
@@ -428,10 +414,11 @@ belv:microRNAAbundance rdfs:subClassOf belv:Abundance .
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
      belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "The dual specificity protein phosphatase MAPK phosphatase-1(MKP-1) has been shown to dephosphorylate and inactivate ERK2, SAPK, and p38 MAPK in transient transfection studies."];
-   belv:hasObject "kin_p_SFAM_MAPK_p38_Family";
+     belv:hasEvidenceText "The dual specificity protein phosphatase MAPK phosphatase-1(MKP-1) has been shown to dephosphorylate and inactivate ERK2, SAPK, and p38 MAPK in transient transfection studies.";
+     belv:hasStatement <phos_p_HGNC_DUSP1_#directlyDecreases_kin_p_SFAM_MAPK_p38_Family>];
+   belv:hasObject <kin_p_SFAM_MAPK_p38_Family>;
    belv:hasRelationship "directlyDecreases";
-   belv:hasSubject "phos_p_HGNC_DUSP1" .
+   belv:hasSubject <phos_p_HGNC_DUSP1> .
 
 <phos_p_HGNC_DUSP1_#directlyDecreases_p_HGNC_MAPK1_pmod_P> a belv:Statement;
    rdfs:label "phos(p(HGNC:DUSP1)) =| p(HGNC:MAPK1,pmod(P))";
@@ -440,10 +427,11 @@ belv:microRNAAbundance rdfs:subClassOf belv:Abundance .
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
      belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "The dual specificity protein phosphatase MAPK phosphatase-1(MKP-1) has been shown to dephosphorylate and inactivate ERK2, SAPK, and p38 MAPK in transient transfection studies."];
-   belv:hasObject "p_HGNC_MAPK1_pmod_P";
+     belv:hasEvidenceText "The dual specificity protein phosphatase MAPK phosphatase-1(MKP-1) has been shown to dephosphorylate and inactivate ERK2, SAPK, and p38 MAPK in transient transfection studies.";
+     belv:hasStatement <phos_p_HGNC_DUSP1_#directlyDecreases_p_HGNC_MAPK1_pmod_P>];
+   belv:hasObject <p_HGNC_MAPK1_pmod_P>;
    belv:hasRelationship "directlyDecreases";
-   belv:hasSubject "phos_p_HGNC_DUSP1" .
+   belv:hasSubject <phos_p_HGNC_DUSP1> .
 
 <phos_p_HGNC_DUSP1_#directlyDecreases_p_HGNC_MAPK8_pmod_P> a belv:Statement;
    rdfs:label "phos(p(HGNC:DUSP1)) =| p(HGNC:MAPK8,pmod(P))";
@@ -452,10 +440,11 @@ belv:microRNAAbundance rdfs:subClassOf belv:Abundance .
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
      belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "The dual specificity protein phosphatase MAPK phosphatase-1(MKP-1) has been shown to dephosphorylate and inactivate ERK2, SAPK, and p38 MAPK in transient transfection studies."];
-   belv:hasObject "p_HGNC_MAPK8_pmod_P";
+     belv:hasEvidenceText "The dual specificity protein phosphatase MAPK phosphatase-1(MKP-1) has been shown to dephosphorylate and inactivate ERK2, SAPK, and p38 MAPK in transient transfection studies.";
+     belv:hasStatement <phos_p_HGNC_DUSP1_#directlyDecreases_p_HGNC_MAPK8_pmod_P>];
+   belv:hasObject <p_HGNC_MAPK8_pmod_P>;
    belv:hasRelationship "directlyDecreases";
-   belv:hasSubject "phos_p_HGNC_DUSP1" .
+   belv:hasSubject <phos_p_HGNC_DUSP1> .
 
 <phos_p_HGNC_DUSP1_#directlyDecreases_p_SFAM_MAPK_p38_Family_pmod_P> a belv:Statement;
    rdfs:label "phos(p(HGNC:DUSP1)) =| p(SFAM:\"\"MAPK p38 Family\"\",pmod(P))";
@@ -464,65 +453,73 @@ belv:microRNAAbundance rdfs:subClassOf belv:Abundance .
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
      belv:hasCitation <http://bio2rdf.org/pubmed:9202001>;
-     belv:hasEvidenceText "The dual specificity protein phosphatase MAPK phosphatase-1(MKP-1) has been shown to dephosphorylate and inactivate ERK2, SAPK, and p38 MAPK in transient transfection studies."];
-   belv:hasObject "p_SFAM_MAPK_p38_Family_pmod_P";
+     belv:hasEvidenceText "The dual specificity protein phosphatase MAPK phosphatase-1(MKP-1) has been shown to dephosphorylate and inactivate ERK2, SAPK, and p38 MAPK in transient transfection studies.";
+     belv:hasStatement <phos_p_HGNC_DUSP1_#directlyDecreases_p_SFAM_MAPK_p38_Family_pmod_P>];
+   belv:hasObject <p_SFAM_MAPK_p38_Family_pmod_P>;
    belv:hasRelationship "directlyDecreases";
-   belv:hasSubject "phos_p_HGNC_DUSP1" .
+   belv:hasSubject <phos_p_HGNC_DUSP1> .
 
-<pmod_P_310> a belv:Term,
-     belv:Abundance;
-   rdfs:label "pmod(P,310)" .
-
-<pmod_P_T_150> a belv:Term,
-     belv:Abundance;
-   rdfs:label "pmod(P,T,150)" .
-
-<pmod_P_T_310> a belv:Term,
-     belv:Abundance;
-   rdfs:label "pmod(P,T,310)" .
-
-<pmod_P_Y_10> a belv:Term,
-     belv:Abundance;
-   rdfs:label "pmod(P,Y,10)" .
-
-belv:BiologicalProcess rdfs:subClassOf belv:Process .
-
-belv:Translocation rdfs:subClassOf belv:Transformation .
-
-<a_CHEBI_phorbol_13-acetate_12-myristate_increases_p_HGNC_DUSP1> a belv:Statement;
-   belv:hasObject "p_HGNC_DUSP1";
-   belv:hasRelationship "increases";
-   belv:hasSubject "a_CHEBI_phorbol_13-acetate_12-myristate" .
-
-<pmod_P_Y> a belv:Term,
-     belv:Abundance;
-   rdfs:label "pmod(P,Y)" .
-
-belv:PhosphorylationTyrosine rdfs:subClassOf belv:Phosphorylation .
-
-<pmod_P> a belv:Term,
-     belv:Abundance;
-   rdfs:label "pmod(P)" .
+<tscript_p_HGNC_JUN> a belv:Term,
+     belv:AbundanceActivity;
+   rdfs:label "tscript(p(HGNC:JUN))";
+   belv:hasActivityType belv:Transcription;
+   belv:hasChild <p_HGNC_JUN> .
 
 belv:PhosphorylationThreonine rdfs:subClassOf belv:Phosphorylation .
 
+belv:PhosphorylationTyrosine rdfs:subClassOf belv:Phosphorylation .
+
 belv:Transformation rdfs:subClassOf belv:Process .
 
+<kin_p_HGNC_MAPK8> a belv:Term,
+     belv:AbundanceActivity;
+   rdfs:label "kin(p(HGNC:MAPK8))";
+   belv:hasActivityType belv:Kinase;
+   belv:hasChild <p_HGNC_MAPK8> .
+
+<kin_p_SFAM_MAPK_p38_Family> a belv:Term,
+     belv:AbundanceActivity;
+   rdfs:label "kin(p(SFAM:\"\"MAPK p38 Family\"\"))";
+   belv:hasActivityType belv:Kinase;
+   belv:hasChild <p_SFAM_MAPK_p38_Family> .
+
 belv:hasModificationPosition a rdf:Property .
+
+<p_HGNC_DUSP1> a belv:Term,
+     belv:ProteinAbundance;
+   rdfs:label "p(HGNC:DUSP1)";
+   belv:hasConcept <entity/hgnc-approved-symbols/DUSP1> .
+
+<kin_p_HGNC_MAPK1> a belv:Term,
+     belv:AbundanceActivity;
+   rdfs:label "kin(p(HGNC:MAPK1))";
+   belv:hasActivityType belv:Kinase;
+   belv:hasChild <p_HGNC_MAPK1> .
+
+<phos_p_HGNC_DUSP1> a belv:Term,
+     belv:AbundanceActivity;
+   rdfs:label "phos(p(HGNC:DUSP1))";
+   belv:hasActivityType belv:Phosphatase;
+   belv:hasChild <p_HGNC_DUSP1> .
 
 belv:AbundanceActivity rdfs:subClassOf belv:Process .
 
 belv:Phosphorylation rdfs:subClassOf belv:Modification .
 
+<a_CHEBI_phorbol_13-acetate_12-myristate> a belv:Term,
+     belv:Abundance;
+   rdfs:label "a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\")";
+   belv:hasConcept <entity/chebi-names/phorbol_13-acetate_12-myristate> .
+
 belv:ModifiedProteinAbundance rdfs:subClassOf belv:ProteinAbundance .
 
 belv:ProteinAbundance rdfs:subClassOf belv:Abundance .
 
+belv:hasChild a rdf:Property .
+
 belv:hasModificationType a rdf:Property .
 
 belv:hasConcept a rdf:Property .
-
-belv:hasChild a rdf:Property .
 
 belv:hasObject rdfs:domain belv:Statement;
    rdfs:range belv:Term;
