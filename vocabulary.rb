@@ -57,7 +57,7 @@ module BELRDF
     tport: BELV.AbundanceActivity
   }
   RELATIONSHIP_TYPE = {
-    # 'actsIn' =>                 'actsIn',  XXX captured by belv:hasChild
+    # 'actsIn' =>                 'actsIn',  XXX captured by BELV.hasChild]
       'analogous'              => 'analogous',
       'association'            => 'association',
       '--'                     => 'association',
@@ -92,6 +92,28 @@ module BELRDF
       '>>'                     => 'translatedTo',
       'translatedTo'           => 'translatedTo',
       'translocates'           => 'translocates'
+  }
+  RELATIONSHIP_CLASSIFICATION = {
+      :'association'            => BELV.correlativeRelationship,
+      :'--'                     => BELV.correlativeRelationship,
+      :'biomarkerFor'           => BELV.biomarkerFor,
+      :'causesNoChange'         => BELV.causesNoChange,
+      :'decreases'              => BELV.decreases,
+      :'-|'                     => BELV.decreases,
+      :'directlyDecreases'      => BELV.directlyDecreases,
+      :'=|'                     => BELV.directlyDecreases,
+      :'directlyIncreases'      => BELV.directlyIncreases,
+      :'=>'                     => BELV.directlyIncreases,
+      :'hasComponent'           => BELV.hasComponent,
+      :'hasMember'              => BELV.hasMember,
+      :'increases'              => BELV.increases,
+      :'->'                     => BELV.increases,
+      :'isA'                    => BELV.isA,
+      :'negativeCorrelation'    => BELV.negativeCorrelation,
+      :'positiveCorrelation'    => BELV.positiveCorrelation,
+      :'prognosticBiomarkerFor' => BELV.prognosticBiomarkerFor,
+      :'rateLimitingStepOf'     => BELV.rateLimitingStepOf,
+      :'subProcessOf'           => BELV.subProcessOf
   }
   ACTIVITY_TYPE = {
     cat: BELV.Catalytic,
@@ -137,7 +159,13 @@ module BELRDF
       id = BELR["#{strip_prefix(sub_id)}_#{rel}_#{strip_prefix(obj_id)}"]
       writer << [id, BELV.hasSubject, sub_id]
       writer << [id, BELV.hasObject, obj_id]
-      writer << [id, BELV.hasRelationship, RELATIONSHIP_TYPE[rel.to_s]]
+
+      if RELATIONSHIP_CLASSIFICATION.include? statement.rel
+        relclass = RELATIONSHIP_CLASSIFICATION[statement.rel]
+        writer << [id, BELV.hasRelationship, relclass]
+      else
+        writer << [id, BELV.hasRelationship, RELATIONSHIP_TYPE[rel]]
+      end
     when statement.nested?
       sub_id  = for_term(statement.subject, writer)
       nsub_id = for_term(statement.object.subject, writer)
@@ -147,17 +175,31 @@ module BELRDF
       id = BELR["#{strip_prefix(sub_id)}_#{rel}_#{strip_prefix(nsub_id)}_#{nrel}_#{strip_prefix(nobj_id)}"]
       nid = BELR["#{strip_prefix(nsub_id)}_#{nrel}_#{strip_prefix(nobj_id)}"]
 
+      # inner
       writer << [nid, RDF.type, BELV.Statement]
+      writer << [nid, RDF::RDFS.label, statement.object.to_s]
       writer << [nid, BELV.hasSubject, nsub_id]
       writer << [nid, BELV.hasObject, nobj_id]
-      writer << [nid, BELV.hasRelationship, RELATIONSHIP_TYPE[nrel.to_s]]
+      if RELATIONSHIP_CLASSIFICATION.include? statement.object.rel
+        nrelclass = RELATIONSHIP_CLASSIFICATION[statement.object.rel]
+        writer << [nid, BELV.hasRelationship, nrelclass]
+      else
+        writer << [nid, BELV.hasRelationship, RELATIONSHIP_TYPE[nrel]]
+      end
+
+      # outer
+      writer << [id, RDF.type, BELV.Statement]
+      writer << [id, RDF::RDFS.label, statement.to_s]
       writer << [id, BELV.hasSubject, sub_id]
       writer << [id, BELV.hasObject, nid]
-      writer << [id, BELV.hasRelationship, RELATIONSHIP_TYPE[rel.to_s]]
+      if RELATIONSHIP_CLASSIFICATION.include? statement.rel
+        relclass = RELATIONSHIP_CLASSIFICATION[statement.rel]
+        writer << [id, BELV.hasRelationship, relclass]
+      else
+        writer << [id, BELV.hasRelationship, RELATIONSHIP_TYPE[rel]]
+      end
     end
 
-    writer << [id, RDF.type, BELV.Statement]
-    writer << [id, RDF::RDFS.label, statement.to_s]
 
     # evidence
     evidence_bnode = RDF::Node.new
@@ -218,7 +260,7 @@ module BELRDF
         writer << [id, BELV.hasModificationPosition, last.to_i]
       end
 
-      # belv:hasConcept
+      # BELV.hasConcept]
       term.args.find_all{|x| x.is_a? BEL::Script::Parameter}.each do |param|
         if param.ns and const_get param.ns
           ev = const_get param.ns
@@ -230,7 +272,7 @@ module BELRDF
       return id
     end
 
-    # belv:hasConcept
+    # BELV.hasConcept]
     term.args.find_all{|x| x.is_a? BEL::Script::Parameter}.each do |param|
       if param.ns and const_get param.ns
         ev = const_get param.ns
@@ -239,7 +281,7 @@ module BELRDF
       end
     end
 
-    # belv:hasChild
+    # BELV.hasChild]
     term.args.find_all{|x| x.is_a? BEL::Script::Term}.each do |child|
       child_id = self.for_term(child, writer)
       writer << [id, BELV.hasChild, child_id]
@@ -282,12 +324,19 @@ module BELRDF
       [BELV.hasObject, RDF::RDFS.range, BELV.Term],
       [BELV.hasObject, RDF::RDFS.domain, BELV.Statement],
       [BELV.hasRelationship, RDF.type, RDF.Property],
+      [BELV.hasActivityType, RDF.type, RDF.Property],
       [BELV.hasModificationPosition, RDF.type, RDF.Property],
       [BELV.hasModificationType, RDF.type, RDF.Property],
+      [BELV.hasEvidence, RDF.type, RDF.Property],
+      [BELV.hasStatement, RDF.type, RDF.Property],
+      [BELV.hasAnnotation, RDF.type, RDF.Property],
+      [BELV.hasCitation, RDF.type, RDF.Property],
+      [BELV.hasEvidenceText, RDF.type, RDF.Property],
 
       # Class
       [BELV.Term, RDF.type, RDF::RDFS.Class],
       [BELV.Statement, RDF.type, RDF::RDFS.Class],
+      # function hierarchy
       [BELV.Abundance, RDF.type, RDF::RDFS.Class],
       [BELV.Process, RDF.type, RDF::RDFS.Class],
       [BELV.ProteinAbundance, RDF::RDFS.subClassOf, BELV.Abundance],
@@ -306,6 +355,7 @@ module BELRDF
       [BELV.CellSecretion, RDF::RDFS.subClassOf, BELV.Translocation],
       [BELV.Degradation, RDF::RDFS.subClassOf, BELV.Transformation],
       [BELV.AbundanceActivity, RDF::RDFS.subClassOf, BELV.Process],
+      # modification types
       [BELV.Acetylation, RDF::RDFS.subClassOf, BELV.Modification],
       [BELV.Farnesylation, RDF::RDFS.subClassOf, BELV.Modification],
       [BELV.Glycosylation, RDF::RDFS.subClassOf, BELV.Modification],
@@ -317,7 +367,41 @@ module BELRDF
       [BELV.Ubiquitination, RDF::RDFS.subClassOf, BELV.Modification],
       [BELV.PhosphorylationSerine, RDF::RDFS.subClassOf, BELV.Phosphorylation],
       [BELV.PhosphorylationTyrosine, RDF::RDFS.subClassOf, BELV.Phosphorylation],
-      [BELV.PhosphorylationThreonine, RDF::RDFS.subClassOf, BELV.Phosphorylation]
+      [BELV.PhosphorylationThreonine, RDF::RDFS.subClassOf, BELV.Phosphorylation],
+      # relationships
+      [BELV.positiveRelationship, RDF::RDFS.subClassOf, BELV.relationship],
+      [BELV.negativeRelationship, RDF::RDFS.subClassOf, BELV.relationship],
+      [BELV.causalRelationship, RDF::RDFS.subClassOf, BELV.relationship],
+      [BELV.directRelationship, RDF::RDFS.subClassOf, BELV.relationship],
+      [BELV.membershipRelationship, RDF::RDFS.subClassOf, BELV.relationship],
+      [BELV.correlativeRelationship, RDF::RDFS.subClassOf, BELV.relationship],
+      [BELV.biomarkerFor, RDF::RDFS.subClassOf, BELV.relationship],
+      [BELV.causesNoChange, RDF::RDFS.subClassOf, BELV.causalRelationship],
+      [BELV.increases, RDF::RDFS.subClassOf, BELV.causalRelationship],
+      [BELV.increases, RDF::RDFS.subClassOf, BELV.positiveRelationship],
+      [BELV.decreases, RDF::RDFS.subClassOf, BELV.causalRelationship],
+      [BELV.decreases, RDF::RDFS.subClassOf, BELV.negativeRelationship],
+      [BELV.directlyIncreases, RDF::RDFS.subClassOf, BELV.causalRelationship],
+      [BELV.directlyIncreases, RDF::RDFS.subClassOf, BELV.positiveRelationship],
+      [BELV.directlyIncreases, RDF::RDFS.subClassOf, BELV.directRelationship],
+      [BELV.directlyIncreases, RDF::RDFS.subClassOf, BELV.increases],
+      [BELV.directlyDecreases, RDF::RDFS.subClassOf, BELV.causalRelationship],
+      [BELV.directlyDecreases, RDF::RDFS.subClassOf, BELV.negativeRelationship],
+      [BELV.directlyDecreases, RDF::RDFS.subClassOf, BELV.directRelationship],
+      [BELV.directlyDecreases, RDF::RDFS.subClassOf, BELV.decreases],
+      [BELV.negativeCorrelation, RDF::RDFS.subClassOf, BELV.correlativeRelationship],
+      [BELV.negativeCorrelation, RDF::RDFS.subClassOf, BELV.negativeRelationship],
+      [BELV.positiveCorrelation, RDF::RDFS.subClassOf, BELV.correlativeRelationship],
+      [BELV.positiveCorrelation, RDF::RDFS.subClassOf, BELV.positiveRelationship],
+      [BELV.association, RDF::RDFS.subClassOf, BELV.correlativeRelationship],
+      [BELV.hasComponent, RDF::RDFS.subClassOf, BELV.membershipRelationship],
+      [BELV.hasMember, RDF::RDFS.subClassOf, BELV.membershipRelationship],
+      [BELV.isA, RDF::RDFS.subClassOf, BELV.membershipRelationship],
+      [BELV.prognosticBiomarkerFor, RDF::RDFS.subClassOf, BELV.biomarkerFor],
+      [BELV.rateLimitingStepOf, RDF::RDFS.subClassOf, BELV.increases],
+      [BELV.rateLimitingStepOf, RDF::RDFS.subClassOf, BELV.causalRelationship],
+      [BELV.rateLimitingStepOf, RDF::RDFS.subClassOf, BELV.subProcessOf],
+      [BELV.subProcessOf, RDF::RDFS.subClassOf, BELV.membershipRelationship]
     ]
   end
 end
