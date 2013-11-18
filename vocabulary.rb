@@ -7,26 +7,28 @@ require 'bel'
 module BELRDF
   BELR    = RDF::Vocabulary.new("http://www.selventa.com/bel/")
   BELV    = RDF::Vocabulary.new("http://www.selventa.com/vocabulary/")
-  HGNC    = RDF::Vocabulary.new("http://www.selventa.com/entity/hgnc-approved-symbols/")
-  MGI     = RDF::Vocabulary.new("http://www.selventa.com/entity/mgi-approved-symbols/")
-  RGD     = RDF::Vocabulary.new("http://www.selventa.com/entity/rgd-approved-symbols/")
-  MESHCL  = RDF::Vocabulary.new("http://www.selventa.com/entity/mesh-cellular-locations/")
-  SFAM    = RDF::Vocabulary.new("http://www.selventa.com/entity/selventa-protein-families/")
-  CHEBI   = RDF::Vocabulary.new("http://www.selventa.com/entity/chebi-names/")
-  NCH     = RDF::Vocabulary.new("http://www.selventa.com/entity/selventa-named-complexes-human/")
-  NCM     = RDF::Vocabulary.new("http://www.selventa.com/entity/selventa-named-complexes-mouse/")
-  NCR     = RDF::Vocabulary.new("http://www.selventa.com/entity/selventa-named-complexes-rat/")
-  PFH     = RDF::Vocabulary.new("http://www.selventa.com/entity/selventa-protein-families-human/")
-  PFM     = RDF::Vocabulary.new("http://www.selventa.com/entity/selventa-protein-families-mouse/")
-  PFR     = RDF::Vocabulary.new("http://www.selventa.com/entity/selventa-protein-families-rat/")
-  GO      = RDF::Vocabulary.new("http://www.selventa.com/entity/go/")
-  MESHPP  = RDF::Vocabulary.new("http://www.selventa.com/entity/mesh-processes/")
-  MESHD   = RDF::Vocabulary.new("http://www.selventa.com/entity/mesh-diseases/")
-  EGID    = RDF::Vocabulary.new("http://www.selventa.com/entity/entrez-gene/")
-  SCHEM   = RDF::Vocabulary.new("http://www.selventa.com/entity/selventa-protein-families-human/")
-  SDIS    = RDF::Vocabulary.new("http://www.selventa.com/entity/selventa-legacy-diseases/")
-  GOCCACC = RDF::Vocabulary.new("http://www.selventa.com/entity/go-cellular-components/")
-
+  EGID    = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/entrez-gene-ids/")
+  HGNC    = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/hgnc-approved-symbols/")
+  MGI     = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/mgi-approved-symbols/")
+  RGD     = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/rgd-approved-symbols/")
+  AFFY    = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/affy-probeset-ids/")
+  SCOM    = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/selventa-named-complexes/")
+  MESHCL  = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/mesh-cellular-locations/")
+  SFAM    = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/selventa-protein-families/")
+  CHEBI   = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/chebi-names/")
+  NCH     = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/selventa-named-complexes-human/")
+  NCM     = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/selventa-named-complexes-mouse/")
+  NCR     = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/selventa-named-complexes-rat/")
+  PFH     = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/selventa-protein-families-human/")
+  PFM     = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/selventa-protein-families-mouse/")
+  PFR     = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/selventa-protein-families-rat/")
+  GO      = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/go/")
+  MESHPP  = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/mesh-processes/")
+  MESHD   = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/mesh-diseases/")
+  SCHEM   = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/selventa-protein-families-human/")
+  SDIS    = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/selventa-legacy-diseases/")
+  GOCCACC = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/go-cellular-components/")
+  GOCCTERM= RDF::Vocabulary.new("http://www.selventa.com/bel/entity/go-cellular-component-terms/")
 
   # maps outer function to bel/vocabulary class
   FUNCTION_TYPE = {
@@ -167,10 +169,12 @@ module BELRDF
     end
 
     # annotations
-    statement.annotations.each do |name, annotation|
-      name = annotation.name.gsub('"', '')
-      value = annotation.value.gsub('"', '')
-      writer << [evidence_bnode, BELV.hasAnnotation, "#{name}:#{value}"]
+    statement.annotations.each do |name, anno|
+      name = anno.name.gsub('"', '')
+
+      value = [anno.value].flatten.map{|x| x.gsub('"', '')}.each do |val|
+        writer << [evidence_bnode, BELV.hasAnnotation, "#{name}:#{val}"]
+      end
     end
 
   end

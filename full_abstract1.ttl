@@ -1,8 +1,5 @@
 @base <http://www.selventa.com/bel/> .
 @base <http://www.selventa.com/bel/> .
-@prefix CHEBI: <http://www.selventa.com/entity/chebi-names/> .
-@prefix HGNC: <http://www.selventa.com/entity/hgnc-approved-symbols> .
-@prefix SFAM: <http://www.selventa.com/entity/selventa-protein-families/> .
 @prefix bel: <http://www.selventa.com/bel/> .
 @prefix belv: <http://www.selventa.com/vocabulary/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -19,7 +16,7 @@ belv:Term a rdfs:Class .
 <a_CHEBI_phorbol_13-acetate_12-myristate> a belv:Term,
      belv:Abundance;
    rdfs:label "a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\")";
-   belv:hasConcept CHEBI:phorbol_13-acetate_12-myristate .
+   belv:hasConcept <entity/chebi-names/phorbol_13-acetate_12-myristate> .
 
 <kin_p_HGNC_MAPK1> a belv:Term,
      belv:AbundanceActivity;
@@ -40,7 +37,7 @@ belv:Term a rdfs:Class .
      belv:ModifiedProteinAbundance;
    rdfs:label "p(HGNC:MAPK14,pmod(P,310))";
    belv:hasChild <pmod_P_310>;
-   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK14>;
+   belv:hasConcept <entity/hgnc-approved-symbols/MAPK14>;
    belv:hasModificationPosition 310;
    belv:hasModificationType belv:Phosphorylation .
 
@@ -48,21 +45,21 @@ belv:Term a rdfs:Class .
      belv:ModifiedProteinAbundance;
    rdfs:label "p(HGNC:MAPK14,pmod(P,Y))";
    belv:hasChild <pmod_P_Y>;
-   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK14>;
+   belv:hasConcept <entity/hgnc-approved-symbols/MAPK14>;
    belv:hasModificationType belv:PhosphorylationThreonine .
 
 <p_HGNC_MAPK1_pmod_P> a belv:Term,
      belv:ModifiedProteinAbundance;
    rdfs:label "p(HGNC:MAPK1,pmod(P))";
    belv:hasChild <pmod_P>;
-   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK1>;
+   belv:hasConcept <entity/hgnc-approved-symbols/MAPK1>;
    belv:hasModificationType belv:Phosphorylation .
 
 <p_HGNC_MAPK1_pmod_P_T_310> a belv:Term,
      belv:ModifiedProteinAbundance;
    rdfs:label "p(HGNC:MAPK1,pmod(P,T,310))";
    belv:hasChild <pmod_P_T_310>;
-   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK1>;
+   belv:hasConcept <entity/hgnc-approved-symbols/MAPK1>;
    belv:hasModificationPosition 310;
    belv:hasModificationType belv:PhosphorylationTyrosine .
 
@@ -70,7 +67,7 @@ belv:Term a rdfs:Class .
      belv:ModifiedProteinAbundance;
    rdfs:label "p(HGNC:MAPK1,pmod(P,Y,10))";
    belv:hasChild <pmod_P_Y_10>;
-   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK1>;
+   belv:hasConcept <entity/hgnc-approved-symbols/MAPK1>;
    belv:hasModificationPosition 10;
    belv:hasModificationType belv:PhosphorylationThreonine .
 
@@ -78,14 +75,14 @@ belv:Term a rdfs:Class .
      belv:ModifiedProteinAbundance;
    rdfs:label "p(HGNC:MAPK8,pmod(P))";
    belv:hasChild <pmod_P>;
-   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK8>;
+   belv:hasConcept <entity/hgnc-approved-symbols/MAPK8>;
    belv:hasModificationType belv:Phosphorylation .
 
 <p_HGNC_MAPK8_pmod_P_T_150> a belv:Term,
      belv:ModifiedProteinAbundance;
    rdfs:label "p(HGNC:MAPK8,pmod(P,T,150))";
    belv:hasChild <pmod_P_T_150>;
-   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK8>;
+   belv:hasConcept <entity/hgnc-approved-symbols/MAPK8>;
    belv:hasModificationPosition 150;
    belv:hasModificationType belv:PhosphorylationTyrosine .
 
@@ -93,14 +90,14 @@ belv:Term a rdfs:Class .
      belv:ModifiedProteinAbundance;
    rdfs:label "p(HGNC:MAPK8,pmod(P,Y))";
    belv:hasChild <pmod_P_Y>;
-   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK8>;
+   belv:hasConcept <entity/hgnc-approved-symbols/MAPK8>;
    belv:hasModificationType belv:PhosphorylationThreonine .
 
 <p_SFAM_MAPK_p38_Family_pmod_P> a belv:Term,
      belv:ModifiedProteinAbundance;
    rdfs:label "p(SFAM:\"\"MAPK p38 Family\"\",pmod(P))";
    belv:hasChild <pmod_P>;
-   belv:hasConcept SFAM:MAPK_p38_Family;
+   belv:hasConcept <entity/selventa-protein-families/MAPK_p38_Family>;
    belv:hasModificationType belv:Phosphorylation .
 
 <phos_p_HGNC_DUSP1> a belv:Term,
@@ -272,7 +269,7 @@ belv:microRNAAbundance rdfs:subClassOf belv:Abundance .
 <p_HGNC_DUSP1> a belv:Term,
      belv:ProteinAbundance;
    rdfs:label "p(HGNC:DUSP1)";
-   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/DUSP1> .
+   belv:hasConcept <entity/hgnc-approved-symbols/DUSP1> .
 
 <p_HGNC_DUSP1_decreases_a_CHEBI_phorbol_13-acetate_12-myristate_increases_p_HGNC_DUSP1> a belv:Statement;
    rdfs:label "p(HGNC:DUSP1) -| (a(CHEBI:\"\"phorbol 13-acetate 12-myristate\"\") -> p(HGNC:DUSP1))";
@@ -289,17 +286,17 @@ belv:microRNAAbundance rdfs:subClassOf belv:Abundance .
 <p_HGNC_ELK1> a belv:Term,
      belv:ProteinAbundance;
    rdfs:label "p(HGNC:ELK1)";
-   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/ELK1> .
+   belv:hasConcept <entity/hgnc-approved-symbols/ELK1> .
 
 <p_HGNC_JUN> a belv:Term,
      belv:ProteinAbundance;
    rdfs:label "p(HGNC:JUN)";
-   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/JUN> .
+   belv:hasConcept <entity/hgnc-approved-symbols/JUN> .
 
 <p_HGNC_MAPK1> a belv:Term,
      belv:ProteinAbundance;
    rdfs:label "p(HGNC:MAPK1)";
-   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK1> .
+   belv:hasConcept <entity/hgnc-approved-symbols/MAPK1> .
 
 <p_HGNC_MAPK14_pmod_P_310_#directlyIncreases_kin_p_SFAM_MAPK_p38_Family> a belv:Statement;
    rdfs:label "p(HGNC:MAPK14,pmod(P,310)) => kin(p(SFAM:\"\"MAPK p38 Family\"\"))";
@@ -352,7 +349,7 @@ belv:microRNAAbundance rdfs:subClassOf belv:Abundance .
 <p_HGNC_MAPK8> a belv:Term,
      belv:ProteinAbundance;
    rdfs:label "p(HGNC:MAPK8)";
-   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MAPK8> .
+   belv:hasConcept <entity/hgnc-approved-symbols/MAPK8> .
 
 <p_HGNC_MAPK8_pmod_P_T_150_#directlyIncreases_kin_p_HGNC_MAPK8> a belv:Statement;
    rdfs:label "p(HGNC:MAPK8,pmod(P,T,150)) => kin(p(HGNC:MAPK8))";
@@ -381,12 +378,12 @@ belv:microRNAAbundance rdfs:subClassOf belv:Abundance .
 <p_HGNC_MYC> a belv:Term,
      belv:ProteinAbundance;
    rdfs:label "p(HGNC:MYC)";
-   belv:hasConcept <http://www.selventa.com/entity/hgnc-approved-symbols/MYC> .
+   belv:hasConcept <entity/hgnc-approved-symbols/MYC> .
 
 <p_SFAM_MAPK_p38_Family> a belv:Term,
      belv:ProteinAbundance;
    rdfs:label "p(SFAM:\"\"MAPK p38 Family\"\")";
-   belv:hasConcept SFAM:MAPK_p38_Family .
+   belv:hasConcept <entity/selventa-protein-families/MAPK_p38_Family> .
 
 <phos_p_HGNC_DUSP1_#decreases_tscript_p_HGNC_JUN> a belv:Statement;
    rdfs:label "phos(p(HGNC:DUSP1)) -| tscript(p(HGNC:JUN))";
