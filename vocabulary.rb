@@ -134,7 +134,7 @@ module BELRDF
       sub_id = for_term(statement.subject, writer)
       obj_id = for_term(statement.object, writer)
       rel = RELATIONSHIP_TYPE[statement.rel.to_s]
-      id = BELR["#{strip_prefix(sub_id)}_##{rel}_#{strip_prefix(obj_id)}"]
+      id = BELR["#{strip_prefix(sub_id)}_#{rel}_#{strip_prefix(obj_id)}"]
       writer << [id, BELV.hasSubject, sub_id]
       writer << [id, BELV.hasObject, obj_id]
       writer << [id, BELV.hasRelationship, RELATIONSHIP_TYPE[rel.to_s]]
