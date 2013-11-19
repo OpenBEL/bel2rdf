@@ -83,66 +83,56 @@ belv:rateLimitingStepOf rdfs:subClassOf belv:increases,
    rdfs:label "p(HGNC:JUN)";
    belv:hasConcept <entity/hgnc-approved-symbols/JUN> .
 
-<p_HGNC_MAPK1> a belv:Term,
-     belv:ProteinAbundance;
-   rdfs:label "p(HGNC:MAPK1)";
-   belv:hasConcept <entity/hgnc-approved-symbols/MAPK1> .
-
 <p_HGNC_MAPK14_pmod_P_310> a belv:Term,
      belv:ModifiedProteinAbundance;
    rdfs:label "p(HGNC:MAPK14,pmod(P,310))";
-   belv:hasConcept <entity/hgnc-approved-symbols/MAPK14>;
+   belv:hasChild <p_HGNC_MAPK14>;
    belv:hasModificationPosition 310;
    belv:hasModificationType belv:Phosphorylation .
 
 <p_HGNC_MAPK14_pmod_P_Y> a belv:Term,
      belv:ModifiedProteinAbundance;
    rdfs:label "p(HGNC:MAPK14,pmod(P,Y))";
-   belv:hasConcept <entity/hgnc-approved-symbols/MAPK14>;
+   belv:hasChild <p_HGNC_MAPK14>;
    belv:hasModificationType belv:PhosphorylationTyrosine .
 
 <p_HGNC_MAPK1_pmod_P> a belv:Term,
      belv:ModifiedProteinAbundance;
    rdfs:label "p(HGNC:MAPK1,pmod(P))";
-   belv:hasConcept <entity/hgnc-approved-symbols/MAPK1>;
+   belv:hasChild <p_HGNC_MAPK1>;
    belv:hasModificationType belv:Phosphorylation .
 
 <p_HGNC_MAPK1_pmod_P_T_310> a belv:Term,
      belv:ModifiedProteinAbundance;
    rdfs:label "p(HGNC:MAPK1,pmod(P,T,310))";
-   belv:hasConcept <entity/hgnc-approved-symbols/MAPK1>;
+   belv:hasChild <p_HGNC_MAPK1>;
    belv:hasModificationPosition 310;
    belv:hasModificationType belv:PhosphorylationThreonine .
 
 <p_HGNC_MAPK1_pmod_P_Y_10> a belv:Term,
      belv:ModifiedProteinAbundance;
    rdfs:label "p(HGNC:MAPK1,pmod(P,Y,10))";
-   belv:hasConcept <entity/hgnc-approved-symbols/MAPK1>;
+   belv:hasChild <p_HGNC_MAPK1>;
    belv:hasModificationPosition 10;
    belv:hasModificationType belv:PhosphorylationTyrosine .
-
-<p_HGNC_MAPK8> a belv:Term,
-     belv:ProteinAbundance;
-   rdfs:label "p(HGNC:MAPK8)";
-   belv:hasConcept <entity/hgnc-approved-symbols/MAPK8> .
 
 <p_HGNC_MAPK8_pmod_P> a belv:Term,
      belv:ModifiedProteinAbundance;
    rdfs:label "p(HGNC:MAPK8,pmod(P))";
-   belv:hasConcept <entity/hgnc-approved-symbols/MAPK8>;
+   belv:hasChild <p_HGNC_MAPK8>;
    belv:hasModificationType belv:Phosphorylation .
 
 <p_HGNC_MAPK8_pmod_P_T_150> a belv:Term,
      belv:ModifiedProteinAbundance;
    rdfs:label "p(HGNC:MAPK8,pmod(P,T,150))";
-   belv:hasConcept <entity/hgnc-approved-symbols/MAPK8>;
+   belv:hasChild <p_HGNC_MAPK8>;
    belv:hasModificationPosition 150;
    belv:hasModificationType belv:PhosphorylationThreonine .
 
 <p_HGNC_MAPK8_pmod_P_Y> a belv:Term,
      belv:ModifiedProteinAbundance;
    rdfs:label "p(HGNC:MAPK8,pmod(P,Y))";
-   belv:hasConcept <entity/hgnc-approved-symbols/MAPK8>;
+   belv:hasChild <p_HGNC_MAPK8>;
    belv:hasModificationType belv:PhosphorylationTyrosine .
 
 <p_HGNC_MYC> a belv:Term,
@@ -150,15 +140,10 @@ belv:rateLimitingStepOf rdfs:subClassOf belv:increases,
    rdfs:label "p(HGNC:MYC)";
    belv:hasConcept <entity/hgnc-approved-symbols/MYC> .
 
-<p_SFAM_MAPK_p38_Family> a belv:Term,
-     belv:ProteinAbundance;
-   rdfs:label "p(SFAM:\"MAPK p38 Family\")";
-   belv:hasConcept <entity/selventa-protein-families/MAPK_p38_Family> .
-
 <p_SFAM_MAPK_p38_Family_pmod_P> a belv:Term,
      belv:ModifiedProteinAbundance;
    rdfs:label "p(SFAM:\"MAPK p38 Family\",pmod(P))";
-   belv:hasConcept <entity/selventa-protein-families/MAPK_p38_Family>;
+   belv:hasChild <p_SFAM_MAPK_p38_Family>;
    belv:hasModificationType belv:Phosphorylation .
 
 <tscript_p_HGNC_ELK1> a belv:Term,
@@ -298,6 +283,11 @@ belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
    belv:hasRelationship belv:decreases;
    belv:hasSubject <p_HGNC_DUSP1> .
 
+<p_HGNC_MAPK14> a belv:Term,
+     belv:ProteinAbundance;
+   rdfs:label "p(HGNC:MAPK14)";
+   belv:hasConcept <entity/hgnc-approved-symbols/MAPK14> .
+
 <p_HGNC_MAPK14_pmod_P_310_directlyIncreases_kin_p_SFAM_MAPK_p38_Family> a belv:Statement;
    rdfs:label "p(HGNC:MAPK14,pmod(P,310)) => kin(p(SFAM:\"MAPK p38 Family\"))";
    belv:hasEvidence [ a belv:Evidence;
@@ -375,6 +365,11 @@ belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
    belv:hasObject <kin_p_HGNC_MAPK8>;
    belv:hasRelationship belv:directlyIncreases;
    belv:hasSubject <p_HGNC_MAPK8_pmod_P_Y> .
+
+<p_SFAM_MAPK_p38_Family> a belv:Term,
+     belv:ProteinAbundance;
+   rdfs:label "p(SFAM:\"MAPK p38 Family\")";
+   belv:hasConcept <entity/selventa-protein-families/MAPK_p38_Family> .
 
 <phos_p_HGNC_DUSP1_decreases_tscript_p_HGNC_JUN> a belv:Statement;
    rdfs:label "phos(p(HGNC:DUSP1)) -| tscript(p(HGNC:JUN))";
@@ -520,6 +515,16 @@ belv:positiveRelationship rdfs:subClassOf belv:relationship .
    rdfs:label "p(HGNC:DUSP1)";
    belv:hasConcept <entity/hgnc-approved-symbols/DUSP1> .
 
+<p_HGNC_MAPK1> a belv:Term,
+     belv:ProteinAbundance;
+   rdfs:label "p(HGNC:MAPK1)";
+   belv:hasConcept <entity/hgnc-approved-symbols/MAPK1> .
+
+<p_HGNC_MAPK8> a belv:Term,
+     belv:ProteinAbundance;
+   rdfs:label "p(HGNC:MAPK8)";
+   belv:hasConcept <entity/hgnc-approved-symbols/MAPK8> .
+
 belv:hasModificationPosition a rdf:Property .
 
 belv:membershipRelationship rdfs:subClassOf belv:relationship .
@@ -561,16 +566,16 @@ belv:hasActivityType a rdf:Property .
 
 belv:ModifiedProteinAbundance rdfs:subClassOf belv:ProteinAbundance .
 
-belv:ProteinAbundance rdfs:subClassOf belv:Abundance .
-
-belv:hasChild a rdf:Property .
+belv:hasConcept a rdf:Property .
 
 belv:hasModificationType a rdf:Property .
+
+belv:ProteinAbundance rdfs:subClassOf belv:Abundance .
 
 belv:increases rdfs:subClassOf belv:causalRelationship,
      belv:positiveRelationship .
 
-belv:hasConcept a rdf:Property .
+belv:hasChild a rdf:Property .
 
 belv:hasCitation a rdf:Property .
 

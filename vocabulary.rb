@@ -142,6 +142,8 @@ module BELRDF
     "S" =>BELV.Sumoylation,
     "U" =>BELV.Ubiquitination
   }
+  # protein variant
+  PROTEIN_VARIANT = [:fus, :fusion, :sub, :substitution, :trunc, :truncation]
   # pubmed URI
   PUBMED = 'http://bio2rdf.org/pubmed:'
 
@@ -250,27 +252,29 @@ module BELRDF
     writer << [id, RDF::RDFS.label, term.to_s]
 
     # special proteins (does not recurse into pmod)
-    if term.fx == :p and term.args.find{|x| x.is_a? BEL::Script::Term and x.fx == :pmod}
-      pmod = term.args.find{|x| x.is_a? BEL::Script::Term and x.fx == :pmod}
-      mod_string = pmod.args.map(&:to_s).join(',')
-      mod_type = MODIFICATION_TYPE.find {|k,v| mod_string.start_with? k}
-      mod_type = (mod_type ? mod_type[1] : BELV.Modification)
-      writer << [id, BELV.hasModificationType, mod_type]
-      last = pmod.args.last.to_s
-      if last.match(/^\d+$/)
-        writer << [id, BELV.hasModificationPosition, last.to_i]
-      end
-
-      # BELV.hasConcept]
-      term.args.find_all{|x| x.is_a? BEL::Script::Parameter}.each do |param|
-        if param.ns and const_get param.ns
-          ev = const_get param.ns
-          value = param.value.gsub(' ', '_').gsub('"', '')
-          writer << [id, BELV.hasConcept, ev[value]]
+    if term.fx == :p
+      if term.args.find{|x| x.is_a? BEL::Script::Term and x.fx == :pmod}
+        pmod = term.args.find{|x| x.is_a? BEL::Script::Term and x.fx == :pmod}
+        mod_string = pmod.args.map(&:to_s).join(',')
+        mod_type = MODIFICATION_TYPE.find {|k,v| mod_string.start_with? k}
+        mod_type = (mod_type ? mod_type[1] : BELV.Modification)
+        writer << [id, BELV.hasModificationType, mod_type]
+        last = pmod.args.last.to_s
+        if last.match(/^\d+$/)
+          writer << [id, BELV.hasModificationPosition, last.to_i]
         end
+        # link root protein abundance as hasChild
+        root_param = term.args.find{|x| x.is_a? BEL::Script::Parameter}
+        root_id = self.for_term(BEL::Script::Term.new(:p, [root_param]), writer)
+        writer << [id, BELV.hasChild, root_id]
+        return id
+      elsif term.args.find{|x| x.is_a? BEL::Script::Term and PROTEIN_VARIANT.include? x.fx}
+        # link root protein abundance as hasChild
+        root_param = term.args.find{|x| x.is_a? BEL::Script::Parameter}
+        root_id = self.for_term(BEL::Script::Term.new(:p, [root_param]), writer)
+        writer << [id, BELV.hasChild, root_id]
+        return id
       end
-
-      return id
     end
 
     # BELV.hasConcept]
@@ -295,6 +299,9 @@ module BELRDF
     if obj.respond_to? 'fx'
       if obj.fx == :p and obj.args.find{|x| x.is_a? BEL::Script::Term and x.fx == :pmod}
         return BELV.ModifiedProteinAbundance
+      end
+      if obj.fx == :p and obj.args.find{|x| x.is_a? BEL::Script::Term and PROTEIN_VARIANT.include? x.fx}
+        return BELV.ProteinVariantAbundance
       end
 
       FUNCTION_TYPE[obj.fx.to_sym] || BELV.Abundance
