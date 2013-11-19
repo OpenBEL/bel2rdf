@@ -1,0 +1,732 @@
+BodyRegion,abdomen,Anatomy,abdomen
+Tissue,Adipose Tissue,Anatomy,adipose tissue
+BodyRegion,adrenal gland,Anatomy,adrenal gland
+BodyRegion,airway,Anatomy,respiratory airway
+BodyRegion,alveolar duct,Anatomy,pulmonary alveolar duct
+BodyRegion,amnion,Anatomy,amnion
+BodyRegion,amygdala,Anatomy,amygdala
+BodyRegion,aorta,Anatomy,aorta
+BodyRegion,aortic arch,Anatomy,aortic arch
+CardiovascularSystem,Arteries,Anatomy,artery
+BodyRegion,arteriole,Anatomy,arteriole
+BodyRegion,atrioventricular node,Anatomy,atrioventricular node
+BodyRegion,atrium,Anatomy,cardiac atrium
+BodyRegion,basal ganglia,Anatomy,basal ganglion
+BodyRegion,bladder,Anatomy,urinary bladder
+FluidAndSecretion,Blood,Anatomy,blood
+Tissue,Bone and Bones,Anatomy,bone tissue
+BodyRegion,Bone joint,Anatomy,skeletal joint
+HemicAndImmuneSystem,Bone Marrow,Anatomy,bone marrow
+NervousSystem,Brain,Anatomy,brain
+BodyRegion,brain stem,Anatomy,brainstem
+Tissue,branchial arch system,Anatomy,pharyngeal arch
+BodyRegion,Breast,Anatomy,breast
+RespiratorySystem,Bronchioles,Anatomy,bronchiole
+BodyRegion,bronchus,Anatomy,bronchus
+Tissue,brown adipose,Anatomy,brown adipose tissue
+BodyRegion,capillary,Anatomy,capillary
+Tissue,cardiac muscle,Anatomy,cardiac muscle tissue
+CardiovascularSystem,Carotid Arteries,Anatomy,carotid artery segment
+BodyRegion,carotid body,Anatomy,carotid body
+Tissue,cartilage,Anatomy,cartilage tissue
+BodyRegion,cecum,Anatomy,caecum
+BodyRegion,central nervous system,Anatomy,central nervous system
+BodyRegion,cerebellum,Anatomy,cerebellum
+BodyRegion,cerebrum,Anatomy,telencephalon
+Tissue,cervical epithelium,Anatomy,cervix epithelium
+BodyRegion,cervix,Anatomy,uterine cervix
+BodyRegion,cochlea,Anatomy,cochlea
+DigestiveSystem,Colon,Anatomy,colon
+Tissue,connective tissue,Anatomy,connective tissue
+BodyRegion,cornea,Anatomy,cornea
+BodyRegion,coronary artery,Anatomy,coronary artery
+BodyRegion,corpus striatum,Anatomy,corpus striatum
+BodyRegion,cortex,Anatomy,cortex
+BodyRegion,cortical collecting duct,Anatomy,cortical collecting duct
+BodyRegion,decidua,Anatomy,decidua
+Tissue,dermal papilla,Anatomy,dermal papilla
+BodyRegion,diencephalon,Anatomy,diencephalon
+BodyRegion,dorsal root ganglia,Anatomy,dorsal root ganglion
+BodyRegion,duodenum,Anatomy,duodenum
+BodyRegion,ear,Anatomy,ear
+Tissue,ectoderm,Anatomy,ectoderm
+Tissue,embryo,Anatomy,embryo
+Tissue,embryonic tissue,Anatomy,embryonic tissue
+Tissue,endoderm,Anatomy,endoderm
+Tissue,endometrium,Anatomy,endometrium
+Tissue,Endothelium,Anatomy,endothelium
+Tissue,"Endothelium, Vascular",Anatomy,cardiovascular system endothelium
+BodyRegion,epididymis,Anatomy,epididymis
+Tissue,Epithelium,Anatomy,epithelium
+BodyRegion,esophagus,Anatomy,esophagus
+BodyRegion,eye,Anatomy,eye
+Tissue,fast twitch muscle,Anatomy,fast muscle tissue
+BodyRegion,forelimb,Anatomy,forelimb
+BodyRegion,frontal cortex,Anatomy,frontal cortex
+BodyRegion,gallbladder,Anatomy,gallbladder
+Tissue,gastric epithelium,Anatomy,epithelium of stomach
+BodyRegion,gastrointestinal tract,Anatomy,gastrointestinal system
+BodyRegion,genitourinary system,Anatomy,genitourinary system
+Tissue,germinal center,Anatomy,germinal center
+BodyRegion,gingiva,Anatomy,gingiva
+BodyRegion,gonad,Anatomy,gonad
+BodyRegion,hair follicle,Anatomy,hair follicle
+BodyRegion,Head,Anatomy,head
+CardiovascularSystem,Heart,Anatomy,heart
+BodyRegion,hippocampus,Anatomy,hippocampal formation
+BodyRegion,hypothalamus,Anatomy,hypothalamus
+BodyRegion,ileum,Anatomy,ileum
+Tissue,immune system,Anatomy,immune system
+BodyRegion,incisor,Anatomy,incisor tooth
+BodyRegion,inner ear,Anatomy,internal ear
+Tissue,intestinal epithelium,Anatomy,intestinal epithelium
+BodyRegion,intestine,Anatomy,intestine
+UrogenitalSystem,Kidney,Anatomy,kidney
+BodyRegion,kidney tubules,Anatomy,nephron tubule
+BodyRegion,"kidney tubules, proximal",Anatomy,proximal tubule
+BodyRegion,lacrimal gland,Anatomy,lacrimal gland
+BodyRegion,large intestine,Anatomy,large intestine
+BodyRegion,larynx,Anatomy,larynx
+BodyRegion,lens,Anatomy,lens of camera-type eye
+BodyRegion,limb,Anatomy,limb
+DigestiveSystem,Liver,Anatomy,liver
+BodyRegion,loop of Henle,Anatomy,loop of Henle
+RespiratorySystem,Lung,Anatomy,lung
+Tissue,Lung airway,Anatomy,respiratory airway
+Tissue,Lung Sputum,Anatomy,sputum
+Tissue,lymph,Anatomy,lymph
+BodyRegion,lymph node,Anatomy,lymph node
+BodyRegion,lymphatic endothelium,Anatomy,lymphatic vessel endothelium
+BodyRegion,lymphatic system,Anatomy,lymphatic part of lymphoid system
+BodyRegion,lymphatic vessel,Anatomy,lymphatic vessel
+BodyRegion,mammary gland,Anatomy,mammary gland
+BodyRegion,mesencephalon,Anatomy,midbrain
+Tissue,mesenchyme,Anatomy,mesenchyme
+BodyRegion,mesenteric artery,Anatomy,mesenteric artery
+Tissue,mesoderm,Anatomy,mesoderm
+Tissue,mesothelium,Anatomy,mesothelium
+BodyRegion,Middle ear,Anatomy,middle ear
+BodyRegion,molar,Anatomy,molar tooth
+BodyRegion,mouth,Anatomy,mouth
+Tissue,mucosa,Anatomy,mucosa
+Tissue,"Muscle, Skeletal",Anatomy,skeletal muscle tissue
+Tissue,"Muscle, Smooth",Anatomy,smooth muscle tissue
+Tissue,Muscles,Anatomy,muscle tissue
+Tissue,myometrium,Anatomy,myometrium
+BodyRegion,nasal cavity,Anatomy,nasal cavity
+BodyRegion,nasopharynx,Anatomy,nasopharynx
+Tissue,nerve,Anatomy,nerve
+NervousSystem,Nervous System,Anatomy,nervous system
+Tissue,neural crest,Anatomy,neural crest
+Tissue,neural tube,Anatomy,neural tube
+Tissue,neuroepithelium,Anatomy,sensory epithelium
+BodyRegion,nose,Anatomy,olfactory apparatus
+BodyRegion,nucleus accumbens,Anatomy,nucleus accumbens
+BodyRegion,olfactory bulb,Anatomy,olfactory bulb
+Tissue,olfactory epithelium,Anatomy,olfactory epithelium
+BodyRegion,outer medullary collecting duct,Anatomy,outer medullary collecting duct
+UrogenitalSystem,Ovary,Anatomy,female gonad
+BodyRegion,oviduct,Anatomy,oviduct
+DigestiveSystem,Pancreas,Anatomy,pancreas
+BodyRegion,pancreatic islet,Anatomy,islet of Langerhans
+BodyRegion,parathyroid gland,Anatomy,parathyroid gland
+Tissue,parenchyma,Anatomy,parenchyma
+BodyRegion,parotid gland,Anatomy,parotid gland
+BodyRegion,penis,Anatomy,penis
+BodyRegion,peripheral nervous system,Anatomy,peripheral nervous system
+BodyRegion,peritoneum,Anatomy,peritoneum
+BodyRegion,pituitary gland,Anatomy,pituitary gland
+BodyRegion,placenta,Anatomy,placenta
+Tissue,plasma,Anatomy,blood plasma
+BodyRegion,pregnant uterus,Anatomy,gravid uterus
+BodyRegion,prostate gland,Anatomy,prostate gland
+RespiratorySystem,Pulmonary Alveoli,Anatomy,alveolus of lung
+BodyRegion,purkinje fibers,Anatomy,purkinje fiber
+BodyRegion,rectum,Anatomy,rectum
+Tissue,rectus abdominis muscle,Anatomy,rectus abdominis muscle
+Tissue,renal cortex,Anatomy,cortex of kidney
+Tissue,renal medulla,Anatomy,renal medulla
+RespiratorySystem,Respiratory Mucosa,Anatomy,respiratory system mucosa
+BodyRegion,respiratory system,Anatomy,respiratory system
+BodyRegion,retina,Anatomy,retina
+BodyRegion,Saliva,Anatomy,saliva
+BodyRegion,salivary gland,Anatomy,salivary gland
+BodyRegion,sciatic nerve,Anatomy,sciatic nerve
+BodyRegion,semicircular canal,Anatomy,semicircular canal
+Tissue,serum,Anatomy,serum
+BodyRegion,sinoatrial node,Anatomy,sinoatrial node
+IntegumentarySystem,Skin,Anatomy,zone of skin
+Tissue,slow twitch muscle,Anatomy,slow muscle tissue
+BodyRegion,small intestine,Anatomy,small intestine
+BodyRegion,spinal cord,Anatomy,spinal cord
+BodyRegion,spleen,Anatomy,spleen
+BodyRegion,sputum,Anatomy,sputum
+BodyRegion,stomach,Anatomy,stomach
+Tissue,striated muscle,Anatomy,striated muscle tissue
+Tissue,striatum,Anatomy,striatum
+Tissue,stroma,Anatomy,stroma
+Tissue,Subcutaneous adipose,Anatomy,subcutaneous adipose tissue
+BodyRegion,submandibular gland,Anatomy,submandibular gland
+Tissue,sympathetic ganglion,Anatomy,sympathetic ganglion
+BodyRegion,tear fluid,Anatomy,lacrimal gland secretion
+BodyRegion,testicle,Anatomy,testis
+BodyRegion,thalamus,Anatomy,thalamus
+BodyRegion,thymus,Anatomy,thymus
+Tissue,thyroid,Anatomy,thyroid gland
+BodyRegion,thyroid gland,Anatomy,thyroid gland
+BodyRegion,tibia,Anatomy,tibia
+BodyRegion,tongue,Anatomy,tongue
+BodyRegion,tooth,Anatomy,calcareous tooth
+BodyRegion,trabecular meshwork,Anatomy,reticulum trabeculare
+BodyRegion,trachea,Anatomy,trachea
+BodyRegion,urinary tract,Anatomy,excretory system
+BodyRegion,Urine,Anatomy,urine
+Tissue,uterine stroma,Anatomy,endometrial stroma
+UrogenitalSystem,Uterus,Anatomy,uterus
+BodyRegion,vagina,Anatomy,vagina
+Tissue,vascular smooth muscle,Anatomy,blood vessel smooth muscle
+Tissue,vascular tissue,Anatomy,cardiovascular system
+BodyRegion,vein,Anatomy,vein
+BodyRegion,ventricle,Anatomy,cardiac ventricle
+BodyRegion,venule,Anatomy,venule
+Tissue,Visceral adipose,Anatomy,abdominal adipose tissue
+Tissue,white adipose,Anatomy,white adipose tissue
+Tissue,whole blood,Anatomy,blood
+BodyRegion,whole body,Anatomy,multi-cellular organism
+BodyRegion,yolk sac,Anatomy,yolk sac
+Tissue,carcinoma,Disease,carcinoma
+BodyRegion,Carcinoma of embryo,Disease,embryonal carcinoma
+BodyRegion,cochlear outer hair,Cell,outer hair cell
+Tissue,DN3 thymocyte,Cell,DN3 thymocyte
+Tissue,endothelial progenitor cell,Cell,adult endothelial progenitor cell
+CardiovascularSystem,Microvessels,Anatomy,microcirculatory vessel
+Tissue,myofibril,CellStructure,Myofibrils
+BodyRegion,neuron,Cell,neuron
+Tissue,synovium,Anatomy,synovial membrane of synovial joint
+Disease,acute lymphoblastic leukemia,Disease,acute lymphocytic leukemia
+Disease,acute myelogenous leukemia,Disease,acute myeloid leukemia
+Disease,Adenocarcinoma,Disease,adenocarcinoma
+Disease,adenoma,Disease,adenoma
+Disease,alveolar rhabdomyosarcoma,Disease,alveolar rhabdomyosarcoma
+Disease,Alzheimers disease,Disease,Alzheimer's disease
+Disease,anaplastic large cell lymphoma,Disease,anaplastic large cell lymphoma
+Disease,anemia,Disease,anemia
+Disease,aneurysm formation,Disease,aneurysm disease
+Disease,Asthma,Disease,asthma
+Disease,astrocytoma,Disease,astrocytoma
+Disease,Atherogenesis,Disease,atherosclerosis
+Disease,Atherosclerosis,Disease,atherosclerosis
+Disease,Autoimmunity,Disease,hypersensitivity reaction type II disease
+Disease,B cell lymphoma,Disease,B-cell lymphocytic neoplasm
+Disease,Barrett Esophagus,Disease,Barrett's esophagus
+Disease,B-Cell Chronic Lymphocytic Leukemia,Disease,chronic lymphocytic leukemia
+Disease,bile duct ligation,Disease,bile duct disease
+Disease,bronchioloalveolar carcinoma,Disease,bronchiolo-alveolar adenocarcinoma
+Disease,Burkitt Lymphoma,Disease,Burkitt's lymphoma
+Disease,carcinoma of blood,Disease,hematologic cancer
+Disease,carcinoma of bone marrow,Disease,bone marrow cancer
+Disease,Carcinoma of brain,Disease,brain cancer
+Disease,carcinoma of breast,Disease,breast cancer
+Disease,carcinoma of endometrium,Disease,endometrial cancer
+Disease,Carcinoma of esophagus,Disease,esophageal carcinoma
+Disease,Carcinoma of gastrointestinal tract,Disease,gastrointestinal system cancer
+Disease,Carcinoma of germ cell,Disease,germ cell cancer
+Disease,carcinoma of hepatocyte,Disease,hepatocellular carcinoma
+Disease,carcinoma of kidney,Disease,kidney cancer
+Disease,Carcinoma of large intestine,Disease,large intestine cancer
+Disease,Carcinoma of liver,Disease,liver cancer
+Disease,Carcinoma of mammary gland,Disease,breast cancer
+Disease,carcinoma of melanocyte,Disease,melanoma
+Disease,Carcinoma of mouth,Disease,oral cavity cancer
+Disease,Carcinoma of muscle,Disease,muscle cancer
+Disease,carcinoma Of nasopharynx,Disease,nasopharynx carcinoma
+Disease,carcinoma of neuron,Disease,central nervous system cancer
+Disease,Carcinoma of pancreas,Disease,pancreatic cancer
+Disease,carcinoma of plasma cell,Disease,myeloma
+Disease,carcinoma of skin,Disease,skin cancer
+Disease,Carcinoma of stomach,Disease,stomach cancer
+Disease,carcinoma of thyroid,Disease,thyroid cancer
+Disease,carcinoma of thyroid gland,Disease,thyroid cancer
+Disease,"Carcinoma, Non-Small-Cell Lung",Disease,non-small cell lung carcinoma
+Disease,"Carcinoma, Small Cell",Disease,small cell carcinoma
+Disease,"Carcinoma, Squamous Cell",Disease,squamous cell carcinoma
+Disease,Cardiomyopathy,Disease,cardiomyopathy
+Disease,Cholesteatoma,Disease,cholesteatoma
+Disease,chondrosarcoma,Disease,chondrosarcoma
+Disease,chronic myeloid leukemia,Disease,chronic myeloid leukemia
+Disease,Chronic Obstructive Pulmonary Disease,Disease,chronic obstructive pulmonary disease
+Disease,cirrhosis,Disease,liver cirrhosis
+Disease,colitis,Disease,ulcerative colitis
+Disease,colorectal adenoma,Disease,colorectal cancer
+Disease,Crohn,Disease,Crohn's disease
+Disease,cystic fibrosis,Disease,cystic fibrosis
+Disease,diabetes,Disease,diabetes mellitus
+Disease,embryonal carcinoma,Disease,embryonal carcinoma
+Disease,emphysema,Disease,pulmonary emphysema
+Disease,epidermoid carcinoma,Disease,squamous cell carcinoma
+Disease,ER negative breast cancer,Disease,estrogen-receptor negative breast cancer
+Disease,ER positive breast cancer,Disease,estrogen-receptor positive breast cancer
+Disease,ERBB2 overexpressing breast cancer,Disease,Her2-receptor positive breast cancer
+Disease,esophageal adenocarcinoma,Disease,esophagus adenocarcinoma
+Disease,fibrosarcoma,Disease,fibrosarcoma
+Disease,fibrosis,Disease,pulmonary fibrosis
+Disease,gastric adenocarcinoma,Disease,gastric adenocarcinoma
+Disease,gastric adenoma,Disease,gastric adenocarcinoma
+Disease,glioblastoma,Disease,glioblastoma
+Disease,Glioma,Disease,brain glioma
+Disease,Head and Neck Neoplasms,Disease,head and neck cancer
+Disease,hepatocellular carcinoma,Disease,hepatocellular carcinoma
+Disease,Huntington Disease,Disease,Huntington's disease
+Disease,Hypercholesterolemia,Disease,hypercholesterolemia
+Disease,Hyperglycemia,Disease,hyperglycemia
+Disease,Hypertension,Disease,hypertension
+Disease,Inflammatory Bowel Disease,Disease,inflammatory bowel disease
+Disease,ischemia,Disease,ischemia
+Disease,leukemia,Disease,leukemia
+Disease,lung adenocarcinoma,Disease,lung adenocarcinoma
+Disease,Lung Neoplasms,Disease,lung cancer
+Disease,lung squamous cell carcinoma,Disease,lung squamous cell carcinoma
+Disease,lymphoma,Disease,lymphoma
+Disease,malignant melanoma,Disease,melanoma
+Disease,medulloblastoma,Disease,medulloblastoma
+Disease,melanoma,Disease,melanoma
+Disease,mesothelioma,Disease,benign mesothelioma
+Disease,Multiple Myeloma,Disease,multiple myeloma
+Disease,myelodysplastic syndromes,Disease,myelodysplastic myeloproliferative cancer
+Disease,myeloid leukemia,Disease,myeloid leukemia
+Disease,myocardial infarction,Disease,myocardial infarction
+Disease,neoplasia,Disease,disease of cellular proliferation
+Disease,Neoplasm,Disease,cancer
+Disease,Neoplasms,Disease,cancer
+Disease,neuroblastoma,Disease,neuroblastoma
+Disease,non-hodgkins lymphoma,Disease,non-Hodgkin lymphoma
+Disease,noninvasive breast cancer,Disease,ductal carcinoma in situ
+Disease,Obesity,Disease,obesity
+Disease,osteoarthritis,Disease,osteoarthritis
+Disease,osteosarcoma,Disease,osteosarcoma
+Disease,pancreatic ductal carcinoma,Disease,pancreatic ductal carcinoma
+Disease,plaque destabilization,Disease,atherosclerosis
+Disease,prostate cancer,Disease,prostate cancer
+Disease,prostatic intraepithelial neoplasia,Disease,prostate carcinoma in situ
+Disease,Prostatic Neoplasms,Disease,prostate cancer
+Disease,psoriasis,Disease,psoriasis
+Disease,rhabdomyosarcoma,Disease,rhabdomyosarcoma
+Disease,Rheumatoid Arthritis,Disease,rheumatoid arthritis
+Disease,sarcoma,Disease,sarcoma
+Disease,steatohepatitis,Disease,fatty liver disease
+Disease,stroke,Disease,cerebrovascular accident
+Disease,T-cell leukemia,Disease,T-cell leukemia
+Disease,teratocarcinoma,Disease,teratocarcinoma
+Disease,Type II diabetes,Disease,type 2 diabetes mellitus
+Disease,Ulcerative Colitis,Disease,ulcerative colitis
+CellLine,22RV1 cell line,CellLine,22RV1 cell
+CellLine,32D cell line,CellLine,32D cell
+CellLine,3T3-L1 cell line,CellLine,3T3-L1 cell
+CellLine,5637 cell line,CellLine,5637 cell
+CellLine,A172 cell line,CellLine,A172 cell
+CellLine,A2058 cell line,CellLine,A2058 cell
+CellLine,A2780 cell line,CellLine,A2780 cell
+CellLine,A375 cell line,CellLine,A375 cell
+CellLine,ACHN cell line,CellLine,ACHN cell
+CellLine,AGS cell line,CellLine,AGS cell
+CellLine,ARH 77 cell line,CellLine,ARH 77 cell
+CellLine,AsPC-1 cell line,CellLine,AsPC-1 cell
+CellLine,BA/F3 cell line,CellLine,BA/F3 cell
+CellLine,BEAS-2B cell line,CellLine,BEAS-2B cell
+CellLine,BEWO cell line,CellLine,BEWO cell
+CellLine,BT-20 cell line,CellLine,BT-20 cell
+CellLine,BT-549 cell line,CellLine,BT-549 cell
+CellLine,C-4I cell line,CellLine,C-4I cell
+CellLine,C6 cell line,CellLine,C6 cell
+CellLine,CA46 cell line,CellLine,CA46 cell
+CellLine,CACO-2 cell line,CellLine,Caco-2 cell
+CellLine,CAL-27 cell line,CellLine,CAL-27 cell
+CellLine,Calu-1 cell line,CellLine,Calu-1 cell
+CellLine,Capan-1 cell line,CellLine,Capan-1 cell
+CellLine,Capan-2 cell line,CellLine,Capan-2 cell
+CellLine,CH1 cell line,CellLine,CH1 cell
+CellLine,Daudi cell line,CellLine,Daudi cell
+CellLine,Dede cell line,CellLine,Dede cell
+CellLine,DLD-1 cell line,CellLine,DLD-1 cell
+CellLine,F9 cell line,CellLine,F9 cell
+CellLine,Fao cell line,CellLine,Fao cell
+CellLine,H4 cell line,CellLine,H4 cell
+CellLine,H-4-II-E cell line,CellLine,H-4-II-E cell
+CellLine,HCC1395 cell line,CellLine,HCC1395 cell
+CellLine,HCC1599 cell line,CellLine,HCC1599 cell
+CellLine,HCC1937 cell line,CellLine,HCC1937 cell
+CellLine,HCC1954 cell line,CellLine,HCC1954 cell
+CellLine,HCC2157 cell line,CellLine,HCC2157 cell
+CellLine,HCC2218 cell line,CellLine,HCC2218 cell
+CellLine,HCC2935 cell line,CellLine,HCC2935 cell
+CellLine,HCC827 cell line,CellLine,HCC827 cell
+CellLine,HCT-15 cell line,CellLine,HCT-15 cell
+CellLine,HCT-8 cell line,CellLine,HCT-8 cell
+CellLine,HEC-1-B cell line,CellLine,HEC-1-B cell
+CellLine,HEL 92.1.7 cell line,CellLine,HEL 92.1.7 cell
+CellLine,Hepa-1c1c7 cell line,CellLine,Hepa-1c1c7 cell
+CellLine,HFL1 cell line,CellLine,HFL1 cell
+CellLine,HN cell line,CellLine,HN cell
+CellLine,HT-1080 cell line,CellLine,HT-1080 cell
+CellLine,HT-1376 cell line,CellLine,HT-1376 cell
+CellLine,J82 cell line,CellLine,J82 cell
+CellLine,JAR cell line,CellLine,JAR cell
+CellLine,JEG-3 cell line,CellLine,JEG-3 cell
+CellLine,Jurkat cell line,CellLine,JURKAT cell
+CellLine,K-562 cell line,CellLine,K-562 cell
+CellLine,KB cell line,CellLine,KB cell
+CellLine,KU812 cell line,CellLine,KU812 cell
+CellLine,L1210 cell line,CellLine,L1210 cell
+CellLine,L2 cell line,CellLine,L2 cell
+CellLine,L-428 cell line,CellLine,L-428 cell
+CellLine,L6 cell line,CellLine,L6 cell
+CellLine,LA-4 cell line,CellLine,LA-4 cell
+CellLine,LNCaP cell line,CellLine,LNCAP cell
+CellLine,LoVo cell line,CellLine,LOVO cell
+CellLine,MALME-3M cell line,CellLine,MALME-3M cell
+CellLine,MDA-MB-231 cell line,CellLine,MDA-MB-231 cell
+CellLine,MDA-MB-436 cell line,CellLine,MDA-MB-436 cell
+CellLine,MDA-MB-468 cell line,CellLine,MDA-MB-468 cell
+CellLine,MEG-01 cell line,CellLine,MEG-01 cell
+CellLine,MG-63 cell line,CellLine,MG-63 cell
+CellLine,MH-S Cell Line,CellLine,MH-S cell
+CellLine,MJ cell line,CellLine,MJ cell
+CellLine,ML-1 cell line,CellLine,ML-1 cell
+CellLine,MRC-5 cell line,CellLine,MRC-5 cell
+CellLine,NCI-H1975 cell line,CellLine,NCI-H1975 cell
+CellLine,NCI-H2087 cell line,CellLine,NCI-H2087 cell
+CellLine,NCI-H2122 cell line,CellLine,NCI-H2122 cell
+CellLine,NCI-H2171 cell line,CellLine,NCI-H2171 cell
+CellLine,NCI-H23 cell line,CellLine,NCI-H23 cell
+CellLine,NCI-H292 cell line,CellLine,NCI-H292 cell
+CellLine,NCI-H295R cell line,CellLine,NCI-H295R cell
+CellLine,NCI-H322 cell line,CellLine,NCI-H322 cell
+CellLine,NCI-H441 cell line,CellLine,NCI-H441 cell
+CellLine,NCI-H460 cell line,CellLine,NCI-H460 cell
+CellLine,NCI-H520 cell line,CellLine,NCI-H520 cell
+CellLine,NCI-H522 cell line,CellLine,NCI-H522 cell
+CellLine,NCI-H69 cell line,CellLine,NCI-H69 cell
+CellLine,NCI-H82 cell line,CellLine,NCI-H82 cell
+CellLine,NCI-H838 cell line,CellLine,NCI-H838 cell
+CellLine,NCI-H929 cell line,CellLine,NCI-H929 cell
+CellLine,NIT-1 cell line,CellLine,NIT-1 cell
+CellLine,OPM-2 cell line,CellLine,OPM-2 cell
+CellLine,OVCAR-3 cell line,CellLine,OVCAR-3 cell
+CellLine,P19 cell line,CellLine,P19 cell
+CellLine,P388 cell line,CellLine,P388 cell
+CellLine,Panc 02.03 cell line,CellLine,Panc 02.03 cell
+CellLine,Panc-1 cell line,CellLine,PANC-1 cell
+CellLine,PC-3 cell line,CellLine,PC-3 cell
+CellLine,PL45 cell line,CellLine,PL45 cell
+CellLine,PLB-985 cell line,CellLine,PLB-985 cell
+CellLine,Raji cell line,CellLine,Raji cell
+CellLine,Ramos cell line,CellLine,RAMOS cell
+CellLine,RAW 264.7 cell line,CellLine,RAW 264.7 cell
+CellLine,RD cell line,CellLine,RD cell
+CellLine,RKO cell line,CellLine,RKO cell
+CellLine,RLE-6TN cell line,CellLine,RLE-6TN cell
+CellLine,RPMI-2650 cell line,CellLine,RPMI-2650 cell
+CellLine,RWPE-1 cell line,CellLine,RWPE-1 cell
+CellLine,SAOS-2 cell line,CellLine,Saos-2 cell
+CellLine,SCC-25 cell line,CellLine,SCC-25 cell
+CellLine,SK-N-MC cell line,CellLine,SK-N-MC cell
+CellLine,SNU-16 cell line,CellLine,SNU-16 cell
+CellLine,SW48 cell line,CellLine,SW48 cell
+CellLine,SW480 cell line,CellLine,SW480 cell
+CellLine,SW620 cell line,CellLine,SW620 cell
+CellLine,T24 cell line,CellLine,T24 cell
+CellLine,T84 cell line,CellLine,T84 cell
+CellLine,Tera-2 cell line,CellLine,Tera-2 cell
+CellLine,THP-1 cell line,CellLine,THP-1 cell
+CellLine,TT cell line,CellLine,TT cell
+CellLine,U-87 MG cell line,CellLine,U-87 MG cell
+CellLine,WI-38 cell line,CellLine,WI-38 cell
+CellLine,WIDR cell line,CellLine,WiDr cell
+CellLine,WM-115 cell line,CellLine,WM-115 cell
+CellLine,Y79 cell line,CellLine,Y79 cell
+CellLine,ZR-75-1 cell line,CellLine,ZR-75-1 cell
+CellLine,293T cell line,CellLine,293T/17 cell
+CellLine,3T3 Swiss albino mouse,CellLine,NIH-3T3 cell
+CellLine,786-0 cell line,CellLine,786-O cell
+CellLine,A204 cell line,CellLine,A-204 cell
+CellLine,A427 cell line,CellLine,A-427 cell
+CellLine,A498 cell line,CellLine,A-498 cell
+CellLine,B16 cell line,CellLine,B16-F0 cell
+CellLine,B82L fibroblast,CellLine,B82 cell
+CellLine,BT474 cell line,CellLine,BT-474 cell
+CellLine,BxPC3 cell line,CellLine,BxPC-3 cell
+CellLine,C2C12 cell line,CellLine,C subscript(2) C subscript(12) cell
+CellLine,C-33A cell line,CellLine,C-33 A cell
+CellLine,C3H10T1/2 cell line,CellLine,"C3H/10T1/2, Clone 8 cell"
+CellLine,Calu-3,CellLine,Calu-3 cell
+CellLine,Colo-205 cell line,CellLine,COLO 205 cell
+CellLine,DU-145 cell line,CellLine,DU 145 cell
+CellLine,H1299 cell line,CellLine,NCI-H1299 cell
+CellLine,H441 cell line,CellLine,NCI-H441 cell
+CellLine,H820 cell line,CellLine,NCI-H820 cell
+CellLine,HCT116 cell line,CellLine,HCT 116 cell
+CellLine,Hep3B cell line,CellLine,Hep 3B cell
+CellLine,HepG2 cell line,CellLine,Hep G2 cell
+CellLine,HL60 cell line,CellLine,HL-60 cell
+CellLine,hybridoma cell line,CellLine,hybridoma cell line cell
+CellLine,immortalized cell line,CellLine,immortal cell line cell
+CellLine,J774A1 cell line,CellLine,J774A.1 cell
+CellLine,KATO-III cell line,CellLine,KATO III cell
+CellLine,KE37 cell line,CellLine,KE-37 cell
+CellLine,LS-174T cell line,CellLine,LS 174T cell
+CellLine,MCF-10A cell line,CellLine,MCF 10A cell
+CellLine,MCF10F cell line,CellLine,MCF 10F cell
+CellLine,MDA-MB-435 cell line,CellLine,MDA-MB-435S cell
+CellLine,MiaPaCa cell line,CellLine,MIA PaCa-2 cell
+CellLine,MKN45 cell line,CellLine,MKN-45 cell
+CellLine,NCI-H1650,CellLine,NCI-H1650 cell
+CellLine,NCI-H1666,CellLine,NCI-H1666 cell
+CellLine,NCI-H345,CellLine,NCI-H345 cell
+CellLine,NCI-H510 cell line,CellLine,NCI-H510A cell
+CellLine,NCI-H596,CellLine,NCI-H596 cell
+CellLine,NT2 cell line,CellLine,NT2-D1 cell
+CellLine,PC12 cell line,CellLine,PC-12 cell
+CellLine,RIN-m5F insulinoma cell line,CellLine,RIN-m5F cell
+CellLine,RPMI-8226 cell line,CellLine,RPMI 8226 cell
+CellLine,SW1990 cell line,CellLine,SW 1990 cell
+CellLine,SW872 cell line,CellLine,SW 872 cell
+CellLine,T47D cell line,CellLine,T-47D cell
+CellLine,TE671 cell line,CellLine,TE-671 cell
+CellLine,U-251MG cell line,CellLine,U-251 MG cell
+CellLine,U266 cell line,CellLine,U-266 cell
+CellLine,U2OS cell line,CellLine,U-2 OS cell
+CellLine,WR-21 cell line,CellLine,WR21 cell
+CellLine,293,CellLine,293 cell
+CellLine,3T3-Swiss albino,CellLine,NIH-3T3 cell
+CellLine,A-431,CellLine,A-431 cell
+CellLine,A549,CellLine,A549 cell
+CellLine,Calu-6,CellLine,Calu-6 cell
+CellLine,COS-1,CellLine,COS-1 cell
+CellLine,HeLa,CellLine,HeLa cell
+CellLine,HT-29,CellLine,HT-29 cell
+CellLine,IMR-90,CellLine,IMR-90 cell
+CellLine,MCF7,CellLine,MCF7 cell
+CellLine,MDA-MB-361,CellLine,MDA-MB-361 cell
+CellLine,MDA-MB-453,CellLine,MDA-MB-453 cell
+CellLine,NCI-H1155,CellLine,NCI-H1155 cell
+CellLine,NCI-H1703,CellLine,NCI-H1703 cell
+CellLine,NCI-H226,CellLine,NCI-H226 cell
+CellLine,NCI-H358,CellLine,NCI-H358 cell
+CellLine,U-937,CellLine,U-937 cell
+CellLine,Carcinoma of bladder,Disease,bladder carcinoma
+CellLine,Carcinoma of breast,Disease,breast cancer
+CellLine,carcinoma of cervix,Disease,cervical cancer
+CellLine,carcinoma of colon,Disease,colon cancer
+CellLine,Carcinoma of embryo,Disease,embryonal cancer
+CellLine,Carcinoma of gastrointestinal tract,Disease,stomach cancer
+CellLine,Carcinoma of kidney,Disease,kidney cancer
+CellLine,Carcinoma of liver,Disease,liver cancer
+CellLine,Carcinoma of ovary,Disease,ovarian cancer
+CellLine,Carcinoma of pancreas,Disease,pancreatic cancer
+CellLine,Carcinoma of pancreatic beta cell,Disease,insulinoma
+CellLine,Carcinoma of skin,Disease,skin cancer
+CellLine,Carcinoma of stomach,Disease,stomach cancer
+CellLine,11-18 cell line,CellLine,11-18 cell
+CellLine,16HBE14o- cell line,CellLine,16HBE14o- cell
+CellLine,1HAEo cell line,CellLine,1HAEo- cell
+CellLine,ANBL-6 cell line,CellLine,ANBL-6 cell
+CellLine,AS-E2 cell line,CellLine,AS-E2 cell
+CellLine,Bam1a cell line,CellLine,Bam1a cell
+CellLine,beta TC3 cell line,CellLine,beta TC3 cell
+CellLine,C10 cell line,CellLine,C10 cell
+CellLine,CH2 cell line,CellLine,CH2 cell
+CellLine,CL1-5 cell line,CellLine,CL1-5 cell
+CellLine,DA3 cell,CellLine,DA3 cell
+CellLine,DiFi Cell Line,CellLine,DiFi cell
+CellLine,ECC10 cell line,CellLine,ECC10 cell
+CellLine,EKVX cell line,CellLine,EKVX cell
+CellLine,GTL-16 cell line,CellLine,GTL-16 cell
+CellLine,H157 cell line,CellLine,H157 cell
+CellLine,H1752,CellLine,H1752 cell
+CellLine,H2O09 cell line,CellLine,H2O09 cell
+CellLine,H3255 cell line,CellLine,H3255 cell
+CellLine,H9C2 cell line,CellLine,H9c2(2-1) cell
+CellLine,HaCaT cell line,CellLine,HaCaT cell
+CellLine,HBE1 cell line,CellLine,HBE1 cell
+CellLine,Hepa1 cell line,CellLine,Hepa1 cell
+CellLine,HMEC cell line,CellLine,HMEC
+CellLine,HMEC-1 cell line,CellLine,HMEC-1 cell
+CellLine,HN5 cell line,CellLine,HN5 cell
+CellLine,HOP-62 cell line,CellLine,HOP-62 cell
+CellLine,HOP-92 cell line,CellLine,HOP-92 cell
+CellLine,HPL1D cell line,CellLine,HPL1D cell
+CellLine,HuH-7 cell line,CellLine,HuH-7 cell
+CellLine,HUVEC cell line,CellLine,HUVEC cell
+CellLine,ILKM2 cell line,CellLine,ILKM2 cell
+CellLine,INA-6 cell line,CellLine,INA-6 cell
+CellLine,INS-1 cell line,CellLine,INS-1 cell
+CellLine,Ishikawa cell line,CellLine,Ishikawa (London) 02ER+ cell
+CellLine,JB6 Cell Line,CellLine,JB6 Cl 41-5a cell
+CellLine,KAT-50 cell line,CellLine,KAT-50 cell
+CellLine,KM12 cell line,CellLine,KM12 cell
+CellLine,L6E9 cell line,CellLine,L6E9 cell
+CellLine,L828 cell line,CellLine,L828 cell
+CellLine,LTR6 Cell Line,CellLine,LTR6 cell
+CellLine,M14 cell line,CellLine,M14 cell
+CellLine,MEF cell line,CellLine,mouse embryonic fibroblast cell
+CellLine,MIN6 cell line,CellLine,MIN6 cell
+CellLine,MLP29 cell line,CellLine,MLP29 cell
+CellLine,MM.1S cell line,CellLine,MM.1S cell
+CellLine,MSK-Leuk1 cell line,CellLine,MSK-Leuk1 cell
+CellLine,OVCAR-8 cell line,CellLine,OVCAR-8 cell
+CellLine,PC-1 cell line,CellLine,PC-1 cell
+CellLine,PC-CL3 cell line,CellLine,PC-CL3 cell
+CellLine,PCI-10 cell line,CellLine,PCI-10 cell
+CellLine,PCI-43 cell line,CellLine,PCI-43 cell
+CellLine,primary cell culture,Cell,primary cultured cell
+CellLine,rat-1 fibroblast,CellLine,rat-1 cell
+CellLine,RH2 cell line,CellLine,RH2 cell
+CellLine,RH-30 cell line,CellLine,RH-30 cell
+CellLine,SCC-12 cell line,CellLine,SCC-12 cell
+CellLine,SKOV-3 cell line,CellLine,SK-OV-3 cell
+CellLine,SNU638 cell line,CellLine,SNU638 cell
+CellLine,U251 cell line,CellLine,U-251 MG cell
+CellLine,WB-F344 cell line,CellLine,WB-F344 cell
+CellLine,XG-6 cell line,CellLine,XG-6 cell
+Cell,Adult Pancreatic Islet Cell,Cell,type B pancreatic cell
+Cell,Alveolar type I cell,Cell,type I pneumocyte
+Cell,Alveolar type II cell,Cell,type II pneumocyte
+Cell,antigen presenting cell,Cell,professional antigen presenting cell
+Cell,astrocyte,Cell,astrocyte
+Cell,basophil,Cell,basophil
+Cell,b-cell,Cell,B cell
+Cell,bone marrow mesenchymal cell,Cell,mesenchymal stem cell of the bone marrow
+Cell,bone marrow stromal cell,Cell,mesenchymal cell
+Cell,brain neuron,Cell,neuron
+Cell,bronchial epithelial cell,Cell,bronchial epithelial cell
+Cell,bronchiolalveolar stem cells,Cell,bronchioalveolar stem cell
+Cell,brown adipocyte,Cell,brown fat cell
+Cell,cardioblast,Cell,cardioblast
+Cell,cardiomyocyte,Cell,cardiac muscle cell
+Cell,CD4+ T-cell,Cell,"CD4-positive, alpha-beta memory T cell"
+Cell,CD4+CD25+ T-cell,Cell,"CD4-positive, CD25-positive, alpha-beta regulatory T cell"
+Cell,CD4+CD8+CD3+TCR+ naive T-cell,Cell,"double-positive, alpha-beta thymocyte"
+Cell,CD8+ T-cell,Cell,"CD8-positive, alpha-beta regulatory T cell"
+Cell,cerebral endothelial cell,Cell,cerebral cortex endothelial cell
+Cell,cholangiocyte,Cell,cholangiocyte
+Cell,chondrocyte,Cell,chondrocyte
+Cell,Chromaffin Cell,Cell,Chromaffin Cell
+Cell,Clara cell,Cell,Clara cell
+Cell,Columnar Epithelial Cell,Cell,columnar/cuboidal epithelial cell
+Cell,coronary artery endothelial cell,Cell,aortic endothelial cell
+Cell,cortical thymocyte,Cell,neuron of cerebral cortex
+Cell,cytotoxic t-cell,Cell,cytotoxic T cell
+Cell,dendritic cell,Cell,dendritic cell
+Cell,dopaminergic cell,Cell,dopaminergic neuron
+Cell,embryonic stem cell,Cell,embryonic stem cell
+Cell,enterocyte,Cell,enterocyte
+Cell,eosinophil,Cell,eosinophil
+Cell,erythroblast,Cell,erythroblast
+Cell,erythrocyte,Cell,erythrocyte
+Cell,erythroid progenitor,Cell,erythroid progenitor cell
+Cell,Foam Cell,Cell,Foam Cell
+Cell,germ cell,Cell,germ cell
+Cell,germinal center B-cell,Cell,germinal center B cell
+Cell,glial cell,Cell,glial cell
+Cell,Goblet Cell,Cell,Goblet Cell
+Cell,granulocyte,Cell,granulocyte
+Cell,hematopoietic,Cell,hematopoietic cell
+Cell,Hepatic Endothelial Cell,Cell,endothelial cell of hepatic sinusoid
+Cell,hepatic stellate cell,Cell,hepatic stellate cell
+Cell,Hepatic Stem Cell,Cell,Hepatic Stem Cell
+Cell,hepatocyte,Cell,hepatocyte
+Cell,immune cell,Cell,leukocyte
+Cell,Juxtaglomerular Cell,Cell,juxtaglomerular complex cell
+Cell,kidney epithelial cell,Cell,kidney epithelial cell
+Cell,Kupffer Cell,Cell,Kupffer Cell
+Cell,lamina propria mononuclear cell,Cell,gastrointestinal tract (lamina propria) macrophage
+Cell,leukocyte,Cell,leukocyte
+Cell,Leydig Cell,Cell,Leydig Cell
+Cell,lymphocyte,Cell,lymphocyte
+Cell,mast cell,Cell,mast cell
+Cell,megakaryocyte,Cell,megakaryocyte
+Cell,melanocyte,Cell,melanocyte
+Cell,memory T-cell,Cell,memory T cell
+Cell,mesangial cell,Cell,mesangial cell
+Cell,mesothelial cell,Cell,mesothelial cell
+Cell,microglial cell,Cell,microglial cell
+Cell,motor neuron,Cell,motor neuron
+Cell,myoblast,Cell,myoblast
+Cell,myocyte,Cell,muscle cell
+Cell,Myocytes,Cell,muscle cell
+Cell,myofibroblast,Cell,myofibroblast cell
+Cell,naive T-cell,Cell,naive T cell
+Cell,natural killer cell,Cell,natural killer cell
+Cell,Neural Stem Cell,Cell,neuronal stem cell
+Cell,neuroendocrine cell,Cell,neuroendocrine cell
+Cell,neuron,Cell,neuron
+Cell,Olfactory Epithelial Cell,Cell,Olfactory Epithelial Cell
+Cell,oligodendrocyte,Cell,oligodendrocyte
+Cell,osteoblast,Cell,osteoblast
+Cell,osteoclast,Cell,osteoclast
+Cell,ovarian follicle cell,Cell,follicle cell
+Cell,ovarian granulosa cell,Cell,granulosa cell
+Cell,pancreatic alpha cell,Cell,pancreatic A cell
+Cell,pancreatic beta cell,Cell,type B pancreatic cell
+Cell,Paneth cell,Cell,Paneth cell
+Cell,peripheral blood lymphocyte,Cell,lymphocyte
+Cell,peripheral blood monocyte,Cell,mononuclear cell
+Cell,peripheral blood mononuclear cell,Cell,mononuclear cell
+Cell,peripheral T-cell,Cell,T cell
+Cell,peritoneal macrophage,Cell,peritoneal macrophage
+Cell,plasma cell,Cell,plasma cell
+Cell,pleural mesothelial cell,Cell,mesothelial cell of pleura
+Cell,podocyte,Cell,glomerular visceral epithelial cell
+Cell,preadipocyte,Cell,preadipocyte
+Cell,promyelocyte,Cell,promyelocyte
+Cell,Purkinje Cell,Cell,Purkinje Cell
+Cell,regulatory T-cell,Cell,regulatory T cell
+Cell,Renal Epithelial Cell,Cell,epithelial cell of renal tubule
+Cell,respiratory epithelial cell,Cell,respiratory epithelial cell
+Cell,retinal epithelial cell,Cell,retinal pigment epithelial cell
+Cell,Schwann cell,Cell,Schwann cell
+Cell,sertoli cell,Cell,sertoli cell
+Cell,Smooth Muscle,Cell,smooth muscle cell
+Cell,Sperm,Cell,Sperm
+Cell,spermatid,Cell,spermatid
+Cell,spermatocyte,Cell,spermatocyte
+Cell,spermatogonia,Cell,spermatogonium
+Cell,spinal cord neuron,Cell,spinal cord interneuron
+Cell,squamous cell,Cell,squamous epithelial cell
+Cell,Striated Muscle Cell,Cell,Striated Muscle Cell
+Cell,t-cell,Cell,T cell
+Cell,Th1 cell,Cell,T-helper 1 cell
+Cell,Th17 cell,Cell,T-helper 17 cell
+Cell,Th2 cell,Cell,T-helper 2 cell
+Cell,thymic epithelium,Cell,thyroid follicular cell
+Cell,thymocyte,Cell,thymocyte
+Cell,trophoblast,Cell,trophoblast cell
+Cell,Tube Cell,Cell,epithelial cell of proximal tubule
+Cell,umbilical vein endothelial cell,Cell,endothelial cell of umbilical vein
+Cell,Urothelial Cell,Cell,Urothelial Cell
+Cell,white adipocyte,Cell,white fat cell
+Cell,Adipocytes,Cell,fat cell
+Cell,Blood Platelets,Cell,platelet
+Cell,Endothelial Cells,Cell,endothelial cell
+Cell,Epithelial Cells,Cell,epithelial cell
+Cell,Fibroblasts,Cell,fibroblast
+Cell,Keratinocytes,Cell,keratinocyte
+Cell,Macrophages,Cell,macrophage
+Cell,"Macrophages, Alveolar",Cell,alveolar macrophage
+Cell,Monocytes,Cell,monocyte
+Cell,Myeloid Cells,Cell,myeloid cell
+Cell,"Myocytes, Smooth Muscle",Cell,smooth muscle cell
+Cell,Neutrophils,Cell,neutrophil
+Cell,Pericytes,Cell,pericyte cell
+Cell,"Satellite Cells, Skeletal Muscle",Cell,skeletal muscle satellite cell
+Cell,Stem Cells,Cell,stem cell
+Cell,blastocyst,Anatomy,blastocyst
+Cell,CD34+ cell,CellLine,hematopoietic stem cell
+Cell,CD34+ erythroid progenitor cell,CellLine,hematopoietic stem cell
+Cell,colon epithelium,Anatomy,colonic epithelium
+Cell,embryoid body cell,Anatomy,embryoid body
+Cell,Embryonic Pancreatic Cell,CellLine,MS1 cell
+Cell,Endometrial Epithelial Cell,CellLine,Ishikawa (London) 02ER+ cell
+Cell,extravillous cytotrophoblast cell,CellLine,JEG-3 cell
+Cell,Lung parenchyma,Anatomy,lung parenchyma
+Cell,POMC neuron,Anatomy,adenohypophysis
