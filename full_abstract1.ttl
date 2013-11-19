@@ -181,7 +181,9 @@ belv:biomarkerFor rdfs:subClassOf belv:relationship .
 
 belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
 
-<a_CHEBI_phorbol_13-acetate_12-myristate_increases_kin_p_HGNC_MAPK1> belv:hasEvidence [ a belv:Evidence;
+<a_CHEBI_phorbol_13-acetate_12-myristate_increases_kin_p_HGNC_MAPK1> a belv:Statement;
+   rdfs:label "a(CHEBI:\"phorbol 13-acetate 12-myristate\") -> kin(p(HGNC:MAPK1))";
+   belv:hasEvidence [ a belv:Evidence;
      belv:evidenceFor <a_CHEBI_phorbol_13-acetate_12-myristate_increases_kin_p_HGNC_MAPK1>;
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
@@ -192,7 +194,9 @@ belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
    belv:hasRelationship belv:increases;
    belv:hasSubject <a_CHEBI_phorbol_13-acetate_12-myristate> .
 
-<a_CHEBI_phorbol_13-acetate_12-myristate_increases_kin_p_HGNC_MAPK8> belv:hasEvidence [ a belv:Evidence;
+<a_CHEBI_phorbol_13-acetate_12-myristate_increases_kin_p_HGNC_MAPK8> a belv:Statement;
+   rdfs:label "a(CHEBI:\"phorbol 13-acetate 12-myristate\") -> kin(p(HGNC:MAPK8))";
+   belv:hasEvidence [ a belv:Evidence;
      belv:evidenceFor <a_CHEBI_phorbol_13-acetate_12-myristate_increases_kin_p_HGNC_MAPK8>;
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
@@ -203,7 +207,9 @@ belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
    belv:hasRelationship belv:increases;
    belv:hasSubject <a_CHEBI_phorbol_13-acetate_12-myristate> .
 
-<a_CHEBI_phorbol_13-acetate_12-myristate_increases_kin_p_SFAM_MAPK_p38_Family> belv:hasEvidence [ a belv:Evidence;
+<a_CHEBI_phorbol_13-acetate_12-myristate_increases_kin_p_SFAM_MAPK_p38_Family> a belv:Statement;
+   rdfs:label "a(CHEBI:\"phorbol 13-acetate 12-myristate\") -> kin(p(SFAM:\"MAPK p38 Family\"))";
+   belv:hasEvidence [ a belv:Evidence;
      belv:evidenceFor <a_CHEBI_phorbol_13-acetate_12-myristate_increases_kin_p_SFAM_MAPK_p38_Family>;
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
@@ -214,7 +220,9 @@ belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
    belv:hasRelationship belv:increases;
    belv:hasSubject <a_CHEBI_phorbol_13-acetate_12-myristate> .
 
-<a_CHEBI_phorbol_13-acetate_12-myristate_increases_tscript_p_HGNC_ELK1> belv:hasEvidence [ a belv:Evidence;
+<a_CHEBI_phorbol_13-acetate_12-myristate_increases_tscript_p_HGNC_ELK1> a belv:Statement;
+   rdfs:label "a(CHEBI:\"phorbol 13-acetate 12-myristate\") -> tscript(p(HGNC:ELK1))";
+   belv:hasEvidence [ a belv:Evidence;
      belv:evidenceFor <a_CHEBI_phorbol_13-acetate_12-myristate_increases_tscript_p_HGNC_ELK1>;
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
@@ -225,7 +233,9 @@ belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
    belv:hasRelationship belv:increases;
    belv:hasSubject <a_CHEBI_phorbol_13-acetate_12-myristate> .
 
-<a_CHEBI_phorbol_13-acetate_12-myristate_increases_tscript_p_HGNC_JUN> belv:hasEvidence [ a belv:Evidence;
+<a_CHEBI_phorbol_13-acetate_12-myristate_increases_tscript_p_HGNC_JUN> a belv:Statement;
+   rdfs:label "a(CHEBI:\"phorbol 13-acetate 12-myristate\") -> tscript(p(HGNC:JUN))";
+   belv:hasEvidence [ a belv:Evidence;
      belv:evidenceFor <a_CHEBI_phorbol_13-acetate_12-myristate_increases_tscript_p_HGNC_JUN>;
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
@@ -236,7 +246,9 @@ belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
    belv:hasRelationship belv:increases;
    belv:hasSubject <a_CHEBI_phorbol_13-acetate_12-myristate> .
 
-<a_CHEBI_phorbol_13-acetate_12-myristate_increases_tscript_p_HGNC_MYC> belv:hasEvidence [ a belv:Evidence;
+<a_CHEBI_phorbol_13-acetate_12-myristate_increases_tscript_p_HGNC_MYC> a belv:Statement;
+   rdfs:label "a(CHEBI:\"phorbol 13-acetate 12-myristate\") -> tscript(p(HGNC:MYC))";
+   belv:hasEvidence [ a belv:Evidence;
      belv:evidenceFor <a_CHEBI_phorbol_13-acetate_12-myristate_increases_tscript_p_HGNC_MYC>;
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
@@ -260,7 +272,9 @@ belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
    belv:hasRelationship belv:increases;
    belv:hasSubject <kin_p_HGNC_MAPK1> .
 
-<kin_p_HGNC_MAPK1_increases_p_HGNC_DUSP1> belv:hasEvidence [ a belv:Evidence;
+<kin_p_HGNC_MAPK1_increases_p_HGNC_DUSP1> a belv:Statement;
+   rdfs:label "kin(p(HGNC:MAPK1)) -> p(HGNC:DUSP1)";
+   belv:hasEvidence [ a belv:Evidence;
      belv:evidenceFor <kin_p_HGNC_MAPK1_increases_p_HGNC_DUSP1>;
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
@@ -284,7 +298,9 @@ belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
    belv:hasRelationship belv:decreases;
    belv:hasSubject <p_HGNC_DUSP1> .
 
-<p_HGNC_MAPK14_pmod_P_310_directlyIncreases_kin_p_SFAM_MAPK_p38_Family> belv:hasEvidence [ a belv:Evidence;
+<p_HGNC_MAPK14_pmod_P_310_directlyIncreases_kin_p_SFAM_MAPK_p38_Family> a belv:Statement;
+   rdfs:label "p(HGNC:MAPK14,pmod(P,310)) => kin(p(SFAM:\"MAPK p38 Family\"))";
+   belv:hasEvidence [ a belv:Evidence;
      belv:evidenceFor <p_HGNC_MAPK14_pmod_P_310_directlyIncreases_kin_p_SFAM_MAPK_p38_Family>;
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
@@ -295,7 +311,9 @@ belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
    belv:hasRelationship belv:directlyIncreases;
    belv:hasSubject <p_HGNC_MAPK14_pmod_P_310> .
 
-<p_HGNC_MAPK14_pmod_P_Y_directlyIncreases_kin_p_SFAM_MAPK_p38_Family> belv:hasEvidence [ a belv:Evidence;
+<p_HGNC_MAPK14_pmod_P_Y_directlyIncreases_kin_p_SFAM_MAPK_p38_Family> a belv:Statement;
+   rdfs:label "p(HGNC:MAPK14,pmod(P,Y)) => kin(p(SFAM:\"MAPK p38 Family\"))";
+   belv:hasEvidence [ a belv:Evidence;
      belv:evidenceFor <p_HGNC_MAPK14_pmod_P_Y_directlyIncreases_kin_p_SFAM_MAPK_p38_Family>;
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
@@ -306,7 +324,9 @@ belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
    belv:hasRelationship belv:directlyIncreases;
    belv:hasSubject <p_HGNC_MAPK14_pmod_P_Y> .
 
-<p_HGNC_MAPK1_pmod_P_T_310_directlyIncreases_kin_p_HGNC_MAPK1> belv:hasEvidence [ a belv:Evidence;
+<p_HGNC_MAPK1_pmod_P_T_310_directlyIncreases_kin_p_HGNC_MAPK1> a belv:Statement;
+   rdfs:label "p(HGNC:MAPK1,pmod(P,T,310)) => kin(p(HGNC:MAPK1))";
+   belv:hasEvidence [ a belv:Evidence;
      belv:evidenceFor <p_HGNC_MAPK1_pmod_P_T_310_directlyIncreases_kin_p_HGNC_MAPK1>;
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
@@ -317,7 +337,9 @@ belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
    belv:hasRelationship belv:directlyIncreases;
    belv:hasSubject <p_HGNC_MAPK1_pmod_P_T_310> .
 
-<p_HGNC_MAPK1_pmod_P_Y_10_directlyIncreases_kin_p_HGNC_MAPK1> belv:hasEvidence [ a belv:Evidence;
+<p_HGNC_MAPK1_pmod_P_Y_10_directlyIncreases_kin_p_HGNC_MAPK1> a belv:Statement;
+   rdfs:label "p(HGNC:MAPK1,pmod(P,Y,10)) => kin(p(HGNC:MAPK1))";
+   belv:hasEvidence [ a belv:Evidence;
      belv:evidenceFor <p_HGNC_MAPK1_pmod_P_Y_10_directlyIncreases_kin_p_HGNC_MAPK1>;
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
@@ -328,7 +350,9 @@ belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
    belv:hasRelationship belv:directlyIncreases;
    belv:hasSubject <p_HGNC_MAPK1_pmod_P_Y_10> .
 
-<p_HGNC_MAPK8_pmod_P_T_150_directlyIncreases_kin_p_HGNC_MAPK8> belv:hasEvidence [ a belv:Evidence;
+<p_HGNC_MAPK8_pmod_P_T_150_directlyIncreases_kin_p_HGNC_MAPK8> a belv:Statement;
+   rdfs:label "p(HGNC:MAPK8,pmod(P,T,150)) => kin(p(HGNC:MAPK8))";
+   belv:hasEvidence [ a belv:Evidence;
      belv:evidenceFor <p_HGNC_MAPK8_pmod_P_T_150_directlyIncreases_kin_p_HGNC_MAPK8>;
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
@@ -339,7 +363,9 @@ belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
    belv:hasRelationship belv:directlyIncreases;
    belv:hasSubject <p_HGNC_MAPK8_pmod_P_T_150> .
 
-<p_HGNC_MAPK8_pmod_P_Y_directlyIncreases_kin_p_HGNC_MAPK8> belv:hasEvidence [ a belv:Evidence;
+<p_HGNC_MAPK8_pmod_P_Y_directlyIncreases_kin_p_HGNC_MAPK8> a belv:Statement;
+   rdfs:label "p(HGNC:MAPK8,pmod(P,Y)) => kin(p(HGNC:MAPK8))";
+   belv:hasEvidence [ a belv:Evidence;
      belv:evidenceFor <p_HGNC_MAPK8_pmod_P_Y_directlyIncreases_kin_p_HGNC_MAPK8>;
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
@@ -350,7 +376,9 @@ belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
    belv:hasRelationship belv:directlyIncreases;
    belv:hasSubject <p_HGNC_MAPK8_pmod_P_Y> .
 
-<phos_p_HGNC_DUSP1_decreases_tscript_p_HGNC_JUN> belv:hasEvidence [ a belv:Evidence;
+<phos_p_HGNC_DUSP1_decreases_tscript_p_HGNC_JUN> a belv:Statement;
+   rdfs:label "phos(p(HGNC:DUSP1)) -| tscript(p(HGNC:JUN))";
+   belv:hasEvidence [ a belv:Evidence;
      belv:evidenceFor <phos_p_HGNC_DUSP1_decreases_tscript_p_HGNC_JUN>;
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
@@ -361,7 +389,9 @@ belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
    belv:hasRelationship belv:decreases;
    belv:hasSubject <phos_p_HGNC_DUSP1> .
 
-<phos_p_HGNC_DUSP1_directlyDecreases_kin_p_HGNC_MAPK1> belv:hasEvidence [ a belv:Evidence;
+<phos_p_HGNC_DUSP1_directlyDecreases_kin_p_HGNC_MAPK1> a belv:Statement;
+   rdfs:label "phos(p(HGNC:DUSP1)) =| kin(p(HGNC:MAPK1))";
+   belv:hasEvidence [ a belv:Evidence;
      belv:evidenceFor <phos_p_HGNC_DUSP1_directlyDecreases_kin_p_HGNC_MAPK1>;
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
@@ -372,7 +402,9 @@ belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
    belv:hasRelationship belv:directlyDecreases;
    belv:hasSubject <phos_p_HGNC_DUSP1> .
 
-<phos_p_HGNC_DUSP1_directlyDecreases_kin_p_HGNC_MAPK8> belv:hasEvidence [ a belv:Evidence;
+<phos_p_HGNC_DUSP1_directlyDecreases_kin_p_HGNC_MAPK8> a belv:Statement;
+   rdfs:label "phos(p(HGNC:DUSP1)) =| kin(p(HGNC:MAPK8))";
+   belv:hasEvidence [ a belv:Evidence;
      belv:evidenceFor <phos_p_HGNC_DUSP1_directlyDecreases_kin_p_HGNC_MAPK8>;
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
@@ -383,7 +415,9 @@ belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
    belv:hasRelationship belv:directlyDecreases;
    belv:hasSubject <phos_p_HGNC_DUSP1> .
 
-<phos_p_HGNC_DUSP1_directlyDecreases_kin_p_SFAM_MAPK_p38_Family> belv:hasEvidence [ a belv:Evidence;
+<phos_p_HGNC_DUSP1_directlyDecreases_kin_p_SFAM_MAPK_p38_Family> a belv:Statement;
+   rdfs:label "phos(p(HGNC:DUSP1)) =| kin(p(SFAM:\"MAPK p38 Family\"))";
+   belv:hasEvidence [ a belv:Evidence;
      belv:evidenceFor <phos_p_HGNC_DUSP1_directlyDecreases_kin_p_SFAM_MAPK_p38_Family>;
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
@@ -394,7 +428,9 @@ belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
    belv:hasRelationship belv:directlyDecreases;
    belv:hasSubject <phos_p_HGNC_DUSP1> .
 
-<phos_p_HGNC_DUSP1_directlyDecreases_p_HGNC_MAPK1_pmod_P> belv:hasEvidence [ a belv:Evidence;
+<phos_p_HGNC_DUSP1_directlyDecreases_p_HGNC_MAPK1_pmod_P> a belv:Statement;
+   rdfs:label "phos(p(HGNC:DUSP1)) =| p(HGNC:MAPK1,pmod(P))";
+   belv:hasEvidence [ a belv:Evidence;
      belv:evidenceFor <phos_p_HGNC_DUSP1_directlyDecreases_p_HGNC_MAPK1_pmod_P>;
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
@@ -405,7 +441,9 @@ belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
    belv:hasRelationship belv:directlyDecreases;
    belv:hasSubject <phos_p_HGNC_DUSP1> .
 
-<phos_p_HGNC_DUSP1_directlyDecreases_p_HGNC_MAPK8_pmod_P> belv:hasEvidence [ a belv:Evidence;
+<phos_p_HGNC_DUSP1_directlyDecreases_p_HGNC_MAPK8_pmod_P> a belv:Statement;
+   rdfs:label "phos(p(HGNC:DUSP1)) =| p(HGNC:MAPK8,pmod(P))";
+   belv:hasEvidence [ a belv:Evidence;
      belv:evidenceFor <phos_p_HGNC_DUSP1_directlyDecreases_p_HGNC_MAPK8_pmod_P>;
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";
@@ -416,7 +454,9 @@ belv:subProcessOf rdfs:subClassOf belv:membershipRelationship .
    belv:hasRelationship belv:directlyDecreases;
    belv:hasSubject <phos_p_HGNC_DUSP1> .
 
-<phos_p_HGNC_DUSP1_directlyDecreases_p_SFAM_MAPK_p38_Family_pmod_P> belv:hasEvidence [ a belv:Evidence;
+<phos_p_HGNC_DUSP1_directlyDecreases_p_SFAM_MAPK_p38_Family_pmod_P> a belv:Statement;
+   rdfs:label "phos(p(HGNC:DUSP1)) =| p(SFAM:\"MAPK p38 Family\",pmod(P))";
+   belv:hasEvidence [ a belv:Evidence;
      belv:evidenceFor <phos_p_HGNC_DUSP1_directlyDecreases_p_SFAM_MAPK_p38_Family_pmod_P>;
      belv:hasAnnotation "Species:9606",
        "CellLine:U-937";

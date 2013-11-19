@@ -188,8 +188,6 @@ module BELRDF
       end
 
       # outer
-      writer << [id, RDF.type, BELV.Statement]
-      writer << [id, RDF::RDFS.label, statement.to_s]
       writer << [id, BELV.hasSubject, sub_id]
       writer << [id, BELV.hasObject, nid]
       if RELATIONSHIP_CLASSIFICATION.include? statement.rel
@@ -200,6 +198,9 @@ module BELRDF
       end
     end
 
+    # common statement triples
+    writer << [id, RDF.type, BELV.Statement]
+    writer << [id, RDF::RDFS.label, statement.to_s]
 
     # evidence
     evidence_bnode = RDF::Node.new
