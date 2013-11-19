@@ -61,6 +61,10 @@ if __FILE__ == $0
       parser.parse(content)
     end
     def update(obj)
+      if obj.is_a? BEL::Script::Term or obj.is_a? BEL::Script::Parameter
+        return
+      end
+
       if obj.is_a? BEL::Script::AnnotationDefinition
         if TYPE_REMAP.include? obj.prefix.to_sym
           prefix, url = TYPE_REMAP[obj.prefix.to_sym]
@@ -72,8 +76,13 @@ if __FILE__ == $0
         if ['Citation', 'Evidence', 'Species'].include? obj.name
           puts obj.to_s
         elsif obj.value.respond_to? :each
+          # skip annotations that cannot be mapped or are already mapped
+          unless TYPE_REMAP.include? obj.name.to_sym
+            puts obj.to_s
+            return
+          end
+
           # handle value list
-          puts obj.name
           name = TYPE_REMAP[obj.name.to_sym][0]
           values = obj.value.map do |v|
             if @hash.include? [name, v]
@@ -90,7 +99,11 @@ if __FILE__ == $0
           obj.name = new_type
           obj.value = new_val
           puts obj.to_s
+        else
+          puts obj.to_s
         end
+      elsif obj.is_a? BEL::Script::Statement
+        puts "#{obj.to_s}\n\n"
       else
         puts obj.to_s
       end
