@@ -5,6 +5,7 @@ require 'rdf'
 require 'bel'
 
 module BELRDF
+  # namespaces
   BELR    = RDF::Vocabulary.new("http://www.selventa.com/bel/")
   BELV    = RDF::Vocabulary.new("http://www.selventa.com/vocabulary/")
   EGID    = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/entrez-gene-ids/")
@@ -29,6 +30,15 @@ module BELRDF
   SDIS    = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/selventa-legacy-diseases/")
   GOCCACC = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/go-cellular-components/")
   GOCCTERM= RDF::Vocabulary.new("http://www.selventa.com/bel/entity/go-cellular-component-terms/")
+  # annotations
+  Anatomy       = RDF::Vocabulary.new("http://www.selventa.com/bel/annotation/anatomy/")
+  Cell          = RDF::Vocabulary.new("http://www.selventa.com/bel/annotation/cell/")
+  CellLine      = RDF::Vocabulary.new("http://www.selventa.com/bel/annotation/cell-line/")
+  CellStructure = RDF::Vocabulary.new("http://www.selventa.com/bel/annotation/cell-structure/")
+  Disease       = RDF::Vocabulary.new("http://www.selventa.com/bel/annotation/disease/")
+  MeSHAnatomy   = RDF::Vocabulary.new("http://www.selventa.com/bel/annotation/mesh-anatomy/")
+  MeSHDisease   = RDF::Vocabulary.new("http://www.selventa.com/bel/annotation/mesh-diseases/")
+  Species       = RDF::Vocabulary.new("http://www.selventa.com/bel/annotation/species-taxonomy-id/")
 
   # maps outer function to bel/vocabulary class
   FUNCTION_TYPE = {
@@ -213,10 +223,12 @@ module BELRDF
 
     # citation
     citation = statement.annotations.delete('Citation')
-    value = citation.value.map{|x| x.gsub('"', '')}
-    if citation and value[0] == 'PubMed'
-      pid = value[2]
-      writer << [evidence_bnode, BELV.hasCitation, RDF::URI(PUBMED + pid)]
+    if citation
+      value = citation.value.map{|x| x.gsub('"', '')}
+      if citation and value[0] == 'PubMed'
+        pid = value[2]
+        writer << [evidence_bnode, BELV.hasCitation, RDF::URI(PUBMED + pid)]
+      end
     end
 
     # evidence
@@ -230,8 +242,14 @@ module BELRDF
     statement.annotations.each do |name, anno|
       name = anno.name.gsub('"', '')
 
-      value = [anno.value].flatten.map{|x| x.gsub('"', '')}.each do |val|
-        writer << [evidence_bnode, BELV.hasAnnotation, "#{name}:#{val}"]
+      if const_get name
+        annotation_scheme = const_get name
+        [anno.value].flatten.map{|x| x.gsub('"', '')}.each do |val|
+          value = val.gsub(' ', '_').gsub('"', '')
+          writer << [id, BELV.hasAnnotation, annotation_scheme[value]]
+        end
+      elsif
+        $stderr.puts "missing annotation #{name}"
       end
     end
 
