@@ -3,33 +3,36 @@
 
 require 'rdf'
 require 'bel'
+require 'addressable/uri'
 
 module BELRDF
   # namespaces
   BELR    = RDF::Vocabulary.new("http://www.selventa.com/bel/")
   BELV    = RDF::Vocabulary.new("http://www.selventa.com/vocabulary/")
-  EGID    = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/entrez-gene-ids/")
-  HGNC    = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/hgnc-approved-symbols/")
-  MGI     = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/mgi-approved-symbols/")
-  RGD     = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/rgd-approved-symbols/")
-  AFFY    = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/affy-probeset-ids/")
-  SCOM    = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/selventa-named-complexes/")
-  MESHCL  = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/mesh-cellular-locations/")
-  SFAM    = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/selventa-protein-families/")
-  CHEBI   = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/chebi-names/")
-  NCH     = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/selventa-named-complexes-human/")
-  NCM     = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/selventa-named-complexes-mouse/")
-  NCR     = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/selventa-named-complexes-rat/")
-  PFH     = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/selventa-protein-families-human/")
-  PFM     = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/selventa-protein-families-mouse/")
-  PFR     = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/selventa-protein-families-rat/")
-  GO      = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/go/")
-  MESHPP  = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/mesh-processes/")
-  MESHD   = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/mesh-diseases/")
-  SCHEM   = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/selventa-protein-families-human/")
-  SDIS    = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/selventa-legacy-diseases/")
-  GOCCACC = RDF::Vocabulary.new("http://www.selventa.com/bel/entity/go-cellular-components/")
-  GOCCTERM= RDF::Vocabulary.new("http://www.selventa.com/bel/entity/go-cellular-component-terms/")
+  EGID    = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/entrez-gene-ids/")
+  HGNC    = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/hgnc-approved-symbols/")
+  MGI     = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/mgi-approved-symbols/")
+  RGD     = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/rgd-approved-symbols/")
+  AFFY    = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/affy-probeset-ids/")
+  SCOM    = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/selventa-named-complexes/")
+  MESHCL  = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/mesh-cellular-locations/")
+  SFAM    = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/selventa-protein-families/")
+  CHEBI   = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/chebi-names/")
+  NCH     = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/selventa-named-complexes-human/")
+  NCM     = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/selventa-named-complexes-mouse/")
+  NCR     = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/selventa-named-complexes-rat/")
+  PFH     = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/selventa-protein-families-human/")
+  PFM     = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/selventa-protein-families-mouse/")
+  PFR     = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/selventa-protein-families-rat/")
+  GO      = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/go/")
+  MESHPP  = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/mesh-processes/")
+  MESHD   = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/mesh-diseases/")
+  SCHEM   = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/selventa-legacy-chemical-names/")
+  SDIS    = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/selventa-legacy-diseases/")
+  GOBP    = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/go-biological-processes-names/")
+  GOCCID  = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/go-cellular-component-ids/")
+  GOCC    = RDF::Vocabulary.new("http://www.selventa.com/bel/namespace/go-cellular-component-names/")
+
   # annotations
   Anatomy       = RDF::Vocabulary.new("http://www.selventa.com/bel/annotation/anatomy/")
   Cell          = RDF::Vocabulary.new("http://www.selventa.com/bel/annotation/cell/")
@@ -245,8 +248,8 @@ module BELRDF
       if const_get name
         annotation_scheme = const_get name
         [anno.value].flatten.map{|x| x.gsub('"', '')}.each do |val|
-          value = val.gsub(' ', '_').gsub('"', '')
-          writer << [id, BELV.hasAnnotation, annotation_scheme[value]]
+          value_uri = RDF::URI(Addressable::URI.encode(annotation_scheme[val.to_s]))
+          writer << [evidence_bnode, BELV.hasAnnotation, value_uri]
         end
       elsif
         $stderr.puts "missing annotation #{name}"
@@ -299,8 +302,7 @@ module BELRDF
     term.args.find_all{|x| x.is_a? BEL::Script::Parameter}.each do |param|
       if param.ns and const_get param.ns
         ev = const_get param.ns
-        value = param.value.gsub(' ', '_').gsub('"', '')
-        writer << [id, BELV.hasConcept, ev[value]]
+        writer << [id, BELV.hasConcept, RDF::URI(Addressable::URI.encode(ev[param.value].to_s))]
       end
     end
 
