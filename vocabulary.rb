@@ -342,6 +342,14 @@ module BELRDF
 
   def self.vocabulary_rdf
     [
+      # Class
+      [BELV.Term, RDF.type, RDF::RDFS.Class],
+      [BELV.Statement, RDF.type, RDF::RDFS.Class],
+      [BELV.Evidence, RDF.type, RDF::RDFS.Class],
+      [BELV.Abundance, RDF.type, RDF::RDFS.Class],
+      [BELV.Modification, RDF.type, RDF::RDFS.Class],
+      [BELV.relationship, RDF.type, RDF::RDFS.Class],
+
       # Property
       [BELV.hasConcept, RDF.type, RDF.Property],
       [BELV.hasChild, RDF.type, RDF.Property],
@@ -361,11 +369,7 @@ module BELRDF
       [BELV.hasCitation, RDF.type, RDF.Property],
       [BELV.hasEvidenceText, RDF.type, RDF.Property],
 
-      # Class
-      [BELV.Term, RDF.type, RDF::RDFS.Class],
-      [BELV.Statement, RDF.type, RDF::RDFS.Class],
-      # function hierarchy
-      [BELV.Abundance, RDF.type, RDF::RDFS.Class],
+      # abundance subclasses
       [BELV.Process, RDF.type, RDF::RDFS.Class],
       [BELV.ProteinAbundance, RDF::RDFS.subClassOf, BELV.Abundance],
       [BELV.ModifiedProteinAbundance, RDF::RDFS.subClassOf, BELV.ProteinAbundance],
@@ -383,7 +387,8 @@ module BELRDF
       [BELV.CellSecretion, RDF::RDFS.subClassOf, BELV.Translocation],
       [BELV.Degradation, RDF::RDFS.subClassOf, BELV.Transformation],
       [BELV.AbundanceActivity, RDF::RDFS.subClassOf, BELV.Process],
-      # modification types
+
+      # modification subclasses
       [BELV.Acetylation, RDF::RDFS.subClassOf, BELV.Modification],
       [BELV.Farnesylation, RDF::RDFS.subClassOf, BELV.Modification],
       [BELV.Glycosylation, RDF::RDFS.subClassOf, BELV.Modification],
@@ -396,7 +401,8 @@ module BELRDF
       [BELV.PhosphorylationSerine, RDF::RDFS.subClassOf, BELV.Phosphorylation],
       [BELV.PhosphorylationTyrosine, RDF::RDFS.subClassOf, BELV.Phosphorylation],
       [BELV.PhosphorylationThreonine, RDF::RDFS.subClassOf, BELV.Phosphorylation],
-      # relationships
+
+      # relationships subclasses
       [BELV.positiveRelationship, RDF::RDFS.subClassOf, BELV.relationship],
       [BELV.negativeRelationship, RDF::RDFS.subClassOf, BELV.relationship],
       [BELV.causalRelationship, RDF::RDFS.subClassOf, BELV.relationship],
