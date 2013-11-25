@@ -222,7 +222,6 @@ module BELRDF
     writer << [evidence_bnode, RDF.type, BELV.Evidence]
     writer << [id, BELV.hasEvidence, evidence_bnode]
     writer << [evidence_bnode, BELV.hasStatement, id]
-    writer << [evidence_bnode, BELV.evidenceFor, id]
 
     # citation
     citation = statement.annotations.delete('Citation')
