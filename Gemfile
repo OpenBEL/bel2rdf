@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'bel', '~> 0.2.0'
+gem 'bel', :git => "git://github.com/OpenBEL/bel.rb.git", :ref => "ragel"
 gem 'rdf', '~> 1.0.10'
 gem 'rdf-turtle', '~> 1.0.9'
 

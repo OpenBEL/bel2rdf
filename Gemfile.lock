@@ -1,8 +1,14 @@
+GIT
+  remote: git://github.com/OpenBEL/bel.rb.git
+  revision: 202c5df6dadc6afc56a2beca427be04406ee056a
+  ref: ragel
+  specs:
+    bel (0.2.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
     addressable (2.3.5)
-    bel (0.2.0)
     diff-lcs (1.2.5)
     ebnf (0.3.1)
       rdf
@@ -32,7 +38,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bel (~> 0.2.0)
+  bel!
   bundler (~> 1.0)
   rake (~> 10.1.0)
   rdf (~> 1.0.10)
