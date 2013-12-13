@@ -45,7 +45,7 @@ if __FILE__ == $0
           if clog_ns.has_key? obj.value
             replacement = clog_ns[obj.value]
             if replacement == 'unresolved' or replacement == 'withdrawn'
-              $stderr.puts "replace, '#{obj.value}' for '#{replacement}'"
+              $stderr.puts "no replacement value for '#{obj.value}' - value '#{replacement}'"
               return
             end
             obj.value = replacement
@@ -59,7 +59,7 @@ if __FILE__ == $0
       end
 
       if obj.is_a? BEL::Script::Statement
-        puts "#{obj.to_s}\n\n"
+        puts "#{obj.to_s}\n"
         return
       end
 
