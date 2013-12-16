@@ -1,34 +1,57 @@
 #!/usr/bin/env ruby
 # vim: ts=2 sw=2:
-# upgrade-namespaces: Upgrade namespaces for BEL file
+# upgrade-namespaces: Upgrade namespaces for BEL file given a change log.
 #
 # From BEL file
-# usage: ruby upgrade-namespaces.rb FILE.bel
+# usage: ruby upgrade-namespaces.rb -b file.bel -c file.json
 # From standard in
-# usage: echo "<BEL DOCUMENT STRING>" | ruby upgrade-namespaces.rb
+# usage: echo "<BEL DOCUMENT STRING>" | ruby upgrade-namespaces.rb -c file.json
 if __FILE__ == $0
-  if ARGV[0]
-    content = (File.exists? ARGV[0]) ? File.open(ARGV[0]).read : ARGV[0]
-  else
-    content = $stdin.read
+  require 'optparse'
+
+  # setup and parse options
+  options = {}
+  op = OptionParser.new do |opts|
+    opts.banner = "Usage: upgrade-namespaces.rb [options] [.bel file]"
+    opts.on('-b', '--bel BEL_FILE', 'BEL file to upgrade.  STDIN (standard in) can also be used for BEL content.') do |bel|
+      options['bel'] = bel
+    end
+    opts.on("-c", "--change-log JSON_FILE", "Change log file") do |change_log|
+      options['change_log'] = change_log
+    end
+  end.parse!
+
+  # option guards
+  unless options['change_log']
+    $stderr.puts "Missing --change-log option. Use -h / --help for details."
+    exit
   end
+  unless options['bel'] or not STDIN.tty?
+    $stderr.puts "No bel content provided.  Either use --bel option or STDIN (standard in).  Use -h / --help for details." 
+    exit
+  end
+  if not File.exists? options['change_log']
+    $stderr.puts "No file for change_log, #{options['change_log']}"
+    exit
+  end
+  if options['bel'] and not File.exists? options['bel']
+    $stderr.puts "No file for bel, #{options['bel']}"
+    exit
+  end
+
+  # read bel content
+  content = (STDIN.tty?) ? File.open(options['bel']).read : $stdin.read
 
   require 'bel'
   require 'json'
   class Main
 
-    CHANGELOG_FILE = 'change_log.json'
     NonWordMatcher = Regexp.compile(/[^0-9a-zA-Z]/)
-
     attr_reader :ttl
 
-    def initialize(content)
-      unless File.readable? CHANGELOG_FILE
-        error_file(CHANGELOG_FILE)
-      end
-
+    def initialize(content, change_log)
       begin
-        changelog_file = File.open(CHANGELOG_FILE)
+        changelog_file = File.open(change_log)
         @clog = JSON.parse(changelog_file.read)
       ensure
         changelog_file.close
@@ -69,5 +92,5 @@ if __FILE__ == $0
     end
   end
 
-  prog = Main.new(content)
+  prog = Main.new(content, options['change_log'])
 end
