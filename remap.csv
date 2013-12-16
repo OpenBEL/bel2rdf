@@ -1,208 +1,208 @@
-BodyRegion,abdomen,Anatomy,abdomen
-Tissue,Adipose Tissue,Anatomy,adipose tissue
-BodyRegion,adrenal gland,Anatomy,adrenal gland
-BodyRegion,airway,Anatomy,respiratory airway
-BodyRegion,alveolar duct,Anatomy,pulmonary alveolar duct
-BodyRegion,amnion,Anatomy,amnion
-BodyRegion,amygdala,Anatomy,amygdala
-BodyRegion,aorta,Anatomy,aorta
-BodyRegion,aortic arch,Anatomy,aortic arch
-CardiovascularSystem,Arteries,Anatomy,artery
-BodyRegion,arteriole,Anatomy,arteriole
-BodyRegion,atrioventricular node,Anatomy,atrioventricular node
-BodyRegion,atrium,Anatomy,cardiac atrium
-BodyRegion,basal ganglia,Anatomy,basal ganglion
-BodyRegion,bladder,Anatomy,urinary bladder
-FluidAndSecretion,Blood,Anatomy,blood
-Tissue,Bone and Bones,Anatomy,bone tissue
-BodyRegion,Bone joint,Anatomy,skeletal joint
-HemicAndImmuneSystem,Bone Marrow,Anatomy,bone marrow
-NervousSystem,Brain,Anatomy,brain
-BodyRegion,brain stem,Anatomy,brainstem
-Tissue,branchial arch system,Anatomy,pharyngeal arch
-BodyRegion,Breast,Anatomy,breast
-RespiratorySystem,Bronchioles,Anatomy,bronchiole
-BodyRegion,bronchus,Anatomy,bronchus
-Tissue,brown adipose,Anatomy,brown adipose tissue
-BodyRegion,capillary,Anatomy,capillary
-Tissue,cardiac muscle,Anatomy,cardiac muscle tissue
-CardiovascularSystem,Carotid Arteries,Anatomy,carotid artery segment
-BodyRegion,carotid body,Anatomy,carotid body
-Tissue,cartilage,Anatomy,cartilage tissue
-BodyRegion,cecum,Anatomy,caecum
-BodyRegion,central nervous system,Anatomy,central nervous system
-BodyRegion,cerebellum,Anatomy,cerebellum
-BodyRegion,cerebrum,Anatomy,telencephalon
-Tissue,cervical epithelium,Anatomy,cervix epithelium
-BodyRegion,cervix,Anatomy,uterine cervix
-BodyRegion,cochlea,Anatomy,cochlea
-DigestiveSystem,Colon,Anatomy,colon
-Tissue,connective tissue,Anatomy,connective tissue
-BodyRegion,cornea,Anatomy,cornea
-BodyRegion,coronary artery,Anatomy,coronary artery
-BodyRegion,corpus striatum,Anatomy,corpus striatum
-BodyRegion,cortex,Anatomy,cortex
-BodyRegion,cortical collecting duct,Anatomy,cortical collecting duct
-BodyRegion,decidua,Anatomy,decidua
-Tissue,dermal papilla,Anatomy,dermal papilla
-BodyRegion,diencephalon,Anatomy,diencephalon
-BodyRegion,dorsal root ganglia,Anatomy,dorsal root ganglion
-BodyRegion,duodenum,Anatomy,duodenum
-BodyRegion,ear,Anatomy,ear
-Tissue,ectoderm,Anatomy,ectoderm
-Tissue,embryo,Anatomy,embryo
-Tissue,embryonic tissue,Anatomy,embryonic tissue
-Tissue,endoderm,Anatomy,endoderm
-Tissue,endometrium,Anatomy,endometrium
-Tissue,Endothelium,Anatomy,endothelium
-Tissue,"Endothelium, Vascular",Anatomy,cardiovascular system endothelium
-BodyRegion,epididymis,Anatomy,epididymis
-Tissue,Epithelium,Anatomy,epithelium
-BodyRegion,esophagus,Anatomy,esophagus
-BodyRegion,eye,Anatomy,eye
-Tissue,fast twitch muscle,Anatomy,fast muscle tissue
-BodyRegion,forelimb,Anatomy,forelimb
-BodyRegion,frontal cortex,Anatomy,frontal cortex
-BodyRegion,gallbladder,Anatomy,gallbladder
-Tissue,gastric epithelium,Anatomy,epithelium of stomach
-BodyRegion,gastrointestinal tract,Anatomy,gastrointestinal system
-BodyRegion,genitourinary system,Anatomy,genitourinary system
-Tissue,germinal center,Anatomy,germinal center
-BodyRegion,gingiva,Anatomy,gingiva
-BodyRegion,gonad,Anatomy,gonad
-BodyRegion,hair follicle,Anatomy,hair follicle
-BodyRegion,Head,Anatomy,head
-CardiovascularSystem,Heart,Anatomy,heart
-BodyRegion,hippocampus,Anatomy,hippocampal formation
-BodyRegion,hypothalamus,Anatomy,hypothalamus
-BodyRegion,ileum,Anatomy,ileum
-Tissue,immune system,Anatomy,immune system
-BodyRegion,incisor,Anatomy,incisor tooth
-BodyRegion,inner ear,Anatomy,internal ear
-Tissue,intestinal epithelium,Anatomy,intestinal epithelium
-BodyRegion,intestine,Anatomy,intestine
-UrogenitalSystem,Kidney,Anatomy,kidney
-BodyRegion,kidney tubules,Anatomy,nephron tubule
-BodyRegion,"kidney tubules, proximal",Anatomy,proximal tubule
-BodyRegion,lacrimal gland,Anatomy,lacrimal gland
-BodyRegion,large intestine,Anatomy,large intestine
-BodyRegion,larynx,Anatomy,larynx
-BodyRegion,lens,Anatomy,lens of camera-type eye
-BodyRegion,limb,Anatomy,limb
-DigestiveSystem,Liver,Anatomy,liver
-BodyRegion,loop of Henle,Anatomy,loop of Henle
-RespiratorySystem,Lung,Anatomy,lung
-Tissue,Lung airway,Anatomy,respiratory airway
-Tissue,Lung Sputum,Anatomy,sputum
-Tissue,lymph,Anatomy,lymph
-BodyRegion,lymph node,Anatomy,lymph node
-BodyRegion,lymphatic endothelium,Anatomy,lymphatic vessel endothelium
-BodyRegion,lymphatic system,Anatomy,lymphatic part of lymphoid system
-BodyRegion,lymphatic vessel,Anatomy,lymphatic vessel
-BodyRegion,mammary gland,Anatomy,mammary gland
-BodyRegion,mesencephalon,Anatomy,midbrain
-Tissue,mesenchyme,Anatomy,mesenchyme
-BodyRegion,mesenteric artery,Anatomy,mesenteric artery
-Tissue,mesoderm,Anatomy,mesoderm
-Tissue,mesothelium,Anatomy,mesothelium
-BodyRegion,Middle ear,Anatomy,middle ear
-BodyRegion,molar,Anatomy,molar tooth
-BodyRegion,mouth,Anatomy,mouth
-Tissue,mucosa,Anatomy,mucosa
-Tissue,"Muscle, Skeletal",Anatomy,skeletal muscle tissue
-Tissue,"Muscle, Smooth",Anatomy,smooth muscle tissue
-Tissue,Muscles,Anatomy,muscle tissue
-Tissue,myometrium,Anatomy,myometrium
-BodyRegion,nasal cavity,Anatomy,nasal cavity
-BodyRegion,nasopharynx,Anatomy,nasopharynx
-Tissue,nerve,Anatomy,nerve
-NervousSystem,Nervous System,Anatomy,nervous system
-Tissue,neural crest,Anatomy,neural crest
-Tissue,neural tube,Anatomy,neural tube
-Tissue,neuroepithelium,Anatomy,sensory epithelium
-BodyRegion,nose,Anatomy,olfactory apparatus
-BodyRegion,nucleus accumbens,Anatomy,nucleus accumbens
-BodyRegion,olfactory bulb,Anatomy,olfactory bulb
-Tissue,olfactory epithelium,Anatomy,olfactory epithelium
-BodyRegion,outer medullary collecting duct,Anatomy,outer medullary collecting duct
-UrogenitalSystem,Ovary,Anatomy,female gonad
-BodyRegion,oviduct,Anatomy,oviduct
-DigestiveSystem,Pancreas,Anatomy,pancreas
-BodyRegion,pancreatic islet,Anatomy,islet of Langerhans
-BodyRegion,parathyroid gland,Anatomy,parathyroid gland
-Tissue,parenchyma,Anatomy,parenchyma
-BodyRegion,parotid gland,Anatomy,parotid gland
-BodyRegion,penis,Anatomy,penis
-BodyRegion,peripheral nervous system,Anatomy,peripheral nervous system
-BodyRegion,peritoneum,Anatomy,peritoneum
-BodyRegion,pituitary gland,Anatomy,pituitary gland
-BodyRegion,placenta,Anatomy,placenta
-Tissue,plasma,Anatomy,blood plasma
-BodyRegion,pregnant uterus,Anatomy,gravid uterus
-BodyRegion,prostate gland,Anatomy,prostate gland
-RespiratorySystem,Pulmonary Alveoli,Anatomy,alveolus of lung
-BodyRegion,purkinje fibers,Anatomy,purkinje fiber
-BodyRegion,rectum,Anatomy,rectum
-Tissue,rectus abdominis muscle,Anatomy,rectus abdominis muscle
-Tissue,renal cortex,Anatomy,cortex of kidney
-Tissue,renal medulla,Anatomy,renal medulla
-RespiratorySystem,Respiratory Mucosa,Anatomy,respiratory system mucosa
-BodyRegion,respiratory system,Anatomy,respiratory system
-BodyRegion,retina,Anatomy,retina
-BodyRegion,Saliva,Anatomy,saliva
-BodyRegion,salivary gland,Anatomy,salivary gland
-BodyRegion,sciatic nerve,Anatomy,sciatic nerve
-BodyRegion,semicircular canal,Anatomy,semicircular canal
-Tissue,serum,Anatomy,serum
-BodyRegion,sinoatrial node,Anatomy,sinoatrial node
-IntegumentarySystem,Skin,Anatomy,zone of skin
-Tissue,slow twitch muscle,Anatomy,slow muscle tissue
-BodyRegion,small intestine,Anatomy,small intestine
-BodyRegion,spinal cord,Anatomy,spinal cord
-BodyRegion,spleen,Anatomy,spleen
-BodyRegion,sputum,Anatomy,sputum
-BodyRegion,stomach,Anatomy,stomach
-Tissue,striated muscle,Anatomy,striated muscle tissue
-Tissue,striatum,Anatomy,striatum
-Tissue,stroma,Anatomy,stroma
-Tissue,Subcutaneous adipose,Anatomy,subcutaneous adipose tissue
-BodyRegion,submandibular gland,Anatomy,submandibular gland
-Tissue,sympathetic ganglion,Anatomy,sympathetic ganglion
-BodyRegion,tear fluid,Anatomy,lacrimal gland secretion
-BodyRegion,testicle,Anatomy,testis
-BodyRegion,thalamus,Anatomy,thalamus
-BodyRegion,thymus,Anatomy,thymus
-Tissue,thyroid,Anatomy,thyroid gland
-BodyRegion,thyroid gland,Anatomy,thyroid gland
-BodyRegion,tibia,Anatomy,tibia
-BodyRegion,tongue,Anatomy,tongue
-BodyRegion,tooth,Anatomy,calcareous tooth
-BodyRegion,trabecular meshwork,Anatomy,reticulum trabeculare
-BodyRegion,trachea,Anatomy,trachea
-BodyRegion,urinary tract,Anatomy,excretory system
-BodyRegion,Urine,Anatomy,urine
-Tissue,uterine stroma,Anatomy,endometrial stroma
-UrogenitalSystem,Uterus,Anatomy,uterus
-BodyRegion,vagina,Anatomy,vagina
-Tissue,vascular smooth muscle,Anatomy,blood vessel smooth muscle
-Tissue,vascular tissue,Anatomy,cardiovascular system
-BodyRegion,vein,Anatomy,vein
-BodyRegion,ventricle,Anatomy,cardiac ventricle
-BodyRegion,venule,Anatomy,venule
-Tissue,Visceral adipose,Anatomy,abdominal adipose tissue
-Tissue,white adipose,Anatomy,white adipose tissue
-Tissue,whole blood,Anatomy,blood
-BodyRegion,whole body,Anatomy,multi-cellular organism
-BodyRegion,yolk sac,Anatomy,yolk sac
-Tissue,carcinoma,Disease,carcinoma
-BodyRegion,Carcinoma of embryo,Disease,embryonal carcinoma
-BodyRegion,cochlear outer hair,Cell,outer hair cell
-Tissue,DN3 thymocyte,Cell,DN3 thymocyte
-Tissue,endothelial progenitor cell,Cell,adult endothelial progenitor cell
-CardiovascularSystem,Microvessels,Anatomy,microcirculatory vessel
-Tissue,myofibril,CellStructure,Myofibrils
-BodyRegion,neuron,Cell,neuron
-Tissue,synovium,Anatomy,synovial membrane of synovial joint
+BodyRegion ,abdomen,Anatomy,abdomen
+Tissue ,Adipose Tissue,Anatomy,adipose tissue
+BodyRegion ,adrenal gland,Anatomy,adrenal gland
+BodyRegion ,airway,Anatomy,respiratory airway
+BodyRegion ,alveolar duct,Anatomy,pulmonary alveolar duct
+BodyRegion ,amnion,Anatomy,amnion
+BodyRegion ,amygdala,Anatomy,amygdala
+BodyRegion ,aorta,Anatomy,aorta
+BodyRegion ,aortic arch,Anatomy,aortic arch
+CardiovascularSystem ,Arteries,Anatomy,artery
+BodyRegion ,arteriole,Anatomy,arteriole
+BodyRegion ,atrioventricular node,Anatomy,atrioventricular node
+BodyRegion ,atrium,Anatomy,cardiac atrium
+BodyRegion ,basal ganglia,Anatomy,basal ganglion
+BodyRegion ,bladder,Anatomy,urinary bladder
+FluidAndSecretion ,Blood,Anatomy,blood
+Tissue ,Bone and Bones,Anatomy,bone tissue
+BodyRegion ,Bone joint,Anatomy,skeletal joint
+HemicAndImmuneSystem ,Bone Marrow,Anatomy,bone marrow
+NervousSystem ,Brain,Anatomy,brain
+BodyRegion ,brain stem,Anatomy,brainstem
+Tissue ,branchial arch system,Anatomy,pharyngeal arch
+BodyRegion ,Breast,Anatomy,breast
+RespiratorySystem ,Bronchioles,Anatomy,bronchiole
+BodyRegion ,bronchus,Anatomy,bronchus
+Tissue ,brown adipose,Anatomy,brown adipose tissue
+BodyRegion ,capillary,Anatomy,capillary
+Tissue ,cardiac muscle,Anatomy,cardiac muscle tissue
+CardiovascularSystem ,Carotid Arteries,Anatomy,carotid artery segment
+BodyRegion ,carotid body,Anatomy,carotid body
+Tissue ,cartilage,Anatomy,cartilage tissue
+BodyRegion ,cecum,Anatomy,caecum
+BodyRegion ,central nervous system,Anatomy,central nervous system
+BodyRegion ,cerebellum,Anatomy,cerebellum
+BodyRegion ,cerebrum,Anatomy,telencephalon
+Tissue ,cervical epithelium,Anatomy,cervix epithelium
+BodyRegion ,cervix,Anatomy,uterine cervix
+BodyRegion ,cochlea,Anatomy,cochlea
+DigestiveSystem ,Colon,Anatomy,colon
+Tissue ,connective tissue,Anatomy,connective tissue
+BodyRegion ,cornea,Anatomy,cornea
+BodyRegion ,coronary artery,Anatomy,coronary artery
+BodyRegion ,corpus striatum,Anatomy,corpus striatum
+BodyRegion ,cortex,Anatomy,cortex
+BodyRegion ,cortical collecting duct,Anatomy,cortical collecting duct
+BodyRegion ,decidua,Anatomy,decidua
+Tissue ,dermal papilla,Anatomy,dermal papilla
+BodyRegion ,diencephalon,Anatomy,diencephalon
+BodyRegion ,dorsal root ganglia,Anatomy,dorsal root ganglion
+BodyRegion ,duodenum,Anatomy,duodenum
+BodyRegion ,ear,Anatomy,ear
+Tissue ,ectoderm,Anatomy,ectoderm
+Tissue ,embryo,Anatomy,embryo
+Tissue ,embryonic tissue,Anatomy,embryonic tissue
+Tissue ,endoderm,Anatomy,endoderm
+Tissue ,endometrium,Anatomy,endometrium
+Tissue ,Endothelium,Anatomy,endothelium
+Tissue ,"Endothelium, Vascular",Anatomy,cardiovascular system endothelium
+BodyRegion ,epididymis,Anatomy,epididymis
+Tissue ,Epithelium,Anatomy,epithelium
+BodyRegion ,esophagus,Anatomy,esophagus
+BodyRegion ,eye,Anatomy,eye
+Tissue ,fast twitch muscle,Anatomy,fast muscle tissue
+BodyRegion ,forelimb,Anatomy,forelimb
+BodyRegion ,frontal cortex,Anatomy,frontal cortex
+BodyRegion ,gallbladder,Anatomy,gallbladder
+Tissue ,gastric epithelium,Anatomy,epithelium of stomach
+BodyRegion ,gastrointestinal tract,Anatomy,gastrointestinal system
+BodyRegion ,genitourinary system,Anatomy,genitourinary system
+Tissue ,germinal center,Anatomy,germinal center
+BodyRegion ,gingiva,Anatomy,gingiva
+BodyRegion ,gonad,Anatomy,gonad
+BodyRegion ,hair follicle,Anatomy,hair follicle
+BodyRegion ,Head,Anatomy,head
+CardiovascularSystem ,Heart,Anatomy,heart
+BodyRegion ,hippocampus,Anatomy,hippocampal formation
+BodyRegion ,hypothalamus,Anatomy,hypothalamus
+BodyRegion ,ileum,Anatomy,ileum
+Tissue ,immune system,Anatomy,immune system
+BodyRegion ,incisor,Anatomy,incisor tooth
+BodyRegion ,inner ear,Anatomy,internal ear
+Tissue ,intestinal epithelium,Anatomy,intestinal epithelium
+BodyRegion ,intestine,Anatomy,intestine
+UrogenitalSystem ,Kidney,Anatomy,kidney
+BodyRegion ,kidney tubules,Anatomy,nephron tubule
+BodyRegion ,"kidney tubules, proximal",Anatomy,proximal tubule
+BodyRegion ,lacrimal gland,Anatomy,lacrimal gland
+BodyRegion ,large intestine,Anatomy,large intestine
+BodyRegion ,larynx,Anatomy,larynx
+BodyRegion ,lens,Anatomy,lens of camera-type eye
+BodyRegion ,limb,Anatomy,limb
+DigestiveSystem ,Liver,Anatomy,liver
+BodyRegion ,loop of Henle,Anatomy,loop of Henle
+RespiratorySystem ,Lung,Anatomy,lung
+Tissue ,Lung airway,Anatomy,respiratory airway
+Tissue ,Lung Sputum,Anatomy,sputum
+Tissue ,lymph,Anatomy,lymph
+BodyRegion ,lymph node,Anatomy,lymph node
+BodyRegion ,lymphatic endothelium,Anatomy,lymphatic vessel endothelium
+BodyRegion ,lymphatic system,Anatomy,lymphatic part of lymphoid system
+BodyRegion ,lymphatic vessel,Anatomy,lymphatic vessel
+BodyRegion ,mammary gland,Anatomy,mammary gland
+BodyRegion ,mesencephalon,Anatomy,midbrain
+Tissue ,mesenchyme,Anatomy,mesenchyme
+BodyRegion ,mesenteric artery,Anatomy,mesenteric artery
+Tissue ,mesoderm,Anatomy,mesoderm
+Tissue ,mesothelium,Anatomy,mesothelium
+BodyRegion ,Middle ear,Anatomy,middle ear
+BodyRegion ,molar,Anatomy,molar tooth
+BodyRegion ,mouth,Anatomy,mouth
+Tissue ,mucosa,Anatomy,mucosa
+Tissue ,"Muscle, Skeletal",Anatomy,skeletal muscle tissue
+Tissue ,"Muscle, Smooth",Anatomy,smooth muscle tissue
+Tissue ,Muscles,Anatomy,muscle tissue
+Tissue ,myometrium,Anatomy,myometrium
+BodyRegion ,nasal cavity,Anatomy,nasal cavity
+BodyRegion ,nasopharynx,Anatomy,nasopharynx
+Tissue ,nerve,Anatomy,nerve
+NervousSystem ,Nervous System,Anatomy,nervous system
+Tissue ,neural crest,Anatomy,neural crest
+Tissue ,neural tube,Anatomy,neural tube
+Tissue ,neuroepithelium,Anatomy,sensory epithelium
+BodyRegion ,nose,Anatomy,olfactory apparatus
+BodyRegion ,nucleus accumbens,Anatomy,nucleus accumbens
+BodyRegion ,olfactory bulb,Anatomy,olfactory bulb
+Tissue ,olfactory epithelium,Anatomy,olfactory epithelium
+BodyRegion ,outer medullary collecting duct,Anatomy,outer medullary collecting duct
+UrogenitalSystem ,Ovary,Anatomy,female gonad
+BodyRegion ,oviduct,Anatomy,oviduct
+DigestiveSystem ,Pancreas,Anatomy,pancreas
+BodyRegion ,pancreatic islet,Anatomy,islet of Langerhans
+BodyRegion ,parathyroid gland,Anatomy,parathyroid gland
+Tissue ,parenchyma,Anatomy,parenchyma
+BodyRegion ,parotid gland,Anatomy,parotid gland
+BodyRegion ,penis,Anatomy,penis
+BodyRegion ,peripheral nervous system,Anatomy,peripheral nervous system
+BodyRegion ,peritoneum,Anatomy,peritoneum
+BodyRegion ,pituitary gland,Anatomy,pituitary gland
+BodyRegion ,placenta,Anatomy,placenta
+Tissue ,plasma,Anatomy,blood plasma
+BodyRegion ,pregnant uterus,Anatomy,gravid uterus
+BodyRegion ,prostate gland,Anatomy,prostate gland
+RespiratorySystem ,Pulmonary Alveoli,Anatomy,alveolus of lung
+BodyRegion ,purkinje fibers,Anatomy,purkinje fiber
+BodyRegion ,rectum,Anatomy,rectum
+Tissue ,rectus abdominis muscle,Anatomy,rectus abdominis muscle
+Tissue ,renal cortex,Anatomy,cortex of kidney
+Tissue ,renal medulla,Anatomy,renal medulla
+RespiratorySystem ,Respiratory Mucosa,Anatomy,respiratory system mucosa
+BodyRegion ,respiratory system,Anatomy,respiratory system
+BodyRegion ,retina,Anatomy,retina
+BodyRegion ,Saliva,Anatomy,saliva
+BodyRegion ,salivary gland,Anatomy,salivary gland
+BodyRegion ,sciatic nerve,Anatomy,sciatic nerve
+BodyRegion ,semicircular canal,Anatomy,semicircular canal
+Tissue ,serum,Anatomy,serum
+BodyRegion ,sinoatrial node,Anatomy,sinoatrial node
+IntegumentarySystem ,Skin,Anatomy,zone of skin
+Tissue ,slow twitch muscle,Anatomy,slow muscle tissue
+BodyRegion ,small intestine,Anatomy,small intestine
+BodyRegion ,spinal cord,Anatomy,spinal cord
+BodyRegion ,spleen,Anatomy,spleen
+BodyRegion ,sputum,Anatomy,sputum
+BodyRegion ,stomach,Anatomy,stomach
+Tissue ,striated muscle,Anatomy,striated muscle tissue
+Tissue ,striatum,Anatomy,striatum
+Tissue ,stroma,Anatomy,stroma
+Tissue ,Subcutaneous adipose,Anatomy,subcutaneous adipose tissue
+BodyRegion ,submandibular gland,Anatomy,submandibular gland
+Tissue ,sympathetic ganglion,Anatomy,sympathetic ganglion
+BodyRegion ,tear fluid,Anatomy,lacrimal gland secretion
+BodyRegion ,testicle,Anatomy,testis
+BodyRegion ,thalamus,Anatomy,dorsal plus ventral thalamus
+BodyRegion ,thymus,Anatomy,thymus
+Tissue ,thyroid,Anatomy,thyroid gland
+BodyRegion ,thyroid gland,Anatomy,thyroid gland
+BodyRegion ,tibia,Anatomy,tibia
+BodyRegion ,tongue,Anatomy,tongue
+BodyRegion ,tooth,Anatomy,calcareous tooth
+BodyRegion ,trabecular meshwork,Anatomy,reticulum trabeculare
+BodyRegion ,trachea,Anatomy,trachea
+BodyRegion ,urinary tract,Anatomy,renal system
+BodyRegion ,Urine,Anatomy,urine
+Tissue ,uterine stroma,Anatomy,endometrial stroma
+UrogenitalSystem ,Uterus,Anatomy,uterus
+BodyRegion ,vagina,Anatomy,vagina
+Tissue ,vascular smooth muscle,Anatomy,blood vessel smooth muscle
+Tissue ,vascular tissue,Anatomy,cardiovascular system
+BodyRegion ,vein,Anatomy,vein
+BodyRegion ,ventricle,Anatomy,cardiac ventricle
+BodyRegion ,venule,Anatomy,venule
+Tissue ,Visceral adipose,Anatomy,adipose tissue of abdominal region
+Tissue ,white adipose,Anatomy,white adipose tissue
+Tissue ,whole blood,Anatomy,blood
+BodyRegion ,whole body,Anatomy,multi-cellular organism
+BodyRegion ,yolk sac,Anatomy,yolk sac
+Tissue ,carcinoma,Disease,carcinoma
+BodyRegion ,Carcinoma of embryo,Disease,embryonal carcinoma
+BodyRegion ,cochlear outer hair,Cell,outer hair cell
+Tissue ,DN3 thymocyte,Cell,DN3 thymocyte
+Tissue ,endothelial progenitor cell,Cell,adult endothelial progenitor cell
+CardiovascularSystem ,Microvessels,Anatomy,microcirculatory vessel
+Tissue ,myofibril,CellStructure,Myofibrils
+BodyRegion ,neuron,Cell,neuron
+Tissue ,synovium,Anatomy,synovial membrane of synovial joint
 Disease,acute lymphoblastic leukemia,Disease,acute lymphocytic leukemia
 Disease,acute myelogenous leukemia,Disease,acute myeloid leukemia
 Disease,Adenocarcinoma,Disease,adenocarcinoma
@@ -272,12 +272,12 @@ Disease,fibrosarcoma,Disease,fibrosarcoma
 Disease,fibrosis,Disease,pulmonary fibrosis
 Disease,gastric adenocarcinoma,Disease,gastric adenocarcinoma
 Disease,gastric adenoma,Disease,gastric adenocarcinoma
-Disease,glioblastoma,Disease,glioblastoma
+Disease,glioblastoma,Disease,glioblastoma multiforme
 Disease,Glioma,Disease,brain glioma
-Disease,Head and Neck Neoplasms,Disease,head and neck cancer
+Disease,Head and Neck Neoplasms,MeSHDisease,Head and Neck Neoplasms
 Disease,hepatocellular carcinoma,Disease,hepatocellular carcinoma
 Disease,Huntington Disease,Disease,Huntington's disease
-Disease,Hypercholesterolemia,Disease,hypercholesterolemia
+Disease,Hypercholesterolemia,MeSHDisease,Hypercholesterolemia
 Disease,Hyperglycemia,Disease,hyperglycemia
 Disease,Hypertension,Disease,hypertension
 Disease,Inflammatory Bowel Disease,Disease,inflammatory bowel disease
@@ -541,12 +541,12 @@ CellLine,DiFi Cell Line,CellLine,DiFi cell
 CellLine,ECC10 cell line,CellLine,ECC10 cell
 CellLine,EKVX cell line,CellLine,EKVX cell
 CellLine,GTL-16 cell line,CellLine,GTL-16 cell
-CellLine,H157 cell line,CellLine,H157 cell
+CellLine,H157 cell line,CellLine,NCI-H157
 CellLine,H1752,CellLine,H1752 cell
 CellLine,H2O09 cell line,CellLine,H2O09 cell
-CellLine,H3255 cell line,CellLine,H3255 cell
+CellLine,H3255 cell line,CellLine,NCI-H3255
 CellLine,H9C2 cell line,CellLine,H9c2(2-1) cell
-CellLine,HaCaT cell line,CellLine,HaCaT cell
+CellLine,HaCaT cell line,CellLine,HaCaT
 CellLine,HBE1 cell line,CellLine,HBE1 cell
 CellLine,Hepa1 cell line,CellLine,Hepa1 cell
 CellLine,HMEC cell line,CellLine,HMEC
@@ -556,7 +556,7 @@ CellLine,HOP-62 cell line,CellLine,HOP-62 cell
 CellLine,HOP-92 cell line,CellLine,HOP-92 cell
 CellLine,HPL1D cell line,CellLine,HPL1D cell
 CellLine,HuH-7 cell line,CellLine,HuH-7 cell
-CellLine,HUVEC cell line,CellLine,HUVEC cell
+CellLine,HUVEC cell line,CellLine,HUVEC cell line
 CellLine,ILKM2 cell line,CellLine,ILKM2 cell
 CellLine,INA-6 cell line,CellLine,INA-6 cell
 CellLine,INS-1 cell line,CellLine,INS-1 cell
@@ -568,25 +568,25 @@ CellLine,L6E9 cell line,CellLine,L6E9 cell
 CellLine,L828 cell line,CellLine,L828 cell
 CellLine,LTR6 Cell Line,CellLine,LTR6 cell
 CellLine,M14 cell line,CellLine,M14 cell
-CellLine,MEF cell line,CellLine,mouse embryonic fibroblast cell
-CellLine,MIN6 cell line,CellLine,MIN6 cell
+CellLine,MEF cell line,CellLine,MEF cell line
+CellLine,MIN6 cell line,CellLine,MIN6
 CellLine,MLP29 cell line,CellLine,MLP29 cell
 CellLine,MM.1S cell line,CellLine,MM.1S cell
 CellLine,MSK-Leuk1 cell line,CellLine,MSK-Leuk1 cell
 CellLine,OVCAR-8 cell line,CellLine,OVCAR-8 cell
-CellLine,PC-1 cell line,CellLine,PC-1 cell
+CellLine,PC-1 cell line,CellLine,PC-1
 CellLine,PC-CL3 cell line,CellLine,PC-CL3 cell
 CellLine,PCI-10 cell line,CellLine,PCI-10 cell
 CellLine,PCI-43 cell line,CellLine,PCI-43 cell
 CellLine,primary cell culture,Cell,primary cultured cell
 CellLine,rat-1 fibroblast,CellLine,rat-1 cell
 CellLine,RH2 cell line,CellLine,RH2 cell
-CellLine,RH-30 cell line,CellLine,RH-30 cell
+CellLine,RH-30 cell line,CellLine,SJRH30 cell
 CellLine,SCC-12 cell line,CellLine,SCC-12 cell
 CellLine,SKOV-3 cell line,CellLine,SK-OV-3 cell
 CellLine,SNU638 cell line,CellLine,SNU638 cell
 CellLine,U251 cell line,CellLine,U-251 MG cell
-CellLine,WB-F344 cell line,CellLine,WB-F344 cell
+CellLine,WB-F344 cell line,CellLine,WB-F344
 CellLine,XG-6 cell line,CellLine,XG-6 cell
 Cell,Adult Pancreatic Islet Cell,Cell,type B pancreatic cell
 Cell,Alveolar type I cell,Cell,type I pneumocyte
@@ -610,7 +610,7 @@ Cell,CD8+ T-cell,Cell,"CD8-positive, alpha-beta regulatory T cell"
 Cell,cerebral endothelial cell,Cell,cerebral cortex endothelial cell
 Cell,cholangiocyte,Cell,cholangiocyte
 Cell,chondrocyte,Cell,chondrocyte
-Cell,Chromaffin Cell,Cell,Chromaffin Cell
+Cell,Chromaffin Cell,Cell,chromaffin cell
 Cell,Clara cell,Cell,Clara cell
 Cell,Columnar Epithelial Cell,Cell,columnar/cuboidal epithelial cell
 Cell,coronary artery endothelial cell,Cell,aortic endothelial cell
@@ -624,24 +624,24 @@ Cell,eosinophil,Cell,eosinophil
 Cell,erythroblast,Cell,erythroblast
 Cell,erythrocyte,Cell,erythrocyte
 Cell,erythroid progenitor,Cell,erythroid progenitor cell
-Cell,Foam Cell,Cell,Foam Cell
+Cell,Foam Cell,Cell,foam cell
 Cell,germ cell,Cell,germ cell
 Cell,germinal center B-cell,Cell,germinal center B cell
 Cell,glial cell,Cell,glial cell
-Cell,Goblet Cell,Cell,Goblet Cell
+Cell,Goblet Cell,Cell,goblet cell
 Cell,granulocyte,Cell,granulocyte
 Cell,hematopoietic,Cell,hematopoietic cell
 Cell,Hepatic Endothelial Cell,Cell,endothelial cell of hepatic sinusoid
 Cell,hepatic stellate cell,Cell,hepatic stellate cell
-Cell,Hepatic Stem Cell,Cell,Hepatic Stem Cell
+Cell,Hepatic Stem Cell,Cell,hepatic stem cell
 Cell,hepatocyte,Cell,hepatocyte
 Cell,immune cell,Cell,leukocyte
 Cell,Juxtaglomerular Cell,Cell,juxtaglomerular complex cell
 Cell,kidney epithelial cell,Cell,kidney epithelial cell
-Cell,Kupffer Cell,Cell,Kupffer Cell
+Cell,Kupffer Cell,Cell,Kupffer cell
 Cell,lamina propria mononuclear cell,Cell,gastrointestinal tract (lamina propria) macrophage
 Cell,leukocyte,Cell,leukocyte
-Cell,Leydig Cell,Cell,Leydig Cell
+Cell,Leydig Cell,Cell,Leydig cell
 Cell,lymphocyte,Cell,lymphocyte
 Cell,mast cell,Cell,mast cell
 Cell,megakaryocyte,Cell,megakaryocyte
@@ -660,7 +660,7 @@ Cell,natural killer cell,Cell,natural killer cell
 Cell,Neural Stem Cell,Cell,neuronal stem cell
 Cell,neuroendocrine cell,Cell,neuroendocrine cell
 Cell,neuron,Cell,neuron
-Cell,Olfactory Epithelial Cell,Cell,Olfactory Epithelial Cell
+Cell,Olfactory Epithelial Cell,Cell,olfactory epithelial cell
 Cell,oligodendrocyte,Cell,oligodendrocyte
 Cell,osteoblast,Cell,osteoblast
 Cell,osteoclast,Cell,osteoclast
@@ -668,7 +668,7 @@ Cell,ovarian follicle cell,Cell,follicle cell
 Cell,ovarian granulosa cell,Cell,granulosa cell
 Cell,pancreatic alpha cell,Cell,pancreatic A cell
 Cell,pancreatic beta cell,Cell,type B pancreatic cell
-Cell,Paneth cell,Cell,Paneth cell
+Cell,Paneth cell,Cell,paneth cell
 Cell,peripheral blood lymphocyte,Cell,lymphocyte
 Cell,peripheral blood monocyte,Cell,mononuclear cell
 Cell,peripheral blood mononuclear cell,Cell,mononuclear cell
@@ -679,21 +679,21 @@ Cell,pleural mesothelial cell,Cell,mesothelial cell of pleura
 Cell,podocyte,Cell,glomerular visceral epithelial cell
 Cell,preadipocyte,Cell,preadipocyte
 Cell,promyelocyte,Cell,promyelocyte
-Cell,Purkinje Cell,Cell,Purkinje Cell
+Cell,Purkinje Cell,Cell,Purkinje cell
 Cell,regulatory T-cell,Cell,regulatory T cell
 Cell,Renal Epithelial Cell,Cell,epithelial cell of renal tubule
 Cell,respiratory epithelial cell,Cell,respiratory epithelial cell
 Cell,retinal epithelial cell,Cell,retinal pigment epithelial cell
 Cell,Schwann cell,Cell,Schwann cell
-Cell,sertoli cell,Cell,sertoli cell
+Cell,sertoli cell,Cell,Sertoli cell
 Cell,Smooth Muscle,Cell,smooth muscle cell
-Cell,Sperm,Cell,Sperm
+Cell,Sperm,Cell,sperm
 Cell,spermatid,Cell,spermatid
 Cell,spermatocyte,Cell,spermatocyte
 Cell,spermatogonia,Cell,spermatogonium
 Cell,spinal cord neuron,Cell,spinal cord interneuron
 Cell,squamous cell,Cell,squamous epithelial cell
-Cell,Striated Muscle Cell,Cell,Striated Muscle Cell
+Cell,Striated Muscle Cell,Cell,striated muscle cell
 Cell,t-cell,Cell,T cell
 Cell,Th1 cell,Cell,T-helper 1 cell
 Cell,Th17 cell,Cell,T-helper 17 cell
@@ -703,7 +703,7 @@ Cell,thymocyte,Cell,thymocyte
 Cell,trophoblast,Cell,trophoblast cell
 Cell,Tube Cell,Cell,epithelial cell of proximal tubule
 Cell,umbilical vein endothelial cell,Cell,endothelial cell of umbilical vein
-Cell,Urothelial Cell,Cell,Urothelial Cell
+Cell,Urothelial Cell,Cell,urothelial cell
 Cell,white adipocyte,Cell,white fat cell
 Cell,Adipocytes,Cell,fat cell
 Cell,Blood Platelets,Cell,platelet
@@ -721,12 +721,12 @@ Cell,Pericytes,Cell,pericyte cell
 Cell,"Satellite Cells, Skeletal Muscle",Cell,skeletal muscle satellite cell
 Cell,Stem Cells,Cell,stem cell
 Cell,blastocyst,Anatomy,blastocyst
-Cell,CD34+ cell,CellLine,hematopoietic stem cell
-Cell,CD34+ erythroid progenitor cell,CellLine,hematopoietic stem cell
+Cell,CD34+ cell,,hematopoietic stem cell
+Cell,CD34+ erythroid progenitor cell,,hematopoietic stem cell
 Cell,colon epithelium,Anatomy,colonic epithelium
 Cell,embryoid body cell,Anatomy,embryoid body
 Cell,Embryonic Pancreatic Cell,CellLine,MS1 cell
 Cell,Endometrial Epithelial Cell,CellLine,Ishikawa (London) 02ER+ cell
-Cell,extravillous cytotrophoblast cell,CellLine,JEG-3 cell
+Cell,extravillous cytotrophoblast cell,,JEG-3 cell
 Cell,Lung parenchyma,Anatomy,lung parenchyma
 Cell,POMC neuron,Anatomy,adenohypophysis
