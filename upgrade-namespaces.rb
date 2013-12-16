@@ -58,11 +58,6 @@ if __FILE__ == $0
         return # do not print (part of statement)
       end
 
-      if obj.is_a? BEL::Script::Statement
-        puts "#{obj.to_s}\n"
-        return
-      end
-
       puts obj.to_s
     end
 
