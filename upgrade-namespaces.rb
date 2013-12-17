@@ -68,7 +68,7 @@ if __FILE__ == $0
           if clog_ns.has_key? obj.value
             replacement = clog_ns[obj.value]
             if replacement == 'unresolved' or replacement == 'withdrawn'
-              $stderr.puts "no replacement value for '#{obj.value}' - value '#{replacement}'"
+              $stderr.puts "no replacement value for #{obj.ns} '#{obj.value}' - value '#{replacement}'"
               return
             end
             obj.value = replacement
