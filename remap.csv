@@ -721,12 +721,12 @@ Cell,Pericytes,Cell,pericyte cell
 Cell,"Satellite Cells, Skeletal Muscle",Cell,skeletal muscle satellite cell
 Cell,Stem Cells,Cell,stem cell
 Cell,blastocyst,Anatomy,blastocyst
-Cell,CD34+ cell,,hematopoietic stem cell
-Cell,CD34+ erythroid progenitor cell,,hematopoietic stem cell
+Cell,CD34+ cell,Cell,hematopoietic stem cell
+Cell,CD34+ erythroid progenitor cell,Cell,hematopoietic stem cell
 Cell,colon epithelium,Anatomy,colonic epithelium
 Cell,embryoid body cell,Anatomy,embryoid body
 Cell,Embryonic Pancreatic Cell,CellLine,MS1 cell
 Cell,Endometrial Epithelial Cell,CellLine,Ishikawa (London) 02ER+ cell
-Cell,extravillous cytotrophoblast cell,,JEG-3 cell
+Cell,extravillous cytotrophoblast cell,CellLine,JEG-3 cell
 Cell,Lung parenchyma,Anatomy,lung parenchyma
 Cell,POMC neuron,Anatomy,adenohypophysis
