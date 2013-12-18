@@ -44,6 +44,7 @@ if __FILE__ == $0
 
   require 'bel'
   require 'json'
+  require 'set'
   class Main
 
     NonWordMatcher = Regexp.compile(/[^0-9a-zA-Z]/)
@@ -57,11 +58,30 @@ if __FILE__ == $0
         changelog_file.close
       end
 
+      @keywords_seen = Set.new
       parser = BEL::Script::Parser.new
       parser.add_observer self
       parser.parse(content)
     end
     def update(obj)
+      # redefine namespace based on change log's `redefine` block
+      if obj.is_a? BEL::Script::NamespaceDefinition
+        if @clog.has_key? 'redefine'
+          redefine = @clog['redefine']
+          if redefine.has_key? obj.prefix
+            entry = redefine[obj.prefix]
+            obj.prefix = entry['new_keyword']
+            obj.value = entry['new_url']
+          end
+        end
+
+        # deduplicate namespaces for output purposes
+        if @keywords_seen.include? obj.prefix
+          return
+        end
+        @keywords_seen.add(obj.prefix)
+      end
+
       if obj.is_a? BEL::Script::Parameter
         if @clog.has_key? obj.ns
           clog_ns = @clog[obj.ns]
