@@ -36,6 +36,7 @@ if __FILE__ == $0
       UrogenitalSystem: ['Anatomy', 'http://resource.belframework.org/belframework/testing/annotation/anatomy.belanno'],
       Species: ['Species', 'http://resource.belframework.org/belframework/testing/annotation/species-taxonomy-id.belanno']
     }
+    EvidenceMatcher = Regexp.compile(/SET Evidence = ([0-9a-zA-Z]+)/)
 
     attr_reader :ttl
 
@@ -73,7 +74,11 @@ if __FILE__ == $0
         end
         puts obj.to_s
       elsif obj.is_a? BEL::Script::Annotation
-        if ['Citation', 'Evidence', 'Species'].include? obj.name
+        if obj.name == 'Evidence'
+          ev = obj.to_s
+          ev.gsub!(EvidenceMatcher, 'SET Evidence = "\1"')
+          puts ev
+        elsif ['Citation', 'Species'].include? obj.name
           puts obj.to_s
         elsif obj.value.respond_to? :each
           # skip annotations that cannot be mapped or are already mapped

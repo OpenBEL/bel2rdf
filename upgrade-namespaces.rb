@@ -47,7 +47,7 @@ if __FILE__ == $0
   require 'set'
   class Main
 
-    NonWordMatcher = Regexp.compile(/[^0-9a-zA-Z]/)
+    EvidenceMatcher = Regexp.compile(/SET Evidence = ([0-9a-zA-Z]+)/)
     attr_reader :ttl
 
     def initialize(content, change_log)
@@ -80,6 +80,15 @@ if __FILE__ == $0
           return
         end
         @keywords_seen.add(obj.prefix)
+      end
+
+      if obj.is_a? BEL::Script::Annotation
+        if obj.name == 'Evidence'
+          ev = obj.to_s
+          ev.gsub!(EvidenceMatcher, 'SET Evidence = "\1"')
+          puts ev
+          return
+        end
       end
 
       if obj.is_a? BEL::Script::Parameter
