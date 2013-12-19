@@ -103,7 +103,7 @@ if __FILE__ == $0
           puts obj.to_s
         end
       elsif obj.is_a? BEL::Script::Statement
-        puts "#{obj.to_s}\n\n"
+        puts "#{obj.to_s}"
       else
         puts obj.to_s
       end
