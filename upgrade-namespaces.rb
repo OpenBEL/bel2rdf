@@ -103,6 +103,13 @@ if __FILE__ == $0
             obj.value = replacement
           end
         end
+        # redefine param namespace based on change log's `redefine` block
+        if @clog.has_key? 'redefine'
+          redefine = @clog['redefine']
+          if redefine.has_key? obj.ns
+            obj.ns = redefine[obj.ns]['new_keyword']
+          end
+        end
         return
       end
 
