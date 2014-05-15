@@ -1,6 +1,8 @@
 bel2rdf
 =======
 
+**Warning: This repository has been superseded by [OpenBEL/bel.rb](https://github.com/OpenBEL/bel.rb).**
+
 Tool to convert BEL to RDF triples.
 
 requirements
