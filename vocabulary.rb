@@ -218,7 +218,7 @@ module BELRDF
     writer << [id, RDF::RDFS.label, statement.to_s]
 
     # evidence
-    evidence_bnode = RDF::Node.new
+    evidence_bnode = RDF::Node.uuid
     writer << [evidence_bnode, RDF.type, BELV.Evidence]
     writer << [id, BELV.hasEvidence, evidence_bnode]
     writer << [evidence_bnode, BELV.hasStatement, id]

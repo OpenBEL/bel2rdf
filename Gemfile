@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'bel', '~> 0.2.0'
 gem 'rdf', '~> 1.0.10'
 gem 'rdf-turtle', '~> 1.0.9'
+gem 'uuid', '~> 2.3'
 
 # development requirements
 group :development do
