@@ -3,7 +3,7 @@
 require './conversion.rb'
 require 'addressable/uri'
 
-N = RDF::Vocabulary.new('http://www.selventa.com/bel/namespace/')
+N = RDF::Vocabulary.new('http://www.openbel.org/bel/namespace/')
 GO = RDF::Vocabulary.new('http://www.geneontology.org/go#') # need GO:
 UNIPROT = RDF::Vocabulary.new('http://purl.uniprot.org/uniprot/') #acc num
 CHEBI = RDF::Vocabulary.new('http://purl.obolibrary.org/obo/') # need CHEBI_
@@ -43,7 +43,7 @@ def write_ns_stmts(hash, path, ttl)
     ttl << RDF::Statement.new(res_uri, RDF::SKOS.inScheme, N[name])
     ttl << RDF::Statement.new(res_uri, RDF::SKOS.prefLabel, ident)
 
-    if name == 'go-biological-processes-ids' or name == 'go-cellular-component-ids'
+    if name == 'go-biological-process-ids' or name == 'go-cellular-component-ids'
       ttl << RDF::Statement.new(res_uri, RDF::RDFS.seeAlso, GO["GO:#{ident}"])
     elsif name == 'swissprot-accession-numbers'
       ttl << RDF::Statement.new(res_uri, RDF::RDFS.seeAlso, UNIPROT[ident])
