@@ -57,60 +57,57 @@ if __FILE__ == $0
         remap_file.close
       end
 
-      parser = BEL::Script::Parser.new
-      parser.add_observer self
-      parser.parse(content)
-    end
-    def update(obj)
-      if obj.is_a? BEL::Script::Term or obj.is_a? BEL::Script::Parameter
-        return
-      end
-
-      if obj.is_a? BEL::Script::AnnotationDefinition
-        if TYPE_REMAP.include? obj.prefix.to_sym
-          prefix, url = TYPE_REMAP[obj.prefix.to_sym]
-          obj.prefix = prefix
-          obj.value = url
+      BEL::Script.parse(content, ResourceIndex.openbel_published_index('20131211')) do |obj|
+        if obj.is_a? Term or obj.is_a? Parameter
+          return
         end
-        puts obj.to_s
-      elsif obj.is_a? BEL::Script::Annotation
-        if obj.name == 'Evidence'
-          ev = obj.to_s
-          ev.gsub!(EvidenceMatcher, 'SET Evidence = "\1"')
-          puts ev
-        elsif ['Citation', 'Species'].include? obj.name
-          puts obj.to_s
-        elsif obj.value.respond_to? :each
-          # skip annotations that cannot be mapped or are already mapped
-          unless TYPE_REMAP.include? obj.name.to_sym
-            puts obj.to_s
-            return
-          end
 
-          # handle value list
-          name = TYPE_REMAP[obj.name.to_sym][0]
-          values = obj.value.map do |v|
-            if @hash.include? [name, v]
-              @hash[[name, v]][1]
-            else
-              v
-            end
+        if obj.is_a? AnnotationDefinition
+          if TYPE_REMAP.include? obj.prefix.to_sym
+            prefix, url = TYPE_REMAP[obj.prefix.to_sym]
+            obj.prefix = prefix
+            obj.value = url
           end
-          obj.name = name
-          obj.value = values
           puts obj.to_s
-        elsif @hash.include? [obj.name, obj.value]
-          new_type, new_val = @hash[[obj.name, obj.value]]
-          obj.name = new_type
-          obj.value = new_val
-          puts obj.to_s
+        elsif obj.is_a? Annotation
+          if obj.name == 'Evidence'
+            ev = obj.to_s
+            ev.gsub!(EvidenceMatcher, 'SET Evidence = "\1"')
+            puts ev
+          elsif ['Citation', 'Species'].include? obj.name
+            puts obj.to_s
+          elsif obj.value.respond_to? :each
+            # skip annotations that cannot be mapped or are already mapped
+            unless TYPE_REMAP.include? obj.name.to_sym
+              puts obj.to_s
+              return
+            end
+
+            # handle value list
+            name = TYPE_REMAP[obj.name.to_sym][0]
+            values = obj.value.map do |v|
+              if @hash.include? [name, v]
+                @hash[[name, v]][1]
+              else
+                v
+              end
+            end
+            obj.name = name
+            obj.value = values
+            puts obj.to_s
+          elsif @hash.include? [obj.name, obj.value]
+            new_type, new_val = @hash[[obj.name, obj.value]]
+            obj.name = new_type
+            obj.value = new_val
+            puts obj.to_s
+          else
+            puts obj.to_s
+          end
+        elsif obj.is_a? Statement
+          puts "#{obj.to_s}"
         else
           puts obj.to_s
         end
-      elsif obj.is_a? BEL::Script::Statement
-        puts "#{obj.to_s}"
-      else
-        puts obj.to_s
       end
     end
 
@@ -122,5 +119,5 @@ if __FILE__ == $0
     end
   end
 
-  prog = Main.new(content)
+  Main.new(content)
 end
